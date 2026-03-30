@@ -62,6 +62,129 @@ class Person {
 
 /***/ },
 
+/***/ "./src/scripts/navbar.js"
+/*!*******************************!*\
+  !*** ./src/scripts/navbar.js ***!
+  \*******************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ initNavbar)
+/* harmony export */ });
+function initNavbar() {
+  const body = document.body;
+  const header = document.querySelector(".js-rpc-header");
+  const navToggle = document.querySelector(".js-rpc-nav-toggle");
+  const mobilePanel = document.querySelector(".js-rpc-mobile-panel");
+  const desktopDropdowns = document.querySelectorAll(".js-rpc-dropdown");
+  const desktopDropdownToggles = document.querySelectorAll(".js-rpc-dropdown-toggle");
+  const mobileGroups = document.querySelectorAll(".js-rpc-mobile-group");
+  const mobileGroupToggles = document.querySelectorAll(".js-rpc-mobile-group-toggle");
+  if (!header) return;
+  const closeDesktopDropdowns = () => {
+    desktopDropdowns.forEach(item => {
+      item.classList.remove("is-open");
+      const toggle = item.querySelector(".js-rpc-dropdown-toggle");
+      if (toggle) {
+        toggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  };
+  const closeMobileGroups = () => {
+    mobileGroups.forEach(group => {
+      group.classList.remove("is-open");
+      const toggle = group.querySelector(".js-rpc-mobile-group-toggle");
+      if (toggle) {
+        toggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  };
+  const closeMobileMenu = () => {
+    if (!mobilePanel || !navToggle) return;
+    mobilePanel.setAttribute("hidden", "");
+    navToggle.setAttribute("aria-expanded", "false");
+    body.classList.remove("rpc-mobile-open");
+    closeMobileGroups();
+  };
+  const openMobileMenu = () => {
+    if (!mobilePanel || !navToggle) return;
+    mobilePanel.removeAttribute("hidden");
+    navToggle.setAttribute("aria-expanded", "true");
+    body.classList.add("rpc-mobile-open");
+  };
+  const toggleMobileMenu = () => {
+    if (!mobilePanel || !navToggle) return;
+    const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
+    if (isExpanded) {
+      closeMobileMenu();
+    } else {
+      openMobileMenu();
+    }
+  };
+  const handleHeaderState = () => {
+    if (window.scrollY > 16) {
+      header.classList.add("is-scrolled");
+    } else {
+      header.classList.remove("is-scrolled");
+    }
+  };
+  if (navToggle && mobilePanel) {
+    navToggle.addEventListener("click", toggleMobileMenu);
+  }
+  desktopDropdownToggles.forEach(toggle => {
+    toggle.addEventListener("click", event => {
+      event.preventDefault();
+      const parent = toggle.closest(".js-rpc-dropdown");
+      if (!parent) return;
+      const isOpen = parent.classList.contains("is-open");
+      closeDesktopDropdowns();
+      if (!isOpen) {
+        parent.classList.add("is-open");
+        toggle.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+  mobileGroupToggles.forEach(toggle => {
+    toggle.addEventListener("click", () => {
+      const parent = toggle.closest(".js-rpc-mobile-group");
+      if (!parent) return;
+      const isOpen = parent.classList.contains("is-open");
+      closeMobileGroups();
+      if (!isOpen) {
+        parent.classList.add("is-open");
+        toggle.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+  document.addEventListener("click", event => {
+    const clickedInsideDesktopDropdown = event.target.closest(".js-rpc-dropdown");
+    if (!clickedInsideDesktopDropdown) {
+      closeDesktopDropdowns();
+    }
+    const clickedInsideMobilePanel = event.target.closest(".js-rpc-mobile-panel");
+    const clickedToggle = event.target.closest(".js-rpc-nav-toggle");
+    if (mobilePanel && navToggle && !mobilePanel.hasAttribute("hidden") && !clickedInsideMobilePanel && !clickedToggle) {
+      closeMobileMenu();
+    }
+  });
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
+      closeDesktopDropdowns();
+      closeMobileMenu();
+    }
+  });
+  handleHeaderState();
+  window.addEventListener("scroll", handleHeaderState);
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 980) {
+      closeMobileMenu();
+    }
+  });
+}
+
+/***/ },
+
 /***/ "./node_modules/react-dom/client.js"
 /*!******************************************!*\
   !*** ./node_modules/react-dom/client.js ***!
@@ -208,11 +331,13 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scripts_Person__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scripts/Person */ "./src/scripts/Person.js");
 /* harmony import */ var _scripts_ExampleReactComponent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scripts/ExampleReactComponent */ "./src/scripts/ExampleReactComponent.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _scripts_navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scripts/navbar */ "./src/scripts/navbar.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__);
+
 
 
 
@@ -220,9 +345,12 @@ __webpack_require__.r(__webpack_exports__);
 
 const person1 = new _scripts_Person__WEBPACK_IMPORTED_MODULE_0__["default"]("Brad");
 if (document.querySelector("#render-react-example-here")) {
-  const root = react_dom_client__WEBPACK_IMPORTED_MODULE_3__.createRoot(document.querySelector("#render-react-example-here"));
-  root.render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_scripts_ExampleReactComponent__WEBPACK_IMPORTED_MODULE_1__["default"], {}));
+  const root = react_dom_client__WEBPACK_IMPORTED_MODULE_4__.createRoot(document.querySelector("#render-react-example-here"));
+  root.render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_scripts_ExampleReactComponent__WEBPACK_IMPORTED_MODULE_1__["default"], {}));
 }
+document.addEventListener("DOMContentLoaded", () => {
+  (0,_scripts_navbar__WEBPACK_IMPORTED_MODULE_2__["default"])();
+});
 })();
 
 /******/ })()
