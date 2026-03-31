@@ -174,7 +174,15 @@ get_header(); ?>
                 Tell us about your project.
               </h2>
 
-              <form class="mt-8 space-y-5">
+              <div id="rpcContactFormSuccess" class="hidden mt-5 rounded-2xl border border-green-200 bg-green-50 px-4 py-4 text-sm text-green-700">
+                Thanks for reaching out. Your request was sent successfully.
+              </div>
+
+              <div id="rpcContactFormError" class="hidden mt-5 rounded-2xl border border-red-200 bg-red-50 px-4 py-4 text-sm text-red-700">
+                Something went wrong. Please try again.
+              </div>
+
+              <form id="rpcContactForm" class="mt-8 space-y-5">
                 <div class="grid gap-5 md:grid-cols-2">
                   <div>
                     <label for="full_name" class="mb-2 block text-[11px] font-black uppercase tracking-[0.18em] text-[#192F44]/72">
@@ -182,7 +190,7 @@ get_header(); ?>
                     </label>
                     <input
                       id="full_name"
-                      name="full_name"
+                      name="name"
                       type="text"
                       class="rpc-contact-input"
                       required
@@ -195,7 +203,7 @@ get_header(); ?>
                     </label>
                     <input
                       id="phone_number"
-                      name="phone_number"
+                      name="phone"
                       type="tel"
                       class="rpc-contact-input"
                       required
@@ -209,7 +217,7 @@ get_header(); ?>
                   </label>
                   <input
                     id="email_address"
-                    name="email_address"
+                    name="email"
                     type="email"
                     class="rpc-contact-input"
                     required
@@ -222,7 +230,7 @@ get_header(); ?>
                   </label>
                   <select
                     id="service_needed"
-                    name="service_needed"
+                    name="service"
                     class="rpc-contact-input"
                     required
                   >
@@ -241,7 +249,7 @@ get_header(); ?>
                   </label>
                   <input
                     id="property_address"
-                    name="property_address"
+                    name="property"
                     type="text"
                     class="rpc-contact-input"
                     required
@@ -254,9 +262,10 @@ get_header(); ?>
                   </label>
                   <textarea
                     id="project_details"
-                    name="project_details"
+                    name="message"
                     rows="6"
                     class="rpc-contact-input rpc-contact-textarea"
+                    required
                   ></textarea>
                 </div>
 
@@ -274,6 +283,7 @@ get_header(); ?>
 
                 <div class="pt-2">
                   <button
+                    id="rpcContactSubmitBtn"
                     type="submit"
                     class="rpc-contact-btn rpc-contact-btn-green inline-flex items-center justify-center px-8 py-4 text-sm font-black uppercase tracking-[0.14em] text-white"
                   >
@@ -354,6 +364,10 @@ get_header(); ?>
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap');
+
+  .hidden {
+    display: none !important;
+  }
 
   .rpc-contact-page {
     font-family: "Manrope", "Segoe UI", Arial, sans-serif;
@@ -528,6 +542,8 @@ get_header(); ?>
   }
 </style>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const items = document.querySelectorAll(
@@ -546,6 +562,62 @@ get_header(); ?>
     }, { threshold: 0.12 });
 
     items.forEach((item) => observer.observe(item));
+
+    if (window.emailjs) {
+      emailjs.init({
+        publicKey: "CDikedp0ZSxxiBeLb"
+      });
+    }
+
+    const form = document.getElementById("rpcContactForm");
+    const submitBtn = document.getElementById("rpcContactSubmitBtn");
+    const successBox = document.getElementById("rpcContactFormSuccess");
+    const errorBox = document.getElementById("rpcContactFormError");
+
+    if (form) {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        successBox.classList.add("hidden");
+        errorBox.classList.add("hidden");
+
+        const policyCheckbox = form.querySelector('input[name="policy_agreement"]');
+        if (policyCheckbox && !policyCheckbox.checked) {
+          errorBox.textContent = "Please accept the Privacy Policy and Terms & Conditions.";
+          errorBox.classList.remove("hidden");
+          return;
+        }
+
+        const originalButtonText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending...";
+
+        const formData = {
+          name: document.getElementById("full_name").value,
+          phone: document.getElementById("phone_number").value,
+          email: document.getElementById("email_address").value,
+          service: document.getElementById("service_needed").value,
+          property: document.getElementById("property_address").value,
+          message: document.getElementById("project_details").value
+        };
+
+        emailjs.send(
+          "service_a03f0zf",
+          "template_17g32zt",
+          formData
+        ).then(function () {
+          form.reset();
+          successBox.classList.remove("hidden");
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalButtonText;
+        }).catch(function (error) {
+          console.error("EmailJS error:", error);
+          errorBox.classList.remove("hidden");
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalButtonText;
+        });
+      });
+    }
   });
 </script>
 
