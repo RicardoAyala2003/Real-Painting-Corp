@@ -18,42 +18,42 @@ get_header(); ?>
      */
     $gallery_images = [
       [
-        'src' => 'http://real-painting-corp.local/wp-content/uploads/2026/03/photo-1523198780259-41f275ab6e3d.avif',
+        'src' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/houses-in-suburb-at-summer-in-the-north-america-l-2026-03-26-11-33-50-utc.jpg-scaled.jpeg',
         'alt' => 'Real Painting Corp project gallery image 1',
         'label' => 'Before / After',
       ],
       [
-        'src' => 'http://real-painting-corp.local/wp-content/uploads/2026/03/photo-1523198780259-41f275ab6e3d.avif',
+        'src' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/houses-in-suburb-at-summer-in-the-north-america-l-2026-03-26-11-33-50-utc.jpg-scaled.jpeg',
         'alt' => 'Real Painting Corp project gallery image 2',
         'label' => 'Real Project',
       ],
       [
-        'src' => 'http://real-painting-corp.local/wp-content/uploads/2026/03/photo-1523198780259-41f275ab6e3d.avif',
+        'src' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/houses-in-suburb-at-summer-in-the-north-america-l-2026-03-26-11-33-50-utc.jpg-scaled.jpeg',
         'alt' => 'Real Painting Corp project gallery image 3',
         'label' => 'Before / After',
       ],
       [
-        'src' => 'http://real-painting-corp.local/wp-content/uploads/2026/03/photo-1523198780259-41f275ab6e3d.avif',
+        'src' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/houses-in-suburb-at-summer-in-the-north-america-l-2026-03-26-11-33-50-utc.jpg-scaled.jpeg',
         'alt' => 'Real Painting Corp project gallery image 4',
         'label' => 'Real Project',
       ],
       [
-        'src' => 'http://real-painting-corp.local/wp-content/uploads/2026/03/photo-1523198780259-41f275ab6e3d.avif',
+        'src' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/houses-in-suburb-at-summer-in-the-north-america-l-2026-03-26-11-33-50-utc.jpg-scaled.jpeg',
         'alt' => 'Real Painting Corp project gallery image 5',
         'label' => 'Before / After',
       ],
       [
-        'src' => 'http://real-painting-corp.local/wp-content/uploads/2026/03/photo-1523198780259-41f275ab6e3d.avif',
+        'src' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/houses-in-suburb-at-summer-in-the-north-america-l-2026-03-26-11-33-50-utc.jpg-scaled.jpeg',
         'alt' => 'Real Painting Corp project gallery image 6',
         'label' => 'Real Project',
       ],
       [
-        'src' => 'http://real-painting-corp.local/wp-content/uploads/2026/03/photo-1523198780259-41f275ab6e3d.avif',
+        'src' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/houses-in-suburb-at-summer-in-the-north-america-l-2026-03-26-11-33-50-utc.jpg-scaled.jpeg',
         'alt' => 'Real Painting Corp project gallery image 7',
         'label' => 'Before / After',
       ],
       [
-        'src' => 'http://real-painting-corp.local/wp-content/uploads/2026/03/photo-1523198780259-41f275ab6e3d.avif',
+        'src' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/houses-in-suburb-at-summer-in-the-north-america-l-2026-03-26-11-33-50-utc.jpg-scaled.jpeg',
         'alt' => 'Real Painting Corp project gallery image 8',
         'label' => 'Real Project',
       ],

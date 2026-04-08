@@ -11,16 +11,16 @@ get_header(); ?>
 <main class="rpc-paint-home bg-[#f6f5f0] text-[#192F44] overflow-hidden">
 
   <?php
-    $hero_image = 'http://real-painting-corp.local/wp-content/uploads/2026/03/flow-clark-ioOlenqfMqA-unsplash-scaled.jpg';
+    $hero_image = 'http://real-painting-corp.local/wp-content/uploads/2026/04/Painting-scaled.jpg';
 
     // Temporary fallback set for gallery until you replace with 6–8 real project photos / before-after pairs.
     $gallery_images = [
-      $hero_image,
-      $hero_image,
-      $hero_image,
-      $hero_image,
-      $hero_image,
-      $hero_image,
+      'http://real-painting-corp.local/wp-content/uploads/2026/04/houses-in-suburb-at-summer-in-the-north-america-l-2026-03-26-11-33-50-utc.jpg-scaled.jpeg',
+      'http://real-painting-corp.local/wp-content/uploads/2026/04/houses-in-suburb-at-summer-in-the-north-america-l-2026-03-26-11-33-50-utc.jpg-scaled.jpeg',
+      'http://real-painting-corp.local/wp-content/uploads/2026/04/houses-in-suburb-at-summer-in-the-north-america-l-2026-03-26-11-33-50-utc.jpg-scaled.jpeg',
+      'http://real-painting-corp.local/wp-content/uploads/2026/04/houses-in-suburb-at-summer-in-the-north-america-l-2026-03-26-11-33-50-utc.jpg-scaled.jpeg',
+      'http://real-painting-corp.local/wp-content/uploads/2026/04/houses-in-suburb-at-summer-in-the-north-america-l-2026-03-26-11-33-50-utc.jpg-scaled.jpeg',
+      'http://real-painting-corp.local/wp-content/uploads/2026/04/houses-in-suburb-at-summer-in-the-north-america-l-2026-03-26-11-33-50-utc.jpg-scaled.jpeg',
     ];
   ?>
 

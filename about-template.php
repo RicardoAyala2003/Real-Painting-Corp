@@ -11,7 +11,7 @@ get_header(); ?>
 <main class="rpc-about-page bg-[#f6f5f0] text-[#192F44] overflow-hidden">
 
   <?php
-    $about_hero_image = 'http://real-painting-corp.local/wp-content/uploads/2026/03/flow-clark-ioOlenqfMqA-unsplash-scaled.jpg';
+    $about_hero_image = 'http://real-painting-corp.local/wp-content/uploads/2026/04/home-makeover-2026-01-05-04-46-23-utc-scaled.jpg';
 
     $values = [
       [
@@ -110,7 +110,7 @@ get_header(); ?>
         <div class="relative overflow-hidden border border-[#192F44]/10 bg-white p-3 shadow-[0_24px_60px_rgba(25,47,68,0.12)]">
           <div class="relative overflow-hidden">
             <img
-              src="http://real-painting-corp.local/wp-content/uploads/2026/03/photo-1523198780259-41f275ab6e3d.avif"
+              src="<?php echo esc_url($about_hero_image); ?>"
               alt="Real Painting Corp team"
               class="rpc-about-hero-photo h-[420px] w-full object-cover md:h-[520px]"
             >
