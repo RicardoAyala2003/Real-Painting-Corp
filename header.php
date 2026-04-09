@@ -11,7 +11,7 @@
     <header class="rpc-header js-rpc-header">
       <!-- Top Utility Bar -->
       <div class="rpc-topbar">
-        <div class="rpc-shell rpc-topbar__inner">
+        <div class="rpc-shell rpc-shell--header rpc-topbar__inner">
           <div class="rpc-topbar__left">
             <a href="tel:+19092326602" class="rpc-topbar__link">
               <span class="rpc-topbar__icon" aria-hidden="true">
@@ -69,17 +69,23 @@
 
       <!-- Main Navigation -->
       <div class="rpc-nav-wrap">
-        <div class="rpc-shell rpc-nav">
-          <div class="rpc-brand">
-            <a href="<?php echo esc_url(get_home_url()); ?>" class="rpc-brand__link" aria-label="Real Painting Corp Home">
-              <span class="rpc-brand__mark"></span>
-              <span class="rpc-brand__text">
-                <strong>Real Painting Corp</strong>
-                <em>Be Real. Build Real.</em>
-              </span>
-            </a>
-          </div>
+        <div class="rpc-shell rpc-shell--header rpc-nav">
+<div class="rpc-brand">
+  <a href="<?php echo esc_url(get_home_url()); ?>" class="rpc-brand__link" aria-label="Real Painting Corp Home">
+    <span class="rpc-brand__logo-wrap rpc-brand__logo-wrap--mono">
+      <img
+        src="http://real-painting-corp.local/wp-content/uploads/2026/04/RP_isotipo_negativo.png"
+        alt="Real Painting Corp"
+        class="rpc-brand__logo rpc-brand__logo--mono"
+      >
+    </span>
 
+    <span class="rpc-brand__text rpc-brand__text--navbar">
+      <strong>Real Painting Corp</strong>
+      <em>Be Real. Build Real.</em>
+    </span>
+  </a>
+</div>
           <button
             class="rpc-nav-toggle js-rpc-nav-toggle"
             type="button"

@@ -53,6 +53,8 @@ get_header(); ?>
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(35,100,118,0.08),transparent_30%)]"></div>
 
     <div class="relative mx-auto max-w-5xl px-4 text-center">
+
+
       <p class="ajs-reveal-up text-xs font-black uppercase tracking-[0.24em] text-[#236476]">
         Contact Us
       </p>
@@ -82,6 +84,7 @@ get_header(); ?>
             <div class="h-2 w-full bg-[linear-gradient(90deg,#192F44_0%,#236476_50%,#7DAD3F_100%)]"></div>
 
             <div class="p-7 md:p-9">
+
               <p class="text-xs font-black uppercase tracking-[0.22em] text-[#236476]">
                 Contact Information
               </p>
@@ -166,6 +169,12 @@ get_header(); ?>
             <div class="h-2 w-full bg-[linear-gradient(90deg,#7DAD3F_0%,#236476_50%,#192F44_100%)]"></div>
 
             <div class="relative p-7 md:p-9">
+              <img
+                src="http://real-painting-corp.local/wp-content/uploads/2026/04/RP_logotipo-diagonal.png"
+                alt="Real Painting Corp"
+                class="mb-6 h-14 w-auto object-contain md:h-16"
+              >
+
               <p class="text-xs font-black uppercase tracking-[0.22em] text-[#4A6C2F]">
                 Request a Free Estimate
               </p>
