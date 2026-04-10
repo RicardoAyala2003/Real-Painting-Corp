@@ -11,51 +11,42 @@ get_header(); ?>
 <main class="rpc-gallery-page bg-[#f6f5f0] text-[#192F44] overflow-hidden">
 
   <?php
-    /**
-     * Reemplaza estas imágenes por fotos reales de proyectos.
-     * El brief indica priorizar 6–8 best project photos
-     * y before/after pairs cuando sea posible.
-     */
-    $gallery_images = [
+    $gallery_pairs = [
       [
-        'src' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/houses-in-suburb-at-summer-in-the-north-america-l-2026-03-26-11-33-50-utc.jpg-scaled.jpeg',
-        'alt' => 'Real Painting Corp project gallery image 1',
-        'label' => 'Before / After',
+        'before' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-1-scaled.jpg',
+        'after'  => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-1-resuelto-scaled.jpg',
       ],
       [
-        'src' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/houses-in-suburb-at-summer-in-the-north-america-l-2026-03-26-11-33-50-utc.jpg-scaled.jpeg',
-        'alt' => 'Real Painting Corp project gallery image 2',
-        'label' => 'Real Project',
+        'before' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-2-scaled.jpg',
+        'after'  => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-2-resuelto-scaled.jpg',
       ],
       [
-        'src' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/houses-in-suburb-at-summer-in-the-north-america-l-2026-03-26-11-33-50-utc.jpg-scaled.jpeg',
-        'alt' => 'Real Painting Corp project gallery image 3',
-        'label' => 'Before / After',
+        'before' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-3-scaled.jpg',
+        'after'  => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-3-resuelto-scaled.jpg',
       ],
       [
-        'src' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/houses-in-suburb-at-summer-in-the-north-america-l-2026-03-26-11-33-50-utc.jpg-scaled.jpeg',
-        'alt' => 'Real Painting Corp project gallery image 4',
-        'label' => 'Real Project',
+        'before' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-4-scaled.jpg',
+        'after'  => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-4-resuelto-scaled.jpg',
       ],
       [
-        'src' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/houses-in-suburb-at-summer-in-the-north-america-l-2026-03-26-11-33-50-utc.jpg-scaled.jpeg',
-        'alt' => 'Real Painting Corp project gallery image 5',
-        'label' => 'Before / After',
+        'before' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-5-scaled.jpg',
+        'after'  => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-5-resuelto-scaled.jpg',
       ],
       [
-        'src' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/houses-in-suburb-at-summer-in-the-north-america-l-2026-03-26-11-33-50-utc.jpg-scaled.jpeg',
-        'alt' => 'Real Painting Corp project gallery image 6',
-        'label' => 'Real Project',
+        'before' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/20250531_110801-scaled.jpg',
+        'after'  => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-6-scaled.jpg',
       ],
       [
-        'src' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/houses-in-suburb-at-summer-in-the-north-america-l-2026-03-26-11-33-50-utc.jpg-scaled.jpeg',
-        'alt' => 'Real Painting Corp project gallery image 7',
-        'label' => 'Before / After',
+        'before' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-7-scaled.jpg',
+        'after'  => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-7-resuelto-scaled.jpg',
       ],
       [
-        'src' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/houses-in-suburb-at-summer-in-the-north-america-l-2026-03-26-11-33-50-utc.jpg-scaled.jpeg',
-        'alt' => 'Real Painting Corp project gallery image 8',
-        'label' => 'Real Project',
+        'before' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-8-scaled.jpg',
+        'after'  => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-8-resuelto-scaled.jpg',
+      ],
+      [
+        'before' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-9-scaled.jpg',
+        'after'  => 'http://real-painting-corp.local/wp-content/uploads/2026/04/20250527_164612-scaled.jpg',
       ],
     ];
   ?>
@@ -88,34 +79,36 @@ get_header(); ?>
 
     <div class="relative mx-auto max-w-7xl px-4">
       <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        <?php foreach ($gallery_images as $index => $image) : ?>
-          <article class="ajs-reveal-stagger group relative overflow-hidden border border-[#192F44]/10 bg-white shadow-[0_20px_44px_rgba(25,47,68,0.08)]">
-            <div class="relative overflow-hidden">
-              <img
-                src="<?php echo esc_url($image['src']); ?>"
-                alt="<?php echo esc_attr($image['alt']); ?>"
-                class="rpc-gallery-image h-[320px] w-full object-cover"
-              >
+        <?php foreach ($gallery_pairs as $pair) : ?>
+          <article class="ajs-reveal-stagger group overflow-hidden border border-[#192F44]/10 bg-white shadow-[0_20px_44px_rgba(25,47,68,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_28px_60px_rgba(25,47,68,0.12)]">
+            <div class="grid grid-cols-2">
+              
+              <div class="relative h-[320px] overflow-hidden">
+                <img
+                  src="<?php echo esc_url($pair['before']); ?>"
+                  alt="Before project image"
+                  class="rpc-gallery-image h-full w-full object-cover"
+                >
+                <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(25,47,68,0.05)_0%,rgba(25,47,68,0.18)_100%)]"></div>
 
-              <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(25,47,68,0.02)_0%,rgba(25,47,68,0.14)_100%)]"></div>
-
-              <div class="absolute left-4 top-4">
-                <span class="inline-flex items-center border border-white/20 bg-[#192F44]/88 px-3 py-1 text-[10px] font-black uppercase tracking-[0.16em] text-white backdrop-blur-sm">
-                  <?php echo esc_html($image['label']); ?>
+                <span class="absolute left-4 top-4 bg-[#192F44] px-3 py-1 text-[10px] font-black uppercase tracking-[0.14em] text-white">
+                  Before
                 </span>
               </div>
 
-              <?php if (stripos($image['label'], 'Before / After') !== false) : ?>
-                <div class="absolute inset-y-0 left-1/2 w-[2px] -translate-x-1/2 bg-white/70"></div>
+              <div class="relative h-[320px] overflow-hidden">
+                <img
+                  src="<?php echo esc_url($pair['after']); ?>"
+                  alt="After project image"
+                  class="rpc-gallery-image h-full w-full object-cover"
+                >
+                <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(125,173,63,0.04)_0%,rgba(25,47,68,0.14)_100%)]"></div>
 
-                <span class="absolute left-4 bottom-4 bg-white/92 px-3 py-1 text-[10px] font-black uppercase tracking-[0.14em] text-[#192F44]">
-                  Before
-                </span>
-
-                <span class="absolute right-4 bottom-4 bg-[#7DAD3F] px-3 py-1 text-[10px] font-black uppercase tracking-[0.14em] text-white">
+                <span class="absolute right-4 top-4 bg-[#7DAD3F] px-3 py-1 text-[10px] font-black uppercase tracking-[0.14em] text-white">
                   After
                 </span>
-              <?php endif; ?>
+              </div>
+
             </div>
           </article>
         <?php endforeach; ?>

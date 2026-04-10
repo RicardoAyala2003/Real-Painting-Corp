@@ -382,27 +382,78 @@ get_header(); ?>
         </p>
       </div>
 
+      <?php
+        $project_pairs = [
+          [
+            'before' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-1-scaled.jpg',
+            'after'  => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-1-resuelto-scaled.jpg',
+            'title'  => 'Project 01'
+          ],
+          [
+            'before' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-2-scaled.jpg',
+            'after'  => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-2-resuelto-scaled.jpg',
+            'title'  => 'Project 02'
+          ],
+          [
+            'before' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-3-scaled.jpg',
+            'after'  => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-3-resuelto-scaled.jpg',
+            'title'  => 'Project 03'
+          ],
+          [
+            'before' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-4-scaled.jpg',
+            'after'  => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-4-resuelto-scaled.jpg',
+            'title'  => 'Project 04'
+          ],
+          [
+            'before' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-5-scaled.jpg',
+            'after'  => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-5-resuelto-scaled.jpg',
+            'title'  => 'Project 05'
+          ],
+          [
+            'before' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/20250531_110801-scaled.jpg',
+            'after'  => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-6-scaled.jpg',
+            'title'  => 'Project 06'
+          ],
+        ];
+      ?>
+
       <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <?php foreach ($gallery_images as $index => $image) : ?>
-          <article class="ajs-reveal-stagger group relative overflow-hidden border border-[#192F44]/10 bg-white shadow-sm">
-            <div class="relative h-[240px] overflow-hidden">
-              <img
-                src="<?php echo esc_url($image); ?>"
-                class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                alt="Project <?php echo esc_attr($index + 1); ?>"
-              >
+        <?php foreach ($project_pairs as $project) : ?>
+          <article class="ajs-reveal-stagger group overflow-hidden border border-[#192F44]/10 bg-white shadow-[0_14px_34px_rgba(25,47,68,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_44px_rgba(25,47,68,0.10)]">
+            <div class="grid grid-cols-2">
+              <div class="relative h-[260px] overflow-hidden">
+                <img
+                  src="<?php echo esc_url($project['before']); ?>"
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  alt="<?php echo esc_attr($project['title']); ?> before"
+                >
+                <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(25,47,68,0.06)_0%,rgba(25,47,68,0.18)_100%)]"></div>
+                <span class="absolute left-4 top-4 bg-[#192F44] px-3 py-1 text-[10px] font-black uppercase tracking-[0.14em] text-white">
+                  Before
+                </span>
+              </div>
 
-              <div class="absolute inset-y-0 left-1/2 w-[2px] bg-white/70 backdrop-blur-sm"></div>
+              <div class="relative h-[260px] overflow-hidden">
+                <img
+                  src="<?php echo esc_url($project['after']); ?>"
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  alt="<?php echo esc_attr($project['title']); ?> after"
+                >
+                <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(125,173,63,0.04)_0%,rgba(25,47,68,0.14)_100%)]"></div>
+                <span class="absolute right-4 top-4 bg-[#7DAD3F] px-3 py-1 text-[10px] font-black uppercase tracking-[0.14em] text-white">
+                  After
+                </span>
+              </div>
+            </div>
 
-              <span class="absolute left-4 top-4 bg-[#192F44] px-3 py-1 text-[10px] font-black uppercase tracking-[0.14em] text-white">
-                Before
+            <div class="flex items-center justify-between border-t border-[#192F44]/8 px-5 py-4">
+              <h3 class="text-sm font-black uppercase tracking-[0.16em] text-[#192F44]">
+                <?php echo esc_html($project['title']); ?>
+              </h3>
+
+              <span class="text-[11px] font-black uppercase tracking-[0.16em] text-[#236476]">
+                Before / After
               </span>
-
-              <span class="absolute right-4 bottom-4 bg-[#7DAD3F] px-3 py-1 text-[10px] font-black uppercase tracking-[0.14em] text-white">
-                After
-              </span>
-
-              <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(25,47,68,0.08)_0%,rgba(25,47,68,0.18)_100%)]"></div>
             </div>
           </article>
         <?php endforeach; ?>
@@ -416,7 +467,6 @@ get_header(); ?>
       </div>
     </div>
   </section>
-
   <!-- SERVICE AREAS -->
   <section class="border-y border-[#192F44]/10 bg-white py-20 lg:py-24">
     <div class="mx-auto max-w-7xl px-4">
