@@ -36,7 +36,7 @@
 
           <ul class="rpc-footer__list">
             <li>
-              <a href="tel:+19092326602" class="rpc-footer__link">(909) 232-6602</a>
+              <a href="tel:+19095137397" class="rpc-footer__link">(909)-513-7397</a>
             </li>
             <li>
               <a href="#" class="rpc-footer__link">info@realpaintingcorp.com</a>

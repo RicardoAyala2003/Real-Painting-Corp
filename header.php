@@ -13,14 +13,14 @@
       <div class="rpc-topbar">
         <div class="rpc-shell rpc-shell--header rpc-topbar__inner">
           <div class="rpc-topbar__left">
-            <a href="tel:+19092326602" class="rpc-topbar__link">
+            <a href="tel:+19095137397" class="rpc-topbar__link">
               <span class="rpc-topbar__icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.62a2 2 0 0 1-.45 2.11L8 9.91a16 16 0 0 0 6.09 6.09l1.46-1.28a2 2 0 0 1 2.11-.45c.84.29 1.72.5 2.62.62A2 2 0 0 1 22 16.92z"/>
                 </svg>
               </span>
               <span class="rpc-topbar__label">Phone</span>
-              <span>(909) 232-6602</span>
+              <span>(909)-513-7397</span>
             </a>
 
             <!-- TODO: replace once client confirms email -->

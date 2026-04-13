@@ -98,8 +98,8 @@ get_header(); ?>
                   <p class="text-[11px] font-black uppercase tracking-[0.18em] text-[#236476]">
                     Phone
                   </p>
-                  <a href="tel:+19092326602" class="mt-2 block text-lg font-black text-[#192F44] transition hover:text-[#236476]">
-                    (909) 232-6602
+                  <a href="tel:+19095137397" class="mt-2 block text-lg font-black text-[#192F44] transition hover:text-[#236476]">
+                   (909)-513-7397
                   </a>
                 </div>
 
@@ -360,9 +360,9 @@ get_header(); ?>
           Request a Free Estimate
         </a>
 
-        <a href="tel:+19092326602"
+        <a href="tel:+19095137397"
            class="rpc-contact-btn rpc-contact-btn-dark inline-flex items-center justify-center px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-white">
-          (909) 232-6602
+          (909)-513-7397
         </a>
       </div>
 
