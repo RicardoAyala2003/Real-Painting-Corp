@@ -155,7 +155,7 @@ get_header(); ?>
 
       <div class="mt-14 grid gap-8 md:grid-cols-2">
         <?php foreach ($locations as $index => $location) : ?>
-          <article class="ajs-reveal-stagger group overflow-hidden rounded-[26px] border border-[#192F44]/10 bg-[#fcfbf7] shadow-[0_20px_50px_rgba(25,47,68,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_26px_60px_rgba(25,47,68,0.12)]">
+          <article class="ajs-reveal-stagger group overflow-hidden border border-[#192F44]/10 bg-[#fcfbf7] shadow-[0_20px_50px_rgba(25,47,68,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_26px_60px_rgba(25,47,68,0.12)]">
             <div class="relative h-[290px] overflow-hidden border-b border-[#192F44]/10 bg-[#dfe7e3]">
               <iframe
                 src="<?php echo esc_url($location['map_embed']); ?>"
@@ -187,7 +187,7 @@ get_header(); ?>
                 </div>
 
                 <span
-                  class="hidden h-12 w-12 items-center justify-center rounded-full border border-white/18 bg-white/10 text-white shadow-[0_12px_20px_rgba(0,0,0,0.14)] backdrop-blur-md md:inline-flex">
+                  class="hidden h-12 w-12 items-center justify-center border border-white/18 bg-white/10 text-white shadow-[0_12px_20px_rgba(0,0,0,0.14)] backdrop-blur-md md:inline-flex">
                   <svg viewBox="0 0 24 24" class="h-5 w-5 fill-none" stroke="currentColor" stroke-width="2">
                     <path d="M7 17 17 7"></path>
                     <path d="M9 7h8v8"></path>
@@ -198,7 +198,7 @@ get_header(); ?>
 
             <div class="p-7 md:p-8">
               <div class="flex items-center gap-3">
-                <span class="h-2.5 w-16 rounded-full" style="background: <?php echo esc_attr($location['tone']); ?>;"></span>
+                <span class="h-2.5 w-16" style="background: <?php echo esc_attr($location['tone']); ?>;"></span>
                 <span class="text-[11px] font-black uppercase tracking-[0.18em] text-[#236476]">
                   County Page
                 </span>
@@ -208,7 +208,7 @@ get_header(); ?>
                 <?php echo esc_html($location['copy']); ?>
               </p>
 
-              <div class="mt-6 rounded-[22px] border border-[#192F44]/8 bg-white/80 p-5">
+              <div class="mt-6 border border-[#192F44]/8 bg-white/80 p-5">
                 <p class="text-[11px] font-black uppercase tracking-[0.18em] text-[#4A6C2F]">
                   Communities We Target
                 </p>
@@ -220,7 +220,7 @@ get_header(); ?>
 
               <div class="mt-7 flex flex-wrap items-center gap-3">
                 <a href="<?php echo esc_url($location['slug']); ?>"
-                   class="rpc-paint-btn inline-flex items-center justify-center rounded-[16px] px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-white shadow-[0_16px_34px_rgba(25,47,68,0.14)]"
+                   class="rpc-paint-btn inline-flex items-center justify-center px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-white shadow-[0_16px_34px_rgba(25,47,68,0.14)]"
                    style="background: <?php echo esc_attr($location['tone']); ?>; border-color: <?php echo esc_attr($location['tone']); ?>;">
                   Explore <?php echo esc_html($location['title']); ?>
                 </a>
@@ -356,6 +356,7 @@ get_header(); ?>
     border: 1px solid transparent;
     transition: transform .22s ease, box-shadow .22s ease, background-color .22s ease, color .22s ease, border-color .22s ease;
     overflow: hidden;
+    border-radius: 0;
   }
 
   .rpc-paint-btn::after {
