@@ -108,7 +108,7 @@ get_header(); ?>
                     Email
                   </p>
                   <p class="mt-2 text-lg font-black text-[#192F44]">
-                    [client to confirm]
+                   info@realpaintingcorp.com
                   </p>
                 </div>
 

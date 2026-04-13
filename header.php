@@ -32,7 +32,7 @@
                 </svg>
               </span>
               <span class="rpc-topbar__label">Email</span>
-              <span>[client email]</span>
+              <span>info@realpaintingcorp.com</span>
             </a>
           </div>
 
@@ -123,19 +123,9 @@
 
               <li><a href="/gallery">Gallery</a></li>
 
-              <li class="rpc-menu-item-has-children js-rpc-dropdown">
-                <button class="rpc-menu__toggle js-rpc-dropdown-toggle" type="button" aria-expanded="false">
-                  <span>Locations</span>
-                  <span class="rpc-caret"></span>
-                </button>
-
-                <div class="rpc-dropdown">
-                  <a href="/locations/orange-county">Orange County</a>
-                  <a href="/locations/los-angeles-county">Los Angeles County</a>
-                  <a href="/locations/riverside-county">Riverside County</a>
-                  <a href="/locations/san-bernardino-county">San Bernardino County</a>
-                </div>
-              </li>
+<li>
+  <a href="/locations">Locations</a>
+</li>
 
               <li><a href="/contact-us">Contact Us</a></li>
             </ul>

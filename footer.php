@@ -39,7 +39,7 @@
               <a href="tel:+19092326602" class="rpc-footer__link">(909) 232-6602</a>
             </li>
             <li>
-              <a href="#" class="rpc-footer__link">[client email]</a>
+              <a href="#" class="rpc-footer__link">info@realpaintingcorp.com</a>
             </li>
             <li>
               <span class="rpc-footer__text">Serving OC · LA · Riverside · San Bernardino</span>
