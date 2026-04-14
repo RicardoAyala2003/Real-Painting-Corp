@@ -14,7 +14,7 @@
             </span>
           </a>
 
-          <p class="rpc-footer__tagline">Be Real. Build Real.</p>
+          <p class="rpc-footer__tagline">Clear Process. Clean Results.</p>
 
           <p class="rpc-footer__about">
             Real Painting Corp is a full-service painting and remodeling company serving Southern California.

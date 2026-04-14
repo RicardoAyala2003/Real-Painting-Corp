@@ -47,29 +47,43 @@ get_header(); ?>
     ];
   ?>
 
-  <!-- HERO -->
-  <section class="relative overflow-hidden border-b border-[#192F44]/10 bg-[linear-gradient(180deg,#ffffff_0%,#f6f5f0_100%)] py-16 lg:py-24">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(207,224,218,0.50),transparent_28%)]"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(35,100,118,0.08),transparent_30%)]"></div>
+ <!-- HERO -->
+<section class="relative overflow-hidden border-b border-[#192F44]/10 bg-[linear-gradient(180deg,#ffffff_0%,#f6f5f0_100%)] py-16 lg:py-24">
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(207,224,218,0.76),transparent_26%)]"></div>
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(35,100,118,0.14),transparent_26%)]"></div>
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(125,173,63,0.10),transparent_28%)]"></div>
 
-    <div class="relative mx-auto max-w-5xl px-4 text-center">
+  <div class="absolute left-0 top-0 h-full w-[14%] bg-[linear-gradient(180deg,rgba(35,100,118,0.10)_0%,rgba(255,255,255,0)_100%)]"></div>
+  <div class="absolute right-0 top-0 h-full w-[14%] bg-[linear-gradient(180deg,rgba(125,173,63,0.10)_0%,rgba(255,255,255,0)_100%)]"></div>
 
+  <div
+    class="absolute inset-0 opacity-[0.17] mix-blend-multiply"
+    style="
+      background-image:url('http://real-painting-corp.local/wp-content/uploads/2026/04/Estampados-01-scaled.png');
+      background-repeat:repeat;
+      background-position:center;
+      background-size:320px auto;
+    ">
+  </div>
 
-      <p class="ajs-reveal-up text-xs font-black uppercase tracking-[0.24em] text-[#236476]">
+  <div class="relative mx-auto max-w-5xl px-4 text-center">
+    <div class="ajs-reveal-up mx-auto max-w-4xl border border-[#192F44]/8 bg-white/55 px-6 py-10 shadow-[0_18px_44px_rgba(25,47,68,0.08)] backdrop-blur-[2px] md:px-10 md:py-12">
+      <p class="text-xs font-black uppercase tracking-[0.24em] text-[#236476]">
         Contact Us
       </p>
 
-      <h1 class="ajs-reveal-up mt-5 text-4xl font-extrabold leading-[0.98] tracking-[-0.05em] text-[#192F44] md:text-6xl">
+      <h1 class="mt-5 text-4xl font-extrabold leading-[0.98] tracking-[-0.05em] text-[#192F44] md:text-6xl">
         Let’s Talk About Your Home.
       </h1>
 
       <div class="mx-auto mt-6 h-[3px] w-24 bg-[linear-gradient(90deg,#192F44_0%,#236476_55%,#7DAD3F_100%)]"></div>
 
-      <p class="ajs-reveal-up mx-auto mt-8 max-w-3xl text-base leading-8 text-[#192F44]/80 md:text-lg">
+      <p class="mx-auto mt-8 max-w-3xl text-base leading-8 text-[#192F44]/80 md:text-lg">
         Whether you have a project in mind or just want to explore your options, we’re here. Reach out and someone from our team will get back to you within 24–48 hours.
       </p>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- CONTACT + FORM -->
   <section class="relative overflow-hidden py-20 lg:py-24">

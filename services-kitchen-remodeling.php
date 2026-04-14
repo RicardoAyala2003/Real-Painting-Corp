@@ -11,7 +11,7 @@ get_header(); ?>
 <main class="rpc-service-page bg-[#f6f5f0] text-[#192F44] overflow-hidden">
 
   <?php
-    $hero_image = 'http://real-painting-corp.local/wp-content/uploads/2026/03/photo-1523198780259-41f275ab6e3d.avif';
+    $hero_image = 'http://real-painting-corp.local/wp-content/uploads/2026/04/KitchenRemodelingService.jpg-scaled.jpeg';
 
     $handle_items = [
       'Full demolition and site preparation',
@@ -37,6 +37,18 @@ get_header(); ?>
         'q' => 'What’s the typical investment?',
         'a' => 'Our kitchen remodels typically start around $30,000 for a complete transformation. Your estimate will be detailed, transparent, and include everything — no surprises after you sign.',
       ],
+    ];
+
+    $service_options = [
+      'Interior Painting',
+      'Exterior Painting',
+      'Kitchen Remodeling',
+      'Bathroom Remodeling',
+      'Cabinet Refinishing',
+      'Surface Repair & Prep',
+      'Pressure Washing',
+      'Commercial Painting',
+      'Other',
     ];
   ?>
 
@@ -133,6 +145,10 @@ get_header(); ?>
 
   <!-- WHAT WE HANDLE -->
   <section class="relative overflow-hidden bg-[#f6f5f0] py-20 lg:py-24">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(35,100,118,0.12),transparent_28%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(125,173,63,0.14),transparent_30%)]"></div>
+    <div class="absolute left-0 top-0 h-full w-[14%] bg-[linear-gradient(180deg,rgba(207,224,218,0.45)_0%,rgba(255,255,255,0)_100%)]"></div>
+
     <div class="relative mx-auto max-w-7xl px-4">
       <div class="ajs-reveal-up max-w-3xl">
         <p class="text-xs font-black uppercase tracking-[0.22em] text-[#236476]">
@@ -142,12 +158,17 @@ get_header(); ?>
         <h2 class="mt-5 text-3xl font-black leading-tight tracking-[-0.05em] text-[#192F44] md:text-5xl">
           Every phase of the project, handled with structure.
         </h2>
+
+        <div class="mt-6 h-[4px] w-28 bg-[linear-gradient(90deg,#192F44_0%,#236476_45%,#7DAD3F_100%)]"></div>
       </div>
 
       <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
         <?php foreach ($handle_items as $item) : ?>
-          <article class="ajs-reveal-stagger group relative overflow-hidden border border-[#192F44]/10 bg-white p-6 shadow-[0_16px_34px_rgba(25,47,68,0.06)]">
-            <div class="absolute inset-x-0 top-0 h-2 bg-[linear-gradient(90deg,#192F44_0%,#236476_50%,#7DAD3F_100%)]"></div>
+          <article class="ajs-reveal-stagger group relative overflow-hidden border border-[#192F44]/10 bg-[linear-gradient(180deg,#ffffff_0%,#fdfcf8_100%)] p-6 shadow-[0_18px_40px_rgba(25,47,68,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_26px_56px_rgba(25,47,68,0.12)]">
+            <div class="absolute inset-x-0 top-0 h-[3px] bg-[linear-gradient(90deg,#192F44_0%,#236476_40%,#7DAD3F_100%)]"></div>
+
+            <div class="absolute right-0 top-0 h-20 w-20 translate-x-[20%] -translate-y-[20%] rotate-12 bg-[#CFE0DA]/40"></div>
+            <div class="absolute bottom-0 left-0 h-16 w-16 -translate-x-[20%] translate-y-[20%] rotate-12 bg-[#7DAD3F]/12"></div>
 
             <div class="mb-6 mt-2 flex gap-2">
               <span class="h-8 w-8 border border-[#192F44]/10 bg-[#236476] transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110"></span>
@@ -165,7 +186,15 @@ get_header(); ?>
 
   <!-- WHAT TO EXPECT -->
   <section class="relative overflow-hidden border-y border-[#192F44]/10 bg-[#192F44] py-20 text-white lg:py-24">
-    <div class="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(135deg,rgba(255,255,255,0.35)_25%,transparent_25%,transparent_50%,rgba(255,255,255,0.35)_50%,rgba(255,255,255,0.35)_75%,transparent_75%,transparent)] [background-size:20px_20px]"></div>
+    <div
+      class="absolute inset-0 opacity-[0.5] mix-blend-multiply"
+      style="
+        background-image:url('http://real-painting-corp.local/wp-content/uploads/2026/04/Estampados-01-scaled.png');
+        background-repeat:repeat;
+        background-position:center;
+        background-size:300px auto;
+      "
+    ></div>
 
     <div class="relative mx-auto max-w-6xl px-4">
       <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
@@ -225,28 +254,92 @@ get_header(); ?>
   </section>
 
   <!-- FINAL CTA -->
-  <section class="relative isolate overflow-hidden bg-white py-20 text-[#192F44] lg:py-24 border-t border-[#192F44]/10">
+  <section class="relative isolate overflow-hidden bg-[#f6f5f0] py-20 text-[#192F44] lg:py-24">
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(35,100,118,0.08),transparent_28%)]"></div>
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(125,173,63,0.12),transparent_30%)]"></div>
 
-    <div class="relative mx-auto max-w-5xl px-4 text-center">
-      <h2 class="ajs-reveal-up text-3xl font-black leading-tight tracking-[-0.05em] md:text-5xl">
-        Ready to Transform Your Kitchen?
-      </h2>
+    <div class="relative mx-auto grid max-w-7xl gap-10 px-4 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+      <div class="lg:max-w-xl">
+        <h2 class="ajs-reveal-up text-3xl font-black leading-tight tracking-[-0.05em] md:text-5xl">
+          Ready to Transform Your Kitchen?
+        </h2>
 
-      <div class="ajs-reveal-up mt-8 flex flex-wrap items-center justify-center gap-3">
-        <a href="/contact-us"
-           class="rpc-service-btn rpc-service-btn-green inline-flex items-center justify-center px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-white">
-          Request a Free Estimate
-        </a>
+        <p class="ajs-reveal-up mt-6 max-w-3xl text-base leading-8 text-[#192F44]/80">
+          Let’s talk about the layout, finish level, and remodeling scope you want — and build a plan that changes how your home feels and functions every day.
+        </p>
 
-        <a href="tel:+19092326602"
-           class="rpc-service-btn rpc-service-btn-dark inline-flex items-center justify-center px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-white">
-          (909) 232-6602
-        </a>
+        <p class="ajs-reveal-up mt-6 max-w-2xl text-sm leading-7 text-[#192F44]/68">
+          Request your free estimate and we’ll help you define investment, timing, and next steps with clarity.
+        </p>
+
+        <div class="rpc-service-swipe rpc-service-swipe-light mt-10 max-w-2xl"></div>
       </div>
 
-      <div class="rpc-service-swipe rpc-service-swipe-light mx-auto mt-10 max-w-2xl"></div>
+      <div class="ajs-reveal-right">
+        <form class="rpc-estimate-form rpc-estimate-form--light" method="post" action="#">
+          <div class="rpc-estimate-form__header">
+            <p class="rpc-estimate-form__eyebrow">Request a Free Estimate</p>
+            <h3 class="rpc-estimate-form__title">Tell us about your project.</h3>
+            <p class="rpc-estimate-form__trust">
+              Licensed • Insured • Bonded — 40+ Years Combined Experience
+            </p>
+          </div>
+
+          <div class="rpc-estimate-form__grid">
+            <div class="rpc-estimate-form__field">
+              <label for="rpc-service-name">Full Name *</label>
+              <input id="rpc-service-name" type="text" name="full_name" placeholder="Your full name" required>
+            </div>
+
+            <div class="rpc-estimate-form__field">
+              <label for="rpc-service-phone">Phone Number *</label>
+              <input id="rpc-service-phone" type="tel" name="phone" placeholder="(909) 232-6602" required>
+            </div>
+
+            <div class="rpc-estimate-form__field">
+              <label for="rpc-service-email">Email Address *</label>
+              <input id="rpc-service-email" type="email" name="email" placeholder="you@example.com" required>
+            </div>
+
+            <div class="rpc-estimate-form__field">
+              <label for="rpc-service-needed">Service Needed *</label>
+              <select id="rpc-service-needed" name="service" required>
+                <option value="">Select a service</option>
+                <?php foreach ($service_options as $option) : ?>
+                  <option value="<?php echo esc_attr($option); ?>">
+                    <?php echo esc_html($option); ?>
+                  </option>
+                <?php endforeach; ?>
+              </select>
+            </div>
+
+            <div class="rpc-estimate-form__field rpc-estimate-form__field--full">
+              <label for="rpc-service-location">Property Address or City *</label>
+              <input id="rpc-service-location" type="text" name="location" placeholder="City or property address" required>
+            </div>
+
+            <div class="rpc-estimate-form__field rpc-estimate-form__field--full">
+              <label for="rpc-service-message">Tell Us About Your Project</label>
+              <textarea id="rpc-service-message" name="message" rows="4" placeholder="Scope, timing, layout goals, or anything else we should know."></textarea>
+            </div>
+          </div>
+
+          <p class="rpc-estimate-form__micro">
+            We’ll review your request and reach out within 24–48 hours. No pressure. Just clarity.
+          </p>
+
+          <label class="rpc-estimate-form__check">
+            <input type="checkbox" required>
+            <span>
+              I agree to the <a href="/privacy-policy">Privacy Policy</a> and <a href="/terms">Terms &amp; Conditions</a>, and consent to be contacted regarding my request.
+            </span>
+          </label>
+
+          <button type="submit" class="rpc-service-btn rpc-service-btn-green rpc-estimate-form__submit">
+            Request My Estimate
+          </button>
+        </form>
+      </div>
     </div>
   </section>
 </main>
@@ -336,6 +429,151 @@ get_header(); ?>
     background: linear-gradient(90deg, #CFE0DA 0%, #ffffff 36%, #CFE0DA 58%, #7DAD3F 100%);
   }
 
+  .rpc-estimate-form {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.14);
+    background: rgba(255,255,255,0.09);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 24px 60px rgba(0,0,0,0.20);
+    padding: 1.25rem;
+  }
+
+  .rpc-estimate-form::after {
+    content: "";
+    position: absolute;
+    right: -60px;
+    top: -60px;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(255,255,255,0.12), transparent 72%);
+    pointer-events: none;
+  }
+
+  .rpc-estimate-form--light {
+    border-color: rgba(25,47,68,0.10);
+    background: rgba(255,255,255,0.84);
+    box-shadow: 0 22px 46px rgba(25,47,68,0.10);
+  }
+
+  .rpc-estimate-form__header {
+    margin-bottom: 1rem;
+  }
+
+  .rpc-estimate-form__eyebrow {
+    margin: 0;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(25,47,68,0.68);
+  }
+
+  .rpc-estimate-form__title {
+    margin: 0.55rem 0 0;
+    font-size: 1.35rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: #192F44;
+  }
+
+  .rpc-estimate-form__trust {
+    margin-top: 0.6rem;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(25,47,68,0.56);
+  }
+
+  .rpc-estimate-form__grid {
+    display: grid;
+    gap: 0.9rem;
+    grid-template-columns: 1fr;
+  }
+
+  .rpc-estimate-form__field {
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .rpc-estimate-form__field label {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(25,47,68,0.78);
+  }
+
+  .rpc-estimate-form__field input,
+  .rpc-estimate-form__field select,
+  .rpc-estimate-form__field textarea {
+    width: 100%;
+    min-height: 50px;
+    border: 1px solid rgba(25,47,68,0.10);
+    background: rgba(246,245,240,0.82);
+    padding: 0.9rem 1rem;
+    font-size: 0.95rem;
+    color: #192F44;
+    outline: none;
+    transition: border-color .2s ease, background-color .2s ease, box-shadow .2s ease;
+  }
+
+  .rpc-estimate-form__field textarea {
+    min-height: 122px;
+    resize: vertical;
+  }
+
+  .rpc-estimate-form__field input::placeholder,
+  .rpc-estimate-form__field textarea::placeholder {
+    color: rgba(25,47,68,0.52);
+  }
+
+  .rpc-estimate-form__field input:focus,
+  .rpc-estimate-form__field select:focus,
+  .rpc-estimate-form__field textarea:focus {
+    border-color: rgba(125,173,63,0.65);
+    box-shadow: 0 0 0 3px rgba(125,173,63,0.16);
+    background: #fff;
+  }
+
+  .rpc-estimate-form__field--full {
+    grid-column: 1 / -1;
+  }
+
+  .rpc-estimate-form__micro {
+    font-size: 0.75rem;
+    line-height: 1.6;
+    color: rgba(25,47,68,0.64);
+    margin-top: 0.9rem;
+  }
+
+  .rpc-estimate-form__check {
+    display: flex;
+    gap: 0.7rem;
+    margin-top: 1rem;
+    font-size: 0.78rem;
+    line-height: 1.6;
+    color: rgba(25,47,68,0.72);
+  }
+
+  .rpc-estimate-form__check input {
+    margin-top: 0.15rem;
+    accent-color: #7DAD3F;
+  }
+
+  .rpc-estimate-form__check a {
+    color: #236476;
+    text-decoration: underline;
+  }
+
+  .rpc-estimate-form__submit {
+    width: 100%;
+    margin-top: 1rem;
+    min-height: 54px;
+  }
+
   .ajs-reveal-up,
   .ajs-reveal-left,
   .ajs-reveal-right,
@@ -377,6 +615,12 @@ get_header(); ?>
   @keyframes rpcServiceHeroZoom {
     0% { transform: scale(1.08); }
     100% { transform: scale(1); }
+  }
+
+  @media (min-width: 768px) {
+    .rpc-estimate-form__grid {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {

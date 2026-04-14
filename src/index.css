@@ -72,7 +72,31 @@ h6,
   color: var(--rpc-white);
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
+/* CENTER GEO TAG */
+.rpc-topbar__center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+}
 
+.rpc-topbar__geo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--rpc-white);
+  opacity: 0.9;
+}
+
+.rpc-topbar__geo svg {
+  width: 16px;
+  height: 16px;
+}
 .rpc-topbar__inner {
   display: flex;
   align-items: center;

@@ -53,8 +53,9 @@ get_header(); ?>
 
   <!-- HERO -->
   <section class="relative overflow-hidden border-b border-[#192F44]/10 bg-[linear-gradient(180deg,#ffffff_0%,#f6f5f0_100%)] py-16 lg:py-24">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(207,224,218,0.50),transparent_28%)]"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(35,100,118,0.08),transparent_30%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(207,224,218,0.72),transparent_28%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(35,100,118,0.14),transparent_30%)]"></div>
+    <div class="absolute inset-y-0 left-0 w-[18%] bg-[linear-gradient(180deg,rgba(35,100,118,0.08)_0%,rgba(255,255,255,0)_100%)]"></div>
 
     <div class="relative mx-auto max-w-5xl px-4 text-center">
       <p class="ajs-reveal-up text-xs font-black uppercase tracking-[0.24em] text-[#236476]">
@@ -75,7 +76,8 @@ get_header(); ?>
 
   <!-- GALLERY GRID -->
   <section class="relative overflow-hidden py-20 lg:py-24">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(207,224,218,0.28),transparent_24%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(207,224,218,0.34),transparent_24%)]"></div>
+    <div class="absolute inset-y-0 right-0 w-[16%] bg-[linear-gradient(180deg,rgba(125,173,63,0.08)_0%,rgba(255,255,255,0)_100%)]"></div>
 
     <div class="relative mx-auto max-w-7xl px-4">
       <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -89,7 +91,7 @@ get_header(); ?>
                   alt="Before project image"
                   class="rpc-gallery-image h-full w-full object-cover"
                 >
-                <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(25,47,68,0.05)_0%,rgba(25,47,68,0.18)_100%)]"></div>
+                <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(25,47,68,0.04)_0%,rgba(25,47,68,0.20)_100%)]"></div>
 
                 <span class="absolute left-4 top-4 bg-[#192F44] px-3 py-1 text-[10px] font-black uppercase tracking-[0.14em] text-white">
                   Before
@@ -102,7 +104,7 @@ get_header(); ?>
                   alt="After project image"
                   class="rpc-gallery-image h-full w-full object-cover"
                 >
-                <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(125,173,63,0.04)_0%,rgba(25,47,68,0.14)_100%)]"></div>
+                <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(125,173,63,0.06)_0%,rgba(35,100,118,0.18)_100%)]"></div>
 
                 <span class="absolute right-4 top-4 bg-[#7DAD3F] px-3 py-1 text-[10px] font-black uppercase tracking-[0.14em] text-white">
                   After
@@ -118,8 +120,9 @@ get_header(); ?>
 
   <!-- FINAL CTA -->
   <section class="relative isolate overflow-hidden border-t border-[#192F44]/10 bg-white py-20 text-[#192F44] lg:py-24">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(35,100,118,0.08),transparent_28%)]"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(125,173,63,0.10),transparent_30%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(35,100,118,0.12),transparent_28%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(125,173,63,0.14),transparent_30%)]"></div>
+    <div class="absolute left-0 top-0 h-full w-[14%] bg-[linear-gradient(180deg,rgba(207,224,218,0.32)_0%,rgba(255,255,255,0)_100%)]"></div>
 
     <div class="relative mx-auto max-w-5xl px-4 text-center">
       <h2 class="ajs-reveal-up text-3xl font-black leading-tight tracking-[-0.05em] md:text-5xl">

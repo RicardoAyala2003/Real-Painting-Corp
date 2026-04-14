@@ -11,26 +11,163 @@ get_header(); ?>
 <main class="rpc-paint-home bg-[#f6f5f0] text-[#192F44] overflow-hidden">
 
   <?php
-    $hero_image = 'http://real-painting-corp.local/wp-content/uploads/2026/04/Painting-scaled.jpg';
+    $hero_images = [
+      'http://real-painting-corp.local/wp-content/uploads/2026/04/Painting-scaled.jpg',
+      'http://real-painting-corp.local/wp-content/uploads/2026/04/RealPaintingHero3.jpg-scaled.jpeg',
+      'http://real-painting-corp.local/wp-content/uploads/2026/04/RealPaintingHero2.jpg-scaled.jpeg',
+    ];
 
-    // Temporary fallback set for gallery until you replace with 6–8 real project photos / before-after pairs.
-    $gallery_images = [
-      'http://real-painting-corp.local/wp-content/uploads/2026/04/houses-in-suburb-at-summer-in-the-north-america-l-2026-03-26-11-33-50-utc.jpg-scaled.jpeg',
-      'http://real-painting-corp.local/wp-content/uploads/2026/04/houses-in-suburb-at-summer-in-the-north-america-l-2026-03-26-11-33-50-utc.jpg-scaled.jpeg',
-      'http://real-painting-corp.local/wp-content/uploads/2026/04/houses-in-suburb-at-summer-in-the-north-america-l-2026-03-26-11-33-50-utc.jpg-scaled.jpeg',
-      'http://real-painting-corp.local/wp-content/uploads/2026/04/houses-in-suburb-at-summer-in-the-north-america-l-2026-03-26-11-33-50-utc.jpg-scaled.jpeg',
-      'http://real-painting-corp.local/wp-content/uploads/2026/04/houses-in-suburb-at-summer-in-the-north-america-l-2026-03-26-11-33-50-utc.jpg-scaled.jpeg',
-      'http://real-painting-corp.local/wp-content/uploads/2026/04/houses-in-suburb-at-summer-in-the-north-america-l-2026-03-26-11-33-50-utc.jpg-scaled.jpeg',
+    $service_options = [
+      'Interior Painting',
+      'Exterior Painting',
+      'Kitchen Remodeling',
+      'Bathroom Remodeling',
+      'Cabinet Refinishing',
+      'Surface Repair & Prep',
+      'Pressure Washing',
+      'Commercial Painting',
+      'Other',
+    ];
+
+    $render_estimate_form = function($form_class = '', $button_class = 'rpc-paint-btn rpc-paint-btn-green') use ($service_options) {
+      ob_start(); ?>
+      <form class="rpc-estimate-form <?php echo esc_attr($form_class); ?>" method="post" action="#">
+        <div class="rpc-estimate-form__header">
+          <p class="rpc-estimate-form__eyebrow">Request a Free Estimate</p>
+          <h3 class="rpc-estimate-form__title">Tell us about your project.</h3>
+        </div>
+
+        <div class="rpc-estimate-form__grid">
+          <div class="rpc-estimate-form__field">
+            <label for="<?php echo esc_attr(uniqid('name_')); ?>">Full Name *</label>
+            <input id="<?php echo esc_attr(uniqid('name_')); ?>" type="text" name="full_name" placeholder="Your full name" required>
+          </div>
+
+          <div class="rpc-estimate-form__field">
+            <label for="<?php echo esc_attr(uniqid('phone_')); ?>">Phone Number *</label>
+            <input id="<?php echo esc_attr(uniqid('phone_')); ?>" type="tel" name="phone" placeholder="(909) 232-6602" required>
+          </div>
+
+          <div class="rpc-estimate-form__field">
+            <label for="<?php echo esc_attr(uniqid('email_')); ?>">Email Address *</label>
+            <input id="<?php echo esc_attr(uniqid('email_')); ?>" type="email" name="email" placeholder="you@example.com" required>
+          </div>
+
+          <div class="rpc-estimate-form__field">
+            <label for="<?php echo esc_attr(uniqid('service_')); ?>">Service Needed *</label>
+            <select id="<?php echo esc_attr(uniqid('service_')); ?>" name="service" required>
+              <option value="">Select a service</option>
+              <?php foreach ($service_options as $option) : ?>
+                <option value="<?php echo esc_attr($option); ?>"><?php echo esc_html($option); ?></option>
+              <?php endforeach; ?>
+            </select>
+          </div>
+
+          <div class="rpc-estimate-form__field rpc-estimate-form__field--full">
+            <label for="<?php echo esc_attr(uniqid('city_')); ?>">Property Address or City *</label>
+            <input id="<?php echo esc_attr(uniqid('city_')); ?>" type="text" name="location" placeholder="City or property address" required>
+          </div>
+
+          <div class="rpc-estimate-form__field rpc-estimate-form__field--full">
+            <label for="<?php echo esc_attr(uniqid('message_')); ?>">Tell Us About Your Project</label>
+            <textarea id="<?php echo esc_attr(uniqid('message_')); ?>" name="message" rows="4" placeholder="Scope, timing, type of work, or anything else we should know."></textarea>
+          </div>
+        </div>
+
+        <label class="rpc-estimate-form__check">
+          <input type="checkbox" required>
+          <span>I agree to the Privacy Policy and Terms &amp; Conditions.</span>
+        </label>
+
+        <button type="submit" class="<?php echo esc_attr($button_class); ?> rpc-estimate-form__submit">
+          Submit Request
+        </button>
+      </form>
+      <?php
+      return ob_get_clean();
+    };
+
+    $services = [
+      [
+        'title' => 'Interior Painting',
+        'copy'  => 'Walls, ceilings, trim, and accent work — with full surface preparation and daily cleanup.',
+        'link'  => '/services/interior-painting',
+        'tone'  => '#192F44',
+        'cta'   => 'Explore Interior Painting →',
+        'image' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/InteriorPaintingService.jpg-scaled.jpeg',
+      ],
+      [
+        'title' => 'Exterior Painting',
+        'copy'  => 'Complete exterior coatings built for Southern California sun, wind, and climate.',
+        'link'  => '/services/exterior-painting',
+        'tone'  => '#236476',
+        'cta'   => 'Explore Exterior Painting →',
+        'image' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/ExteriorPaintingService.jpg-scaled.jpeg',
+      ],
+      [
+        'title' => 'Kitchen Remodeling',
+        'copy'  => 'Full kitchen transformations — layout, cabinets, countertops, tile, and finishing.',
+        'link'  => '/services/kitchen-remodeling',
+        'tone'  => '#4A6C2F',
+        'cta'   => 'Explore Kitchen Remodeling →',
+        'image' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/KitchenRemodelingService.jpg-scaled.jpeg',
+      ],
+      [
+        'title' => 'Bathroom Remodeling',
+        'copy'  => 'Shower conversions, tile, vanities, and modern upgrades with lasting value.',
+        'link'  => '/services/bathroom-remodeling',
+        'tone'  => '#7DAD3F',
+        'cta'   => 'Explore Bathroom Remodeling →',
+        'image' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/BathroomRemodelingService.jpg-scaled.jpeg',
+      ],
+      [
+        'title' => 'Cabinet Refinishing & Staining',
+        'copy'  => 'A dramatic kitchen refresh without the cost of full replacement.',
+        'link'  => '/services/cabinet-refinishing-staining',
+        'tone'  => '#192F44',
+        'cta'   => 'Explore Cabinet Refinishing →',
+        'image' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/CabinetRefinishingStainingService.jpg-scaled.jpeg',
+      ],
+      [
+        'title' => 'Surface Repair & Preparation',
+        'copy'  => 'Drywall, stucco, texture, trim, and the prep work behind every lasting finish.',
+        'link'  => '/services/surface-repair-preparation',
+        'tone'  => '#236476',
+        'cta'   => 'Explore Surface Repair →',
+        'image' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/SurfaceReparePreparationService.jpg-scaled.jpeg',
+      ],
+      [
+        'title' => 'Pressure Washing',
+        'copy'  => 'Deep cleaning for exterior surfaces, curb appeal, and pre-paint preparation.',
+        'link'  => '/services/pressure-washing',
+        'tone'  => '#7DAD3F',
+        'cta'   => 'Explore Pressure Washing →',
+        'image' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/PressureWashingService.jpg-scaled.jpeg',
+      ],
+      [
+        'title' => 'Commercial Painting',
+        'copy'  => 'Professional results for offices, retail, and commercial properties.',
+        'link'  => '/services/commercial-painting',
+        'tone'  => '#4A6C2F',
+        'cta'   => 'Explore Commercial Painting →',
+        'image' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/CommercialPaintingService.jpg-scaled.jpeg',
+      ],
     ];
   ?>
 
   <!-- HERO FULL WIDTH -->
-  <section class="relative h-[90vh] min-h-[640px] w-full overflow-hidden">
-    <img
-      src="<?php echo esc_url($hero_image); ?>"
-      alt="Premium residential painting project"
-      class="rpc-hero-image absolute inset-0 h-full w-full object-cover"
-    >
+  <section class="relative min-h-[760px] w-full overflow-hidden lg:min-h-[820px]">
+    <div class="rpc-hero-carousel absolute inset-0">
+      <?php foreach ($hero_images as $index => $image) : ?>
+        <div class="rpc-hero-slide<?php echo $index === 0 ? ' is-active' : ''; ?>">
+          <img
+            src="<?php echo esc_url($image); ?>"
+            alt="Premium residential painting project"
+            class="rpc-hero-slide__image"
+          >
+        </div>
+      <?php endforeach; ?>
+    </div>
 
     <div class="absolute inset-0 bg-[#192F44]/70"></div>
 
@@ -39,64 +176,90 @@ get_header(); ?>
       style="background-image:url('https://www.transparenttextures.com/patterns/brushed-alum.png')">
     </div>
 
-    <div class="relative z-10 mx-auto flex h-full max-w-6xl flex-col items-center justify-center px-4 text-center">
-      <p class="ajs-reveal-up text-xs font-black uppercase tracking-[0.28em] text-[#CFE0DA]">
-        Real Painting Corp
-      </p>
+    <div class="relative z-10 mx-auto grid min-h-[760px] max-w-7xl gap-10 px-4 py-20 lg:min-h-[820px] lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-14">
+      <div class="text-center lg:text-left">
+        <p class="ajs-reveal-up text-xs font-black uppercase tracking-[0.28em] text-[#CFE0DA]">
+          Real Painting Corp
+        </p>
 
-      <p class="ajs-reveal-up mt-4 text-sm font-black uppercase tracking-[0.24em] text-white/82 md:text-base">
-        Be Real. Build Real.
-      </p>
+        <p class="ajs-reveal-up mt-4 text-sm font-black uppercase tracking-[0.24em] text-white/82 md:text-base">
+          Be Real. Build Real.
+        </p>
 
-      <h1 class="ajs-reveal-up mt-6 text-4xl font-extrabold leading-[1.05] tracking-[-0.04em] text-white md:text-6xl">
-        When We Enter Your Home,<br class="hidden md:block">
-        the Stress Leaves.
-      </h1>
+        <h1 class="ajs-reveal-up mt-6 text-4xl font-extrabold leading-[1.05] tracking-[-0.04em] text-white md:text-6xl">
+          When We Enter Your Home,<br class="hidden md:block">
+          the Stress Leaves.
+        </h1>
 
-      <p class="ajs-reveal-up mt-6 max-w-2xl text-base leading-7 text-white/85 md:text-lg">
-        Premium painting and remodeling across Southern California — delivered with clean execution,
-        schedule discipline, and the certainty your home deserves.
-      </p>
+        <p class="ajs-reveal-up mt-6 max-w-2xl text-base leading-7 text-white/85 md:text-lg lg:max-w-xl">
+          Premium painting and remodeling across Southern California — delivered with clean execution,
+          schedule discipline, and the certainty your home deserves.
+        </p>
 
-      <div class="ajs-reveal-up mt-10 flex flex-col gap-4 sm:flex-row">
-        <a href="/contact-us"
-           class="rpc-paint-btn rpc-paint-btn-green inline-flex items-center justify-center px-8 py-4 text-sm font-black uppercase tracking-[0.14em] text-white">
-          Request a Free Estimate
-        </a>
+        <div class="ajs-reveal-up mt-10 flex flex-col gap-4 sm:flex-row lg:justify-start">
+          <a href="/contact-us"
+             class="rpc-paint-btn rpc-paint-btn-green inline-flex items-center justify-center px-8 py-4 text-sm font-black uppercase tracking-[0.14em] text-white">
+            Request a Free Estimate
+          </a>
 
-        <a href="#services"
-           class="rpc-paint-btn rpc-paint-btn-outline inline-flex items-center justify-center px-8 py-4 text-sm font-black uppercase tracking-[0.14em] text-white">
-          Explore Our Services
-        </a>
+          <a href="#services"
+             class="rpc-paint-btn rpc-paint-btn-outline inline-flex items-center justify-center px-8 py-4 text-sm font-black uppercase tracking-[0.14em] text-white">
+            Explore Our Services
+          </a>
+        </div>
+      </div>
+
+      <div class="ajs-reveal-right">
+        <?php echo $render_estimate_form('rpc-estimate-form--hero', 'rpc-paint-btn rpc-paint-btn-green'); ?>
       </div>
     </div>
-
-    <div class="absolute bottom-0 left-0 h-32 w-full bg-gradient-to-t from-white to-transparent"></div>
   </section>
 
-  <!-- TRUST BAR -->
-  <section class="border-b border-[#192F44]/10 bg-white">
-    <div class="mx-auto max-w-7xl px-4 py-5">
-      <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-        <div class="ajs-reveal-up flex items-start gap-3">
-          <span class="mt-1 block h-3 w-3 bg-[#192F44]"></span>
-          <p class="text-sm font-extrabold leading-6 text-[#192F44]">C-33 Licensed · Insured · Bonded</p>
-        </div>
+  <!-- MOVING TRUST RIBBON -->
+  <section class="rpc-marquee border-b border-[#192F44]/10 bg-white">
+    <div class="rpc-marquee__track">
+      <div class="rpc-marquee__group">
+        <span class="rpc-marquee__item">
+          <span class="rpc-marquee__dot bg-[#192F44]"></span>
+          C-33 Licensed · Insured · Bonded
+        </span>
 
-        <div class="ajs-reveal-up flex items-start gap-3">
-          <span class="mt-1 block h-3 w-3 bg-[#236476]"></span>
-          <p class="text-sm font-extrabold leading-6 text-[#192F44]">40+ Years Combined Experience</p>
-        </div>
+        <span class="rpc-marquee__item">
+          <span class="rpc-marquee__dot bg-[#236476]"></span>
+          40+ Years Combined Experience
+        </span>
 
-        <div class="ajs-reveal-up flex items-start gap-3">
-          <span class="mt-1 block h-3 w-3 bg-[#7DAD3F]"></span>
-          <p class="text-sm font-extrabold leading-6 text-[#192F44]">24–48 Hour Response Time</p>
-        </div>
+        <span class="rpc-marquee__item">
+          <span class="rpc-marquee__dot bg-[#7DAD3F]"></span>
+          24–48 Hour Response Time
+        </span>
 
-        <div class="ajs-reveal-up flex items-start gap-3">
-          <span class="mt-1 block h-3 w-3 bg-[#4A6C2F]"></span>
-          <p class="text-sm font-extrabold leading-6 text-[#192F44]">Serving OC · LA · Riverside · San Bernardino</p>
-        </div>
+        <span class="rpc-marquee__item">
+          <span class="rpc-marquee__dot bg-[#4A6C2F]"></span>
+          Serving OC · LA · Riverside · San Bernardino
+        </span>
+      </div>
+
+      <div class="rpc-marquee__group" aria-hidden="true">
+        <span class="rpc-marquee__item">
+          <span class="rpc-marquee__dot bg-[#192F44]"></span>
+          C-33 Licensed · Insured · Bonded
+        </span>
+
+        <span class="rpc-marquee__item">
+          <span class="rpc-marquee__dot bg-[#236476]"></span>
+          40+ Years Combined Experience
+        </span>
+
+        <span class="rpc-marquee__item">
+          <span class="rpc-marquee__dot bg-[#7DAD3F]"></span>
+          24–48 Hour Response Time
+        </span>
+
+        <span class="rpc-marquee__item">
+          <span class="rpc-marquee__dot bg-[#4A6C2F]"></span>
+          Serving OC · LA · Riverside · San Bernardino
+        </span>
       </div>
     </div>
   </section>
@@ -160,38 +323,32 @@ get_header(); ?>
       </div>
 
       <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-        <?php
-        $services = [
-          ['title' => 'Interior Painting', 'copy' => 'Walls, ceilings, trim, and accent work — with full surface preparation, furniture protection, and daily cleanup as standard. The finish your home deserves.', 'link' => '/services/interior-painting', 'tone' => '#192F44', 'cta' => 'Explore Interior Painting →'],
-          ['title' => 'Exterior Painting', 'copy' => 'Complete exterior coatings for stucco, siding, and trim — engineered for Southern California’s sun, wind, and climate. Protection that performs.', 'link' => '/services/exterior-painting', 'tone' => '#236476', 'cta' => 'Explore Exterior Painting →'],
-          ['title' => 'Kitchen Remodeling', 'copy' => 'Full kitchen transformations — layout, cabinets, countertops, tile, and finishing. The project that changes how your family lives.', 'link' => '/services/kitchen-remodeling', 'tone' => '#4A6C2F', 'cta' => 'Explore Kitchen Remodeling →'],
-          ['title' => 'Bathroom Remodeling', 'copy' => 'Shower conversions, tile, vanities, and modern upgrades that add comfort, style, and lasting value to your home.', 'link' => '/services/bathroom-remodeling', 'tone' => '#7DAD3F', 'cta' => 'Explore Bathroom Remodeling →'],
-          ['title' => 'Cabinet Refinishing & Staining', 'copy' => 'Refresh the look of your kitchen without the cost of full replacement. Professional refinishing that transforms the space.', 'link' => '/services/cabinet-refinishing-staining', 'tone' => '#192F44', 'cta' => 'Explore Cabinet Refinishing →'],
-          ['title' => 'Surface Repair & Preparation', 'copy' => 'Drywall, stucco, texture, acoustic ceiling removal, baseboards, doors, and windows — the foundation behind every lasting finish.', 'link' => '/services/surface-repair-preparation', 'tone' => '#236476', 'cta' => 'Explore Surface Repair →'],
-          ['title' => 'Pressure Washing', 'copy' => 'Deep cleaning for driveways, patios, walkways, and exterior surfaces — restoring your property’s appearance and preparing it for what’s next.', 'link' => '/services/pressure-washing', 'tone' => '#7DAD3F', 'cta' => 'Explore Pressure Washing →'],
-          ['title' => 'Commercial Painting', 'copy' => 'Professional results for offices, retail, and commercial properties — executed on schedule with minimal disruption to your operations.', 'link' => '/services/commercial-painting', 'tone' => '#4A6C2F', 'cta' => 'Explore Commercial Painting →'],
-        ];
+        <?php foreach ($services as $service) : ?>
+          <article class="ajs-reveal-stagger group overflow-hidden border border-[#192F44]/10 bg-[#fdfcf8] shadow-[0_16px_34px_rgba(25,47,68,0.06)]">
+            <a href="<?php echo esc_url($service['link']); ?>" class="block">
+              <div class="relative h-[220px] overflow-hidden">
+                <img
+                  src="<?php echo esc_url($service['image']); ?>"
+                  alt="<?php echo esc_attr($service['title']); ?>"
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.04]"
+                >
+                <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(25,47,68,0.06)_0%,rgba(25,47,68,0.16)_100%)]"></div>
+                <div class="absolute inset-x-0 top-0 h-2" style="background: <?php echo esc_attr($service['tone']); ?>;"></div>
+              </div>
 
-        foreach ($services as $service) : ?>
-          <article class="ajs-reveal-stagger group relative overflow-hidden border border-[#192F44]/10 bg-[#fdfcf8] p-6 shadow-[0_16px_34px_rgba(25,47,68,0.06)]">
-            <div class="absolute inset-x-0 top-0 h-2 transition-all duration-500 group-hover:h-3" style="background: <?php echo esc_attr($service['tone']); ?>;"></div>
+              <div class="p-6">
+                <h3 class="text-xl font-black tracking-[-0.03em] text-[#192F44]">
+                  <?php echo esc_html($service['title']); ?>
+                </h3>
 
-            <div class="mb-6 mt-2 flex gap-2">
-              <span class="h-8 w-8 border border-[#192F44]/10 transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110" style="background: <?php echo esc_attr($service['tone']); ?>;"></span>
-              <span class="h-8 w-8 border border-[#192F44]/10 bg-[#CFE0DA] transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-110"></span>
-            </div>
+                <p class="mt-4 text-[15px] leading-7 text-[#192F44]/76">
+                  <?php echo esc_html($service['copy']); ?>
+                </p>
 
-            <h3 class="text-xl font-black tracking-[-0.03em] text-[#192F44]">
-              <?php echo esc_html($service['title']); ?>
-            </h3>
-
-            <p class="mt-4 text-[15px] leading-8 text-[#192F44]/76">
-              <?php echo esc_html($service['copy']); ?>
-            </p>
-
-            <a href="<?php echo esc_url($service['link']); ?>"
-               class="mt-6 inline-flex items-center gap-2 text-sm font-black uppercase tracking-[0.12em] text-[#236476] transition hover:gap-3">
-              <?php echo esc_html($service['cta']); ?>
+                <span class="mt-6 inline-flex items-center gap-2 text-sm font-black uppercase tracking-[0.12em] text-[#236476] transition group-hover:gap-3">
+                  <?php echo esc_html($service['cta']); ?>
+                </span>
+              </div>
             </a>
           </article>
         <?php endforeach; ?>
@@ -199,58 +356,61 @@ get_header(); ?>
     </div>
   </section>
 
-  <!-- WHY REAL PAINTING -->
-  <section class="relative overflow-hidden bg-[#192F44] py-20 text-white lg:py-24">
-    <div class="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(135deg,rgba(255,255,255,0.35)_25%,transparent_25%,transparent_50%,rgba(255,255,255,0.35)_50%,rgba(255,255,255,0.35)_75%,transparent_75%,transparent)] [background-size:20px_20px]"></div>
+ <!-- WHY REAL PAINTING -->
+<section class="rpc-why-section relative overflow-hidden bg-[#192F44] py-20 text-white lg:py-24">
+<div
+  class="absolute inset-0 rpc-why-stamp"
+  style="background-image: url('http://real-painting-corp.local/wp-content/uploads/2026/04/Estampados-01-scaled.png');">
+</div>
 
-    <div class="relative mx-auto max-w-7xl px-4">
-      <div class="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
-        <div class="ajs-reveal-left">
-          <p class="text-xs font-black uppercase tracking-[0.22em] text-[#CFE0DA]">
-            Why Real Painting
+  <div class="relative z-10 mx-auto max-w-7xl px-4">
+    <div class="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
+      <div class="ajs-reveal-left">
+        <p class="text-xs font-black uppercase tracking-[0.22em] text-[#CFE0DA]">
+          Why Real Painting
+        </p>
+
+        <h2 class="mt-5 text-3xl font-black leading-tight tracking-[-0.05em] md:text-5xl">
+          In an Industry Full of Broken Promises, We Deliver Certainty.
+        </h2>
+
+        <p class="mt-6 max-w-md text-base leading-8 text-white/76">
+          The most common complaints homeowners have about contractors are irresponsibility, lack of cleanliness, and broken timelines. We built our entire company around solving those three problems.
+        </p>
+      </div>
+
+      <div class="grid gap-5 md:grid-cols-2">
+        <article class="ajs-reveal-up border border-white/12 bg-white/6 p-6 backdrop-blur-sm">
+          <h3 class="text-xl font-black">Clean Site Protocol</h3>
+          <p class="mt-4 text-[15px] leading-8 text-white/80">
+            We protect every surface before we start — floors, furniture, fixtures. When we leave each day, your home is cleaner than when we arrived. This isn’t a promise we make at the estimate. It’s what you’ll see on day one.
           </p>
+        </article>
 
-          <h2 class="mt-5 text-3xl font-black leading-tight tracking-[-0.05em] md:text-5xl">
-            In an Industry Full of Broken Promises, We Deliver Certainty.
-          </h2>
-
-          <p class="mt-6 max-w-md text-base leading-8 text-white/76">
-            The most common complaints homeowners have about contractors are irresponsibility, lack of cleanliness, and broken timelines. We built our entire company around solving those three problems.
+        <article class="ajs-reveal-up border border-white/12 bg-white/6 p-6 backdrop-blur-sm">
+          <h3 class="text-xl font-black">Schedule Discipline</h3>
+          <p class="mt-4 text-[15px] leading-8 text-white/80">
+            We arrive when we say. We finish when we promise. Your time matters to us as much as the final result. Every project has a defined timeline, and we hold to it.
           </p>
-        </div>
+        </article>
 
-        <div class="grid gap-5 md:grid-cols-2">
-          <article class="ajs-reveal-up border border-white/12 bg-white/6 p-6 backdrop-blur-sm">
-            <h3 class="text-xl font-black">Clean Site Protocol</h3>
-            <p class="mt-4 text-[15px] leading-8 text-white/80">
-              We protect every surface before we start — floors, furniture, fixtures. When we leave each day, your home is cleaner than when we arrived. This isn’t a promise we make at the estimate. It’s what you’ll see on day one.
-            </p>
-          </article>
+        <article class="ajs-reveal-up border border-white/12 bg-white/6 p-6 backdrop-blur-sm">
+          <h3 class="text-xl font-black">Aesthetic Certainty</h3>
+          <p class="mt-4 text-[15px] leading-8 text-white/80">
+            You’ll know exactly what the result will look like before we begin. Our experience in color, finish, and design means no guesswork — just a result that makes you proud of your home.
+          </p>
+        </article>
 
-          <article class="ajs-reveal-up border border-white/12 bg-white/6 p-6 backdrop-blur-sm">
-            <h3 class="text-xl font-black">Schedule Discipline</h3>
-            <p class="mt-4 text-[15px] leading-8 text-white/80">
-              We arrive when we say. We finish when we promise. Your time matters to us as much as the final result. Every project has a defined timeline, and we hold to it.
-            </p>
-          </article>
-
-          <article class="ajs-reveal-up border border-white/12 bg-white/6 p-6 backdrop-blur-sm">
-            <h3 class="text-xl font-black">Aesthetic Certainty</h3>
-            <p class="mt-4 text-[15px] leading-8 text-white/80">
-              You’ll know exactly what the result will look like before we begin. Our experience in color, finish, and design means no guesswork — just a result that makes you proud of your home.
-            </p>
-          </article>
-
-          <article class="ajs-reveal-up border border-[#7DAD3F]/30 bg-[linear-gradient(135deg,rgba(125,173,63,0.18),rgba(74,108,47,0.36))] p-6">
-            <h3 class="text-xl font-black">Licensed, Insured & Bonded</h3>
-            <p class="mt-4 text-[15px] leading-8 text-white/86">
-              C-33 licensed, General Liability, Workers’ Compensation, and bonded. This eliminates over 60% of informal competitors who operate without protection. Your home and your investment are fully covered.
-            </p>
-          </article>
-        </div>
+        <article class="ajs-reveal-up border border-[#7DAD3F]/30 bg-[linear-gradient(135deg,rgba(125,173,63,0.18),rgba(74,108,47,0.36))] p-6">
+          <h3 class="text-xl font-black">Licensed, Insured & Bonded</h3>
+          <p class="mt-4 text-[15px] leading-8 text-white/86">
+            C-33 licensed, General Liability, Workers’ Compensation, and bonded. This eliminates over 60% of informal competitors who operate without protection. Your home and your investment are fully covered.
+          </p>
+        </article>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- HOW WE WORK -->
   <section class="bg-[#f6f5f0] py-20 lg:py-24">
@@ -467,6 +627,7 @@ get_header(); ?>
       </div>
     </div>
   </section>
+
   <!-- SERVICE AREAS -->
   <section class="border-y border-[#192F44]/10 bg-white py-20 lg:py-24">
     <div class="mx-auto max-w-7xl px-4">
@@ -506,39 +667,40 @@ get_header(); ?>
     </div>
   </section>
 
-<!-- FINAL CTA -->
-<section class="relative isolate overflow-hidden bg-[#f6f5f0] py-20 text-[#192F44] lg:py-24">
-  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(35,100,118,0.08),transparent_28%)]"></div>
-  <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(125,173,63,0.12),transparent_30%)]"></div>
+  <!-- FINAL CTA -->
+  <section class="relative isolate overflow-hidden bg-[#f6f5f0] py-20 text-[#192F44] lg:py-24">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(35,100,118,0.08),transparent_28%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(125,173,63,0.12),transparent_30%)]"></div>
 
-  <div class="relative mx-auto max-w-5xl px-4 text-center">
-    <p class="ajs-reveal-up text-xs font-black uppercase tracking-[0.22em] text-[#236476]">
-      Final CTA
-    </p>
+    <div class="relative mx-auto grid max-w-7xl gap-10 px-4 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+      <div class="lg:max-w-xl">
+        <p class="ajs-reveal-up text-xs font-black uppercase tracking-[0.22em] text-[#236476]">
+          Final CTA
+        </p>
 
-    <h2 class="ajs-reveal-up mt-5 text-3xl font-black leading-tight tracking-[-0.05em] md:text-5xl">
-      Ready to See What Real Looks Like?
-    </h2>
+        <h2 class="ajs-reveal-up mt-5 text-3xl font-black leading-tight tracking-[-0.05em] md:text-5xl">
+          Ready to See What Real Looks Like?
+        </h2>
 
-    <p class="ajs-reveal-up mx-auto mt-6 max-w-3xl text-base leading-8 text-[#192F44]/80">
-      Whether you need a fresh interior, a complete exterior transformation, or a kitchen and bathroom that changes how you live — we deliver the certainty your home deserves.
-    </p>
+        <p class="ajs-reveal-up mt-6 max-w-3xl text-base leading-8 text-[#192F44]/80">
+          Whether you need a fresh interior, a complete exterior transformation, or a kitchen and bathroom that changes how you live — we deliver the certainty your home deserves.
+        </p>
 
-    <div class="ajs-reveal-up mt-8 flex flex-wrap items-center justify-center gap-3">
-      <a href="/contact-us"
-         class="rpc-paint-btn rpc-paint-btn-green inline-flex items-center justify-center px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-white">
-        Request a Free Estimate
-      </a>
+        <div class="ajs-reveal-up mt-8 flex flex-wrap items-center gap-3">
+          <a href="tel:+19092326602"
+             class="rpc-paint-btn rpc-paint-btn-dark inline-flex items-center justify-center px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-white">
+            (909) 232-6602
+          </a>
+        </div>
 
-      <a href="tel:+19092326602"
-         class="rpc-paint-btn rpc-paint-btn-dark inline-flex items-center justify-center px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-white">
-        (909) 232-6602
-      </a>
+        <div class="rpc-paint-swipe rpc-paint-swipe-light mt-10 max-w-2xl"></div>
+      </div>
+
+      <div class="ajs-reveal-right">
+        <?php echo $render_estimate_form('rpc-estimate-form--light', 'rpc-paint-btn rpc-paint-btn-green'); ?>
+      </div>
     </div>
-
-    <div class="rpc-paint-swipe rpc-paint-swipe-light mx-auto mt-10 max-w-2xl"></div>
-  </div>
-</section>
+  </section>
 </main>
 
 <style>
@@ -554,9 +716,198 @@ get_header(); ?>
     font-family: "Space Grotesk", "Segoe UI", Arial, sans-serif;
   }
 
-  .rpc-hero-image {
-    animation: rpcHeroZoom 14s ease-out forwards;
-    transform: scale(1.06);
+  .rpc-hero-carousel {
+    position: absolute;
+    inset: 0;
+  }
+
+  .rpc-hero-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.2s ease, visibility 1.2s ease;
+  }
+
+.rpc-why-stamp {
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 420px auto;
+  opacity: 0.50;
+  mix-blend-mode: multiply;
+}
+
+
+  .rpc-hero-slide.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .rpc-hero-slide__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: rpcHeroZoom 9s ease-out forwards;
+    transform: scale(1.08);
+  }
+
+  .rpc-estimate-form {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.14);
+    background: rgba(255,255,255,0.09);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 24px 60px rgba(0,0,0,0.20);
+    padding: 1.25rem;
+  }
+
+  .rpc-estimate-form::after {
+    content: "";
+    position: absolute;
+    right: -60px;
+    top: -60px;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(255,255,255,0.12), transparent 72%);
+    pointer-events: none;
+  }
+
+  .rpc-estimate-form--light {
+    border-color: rgba(25,47,68,0.10);
+    background: rgba(255,255,255,0.84);
+    box-shadow: 0 22px 46px rgba(25,47,68,0.10);
+  }
+
+  .rpc-estimate-form__header {
+    margin-bottom: 1rem;
+  }
+
+  .rpc-estimate-form__eyebrow {
+    margin: 0;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.72);
+  }
+
+  .rpc-estimate-form--light .rpc-estimate-form__eyebrow {
+    color: rgba(25,47,68,0.68);
+  }
+
+  .rpc-estimate-form__title {
+    margin: 0.55rem 0 0;
+    font-size: 1.35rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: #fff;
+  }
+
+  .rpc-estimate-form--light .rpc-estimate-form__title {
+    color: #192F44;
+  }
+
+  .rpc-estimate-form__grid {
+    display: grid;
+    gap: 0.9rem;
+    grid-template-columns: 1fr;
+  }
+
+  .rpc-estimate-form__field {
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .rpc-estimate-form__field label {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.78);
+  }
+
+  .rpc-estimate-form--light .rpc-estimate-form__field label {
+    color: rgba(25,47,68,0.78);
+  }
+
+  .rpc-estimate-form__field input,
+  .rpc-estimate-form__field select,
+  .rpc-estimate-form__field textarea {
+    width: 100%;
+    min-height: 50px;
+    border: 1px solid rgba(255,255,255,0.16);
+    background: rgba(255,255,255,0.08);
+    padding: 0.9rem 1rem;
+    font-size: 0.95rem;
+    color: #fff;
+    outline: none;
+    transition: border-color .2s ease, background-color .2s ease, box-shadow .2s ease;
+  }
+
+  .rpc-estimate-form__field textarea {
+    min-height: 122px;
+    resize: vertical;
+  }
+
+  .rpc-estimate-form__field input::placeholder,
+  .rpc-estimate-form__field textarea::placeholder {
+    color: rgba(255,255,255,0.58);
+  }
+
+  .rpc-estimate-form--light .rpc-estimate-form__field input,
+  .rpc-estimate-form--light .rpc-estimate-form__field select,
+  .rpc-estimate-form--light .rpc-estimate-form__field textarea {
+    border-color: rgba(25,47,68,0.10);
+    background: rgba(246,245,240,0.82);
+    color: #192F44;
+  }
+
+  .rpc-estimate-form--light .rpc-estimate-form__field input::placeholder,
+  .rpc-estimate-form--light .rpc-estimate-form__field textarea::placeholder {
+    color: rgba(25,47,68,0.52);
+  }
+
+  .rpc-estimate-form__field input:focus,
+  .rpc-estimate-form__field select:focus,
+  .rpc-estimate-form__field textarea:focus {
+    border-color: rgba(125,173,63,0.65);
+    box-shadow: 0 0 0 3px rgba(125,173,63,0.16);
+    background: rgba(255,255,255,0.12);
+  }
+
+  .rpc-estimate-form--light .rpc-estimate-form__field input:focus,
+  .rpc-estimate-form--light .rpc-estimate-form__field select:focus,
+  .rpc-estimate-form--light .rpc-estimate-form__field textarea:focus {
+    background: #fff;
+  }
+
+  .rpc-estimate-form__field--full {
+    grid-column: 1 / -1;
+  }
+
+  .rpc-estimate-form__check {
+    display: flex;
+    gap: 0.7rem;
+    margin-top: 1rem;
+    font-size: 0.78rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.76);
+  }
+
+  .rpc-estimate-form__check input {
+    margin-top: 0.15rem;
+    accent-color: #7DAD3F;
+  }
+
+  .rpc-estimate-form--light .rpc-estimate-form__check {
+    color: rgba(25,47,68,0.72);
+  }
+
+  .rpc-estimate-form__submit {
+    width: 100%;
+    margin-top: 1rem;
+    min-height: 54px;
   }
 
   .rpc-paint-swipe {
@@ -594,6 +945,48 @@ get_header(); ?>
 
   .rpc-paint-btn:hover {
     transform: translateY(-2px);
+  }
+
+  .rpc-marquee {
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+  }
+
+  .rpc-marquee__track {
+    display: flex;
+    width: max-content;
+    animation: rpcMarquee 22s linear infinite;
+  }
+
+  .rpc-marquee__group {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 3.5rem;
+    padding: 1rem 2rem;
+  }
+
+  .rpc-marquee__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.85rem;
+    white-space: nowrap;
+    font-size: 0.95rem;
+    font-weight: 800;
+    line-height: 1;
+    color: #192F44;
+  }
+
+  .rpc-marquee__dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    flex: 0 0 auto;
+  }
+
+  .rpc-marquee:hover .rpc-marquee__track {
+    animation-play-state: paused;
   }
 
   .rpc-paint-btn-dark {
@@ -756,6 +1149,8 @@ get_header(); ?>
     letter-spacing: -0.01em;
   }
 
+
+
   .ajs-reveal-up,
   .ajs-reveal-left,
   .ajs-reveal-right,
@@ -789,6 +1184,11 @@ get_header(); ?>
     transform: translate(0,0);
   }
 
+  @keyframes rpcMarquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
   @keyframes rpcSwipeShift {
     0%   { transform: translateX(0) scaleX(1); }
     100% { transform: translateX(6px) scaleX(1.01); }
@@ -803,9 +1203,22 @@ get_header(); ?>
     }
   }
 
+  @media (min-width: 768px) {
+    .rpc-estimate-form__grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
   @media (max-width: 1280px) {
     .rpc-testimonial-featured__copy {
       font-size: 1.3rem;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .rpc-estimate-form--hero {
+      max-width: 760px;
+      margin-inline: auto;
     }
   }
 
@@ -835,6 +1248,19 @@ get_header(); ?>
       top: 3.25rem;
       font-size: 6rem;
     }
+
+    .rpc-marquee__group {
+      gap: 2rem;
+      padding: 0.9rem 1.25rem;
+    }
+
+    .rpc-marquee__item {
+      font-size: 0.82rem;
+    }
+
+    .rpc-estimate-form {
+      padding: 1rem;
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -844,7 +1270,10 @@ get_header(); ?>
     .ajs-reveal-stagger,
     .rpc-paint-btn,
     .rpc-paint-swipe,
-    .rpc-hero-image {
+    .rpc-hero-slide,
+    .rpc-hero-slide__image,
+    .rpc-marquee__track,
+    .rpc-why-pattern {
       opacity: 1 !important;
       transform: none !important;
       transition: none !important;
@@ -871,6 +1300,19 @@ get_header(); ?>
     }, { threshold: 0.12 });
 
     items.forEach((item) => observer.observe(item));
+
+    const heroSlides = document.querySelectorAll(".rpc-hero-slide");
+    let heroIndex = 0;
+
+    if (heroSlides.length > 1) {
+      setInterval(() => {
+        heroSlides[heroIndex].classList.remove("is-active");
+        heroIndex = (heroIndex + 1) % heroSlides.length;
+        heroSlides[heroIndex].classList.add("is-active");
+      }, 5000);
+    }
+
+
   });
 </script>
 

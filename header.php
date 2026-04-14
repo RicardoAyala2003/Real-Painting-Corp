@@ -35,6 +35,22 @@
               <span>info@realpaintingcorp.com</span>
             </a>
           </div>
+            <!-- CENTER GEO TAG -->
+<div class="rpc-topbar__center">
+  <a 
+    href="https://www.google.com/maps?q=Orange+County+California" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    class="rpc-topbar__geo"
+    aria-label="View our service area on Google Maps"
+  >
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10z"/>
+      <circle cx="12" cy="11" r="2.5"/>
+    </svg>
+    <span>Southern California</span>
+  </a>
+</div>
 
           <div class="rpc-topbar__right">
             <span class="rpc-topbar__pill">Licensed · Insured · Bonded</span>
@@ -82,7 +98,7 @@
 
     <span class="rpc-brand__text rpc-brand__text--navbar">
       <strong>Real Painting Corp</strong>
-      <em>Be Real. Build Real.</em>
+      <em>Clear Process. Clean Results.</em>
     </span>
   </a>
 </div>

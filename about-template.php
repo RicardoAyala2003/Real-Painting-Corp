@@ -12,121 +12,140 @@ get_header(); ?>
 
   <?php
     $about_hero_image = 'http://real-painting-corp.local/wp-content/uploads/2026/04/home-makeover-2026-01-05-04-46-23-utc-scaled.jpg';
+    $stamp_vertical   = 'http://real-painting-corp.local/wp-content/uploads/2026/04/Estampados-04-1-scaled.png';
+    $stamp_mission    = 'http://real-painting-corp.local/wp-content/uploads/2026/04/Estampados-01-scaled.png';
 
     $values = [
       [
         'title' => 'Certainty',
-        'copy'  => 'Every project has a defined scope, a clear timeline, and a predictable result. You never have to guess what’s happening, what it costs, or when it’ll be done. We eliminate the uncertainty  that’s the product.',
+        'copy'  => 'Every project has a defined scope, a clear timeline, and a predictable result. You never have to guess what’s happening, what it costs, or when it’ll be done. We eliminate the uncertainty — that’s the product.',
         'tone'  => '#192F44'
       ],
       [
         'title' => 'Cleanliness',
-        'copy'  => 'We treat your home like it’s ours. Floors are protected. Furniture is covered. Surfaces are shielded. And when we leave, the site is cleaner than when we arrived. Cleanliness is our first signal of professionalism  before we paint a single wall.',
+        'copy'  => 'We treat your home like it’s ours. Floors are protected. Furniture is covered. Surfaces are shielded. And when we leave, the site is cleaner than when we arrived. Cleanliness is our first signal of professionalism — before we paint a single wall.',
         'tone'  => '#236476'
       ],
       [
         'title' => 'Commitment',
-        'copy'  => 'What we promise, we deliver  on time and in full. Schedule discipline isn’t something we aspire to. It’s how we operate. We respect your time as much as we respect your property.',
+        'copy'  => 'What we promise, we deliver — on time and in full. Schedule discipline isn’t something we aspire to. It’s how we operate. We respect your time as much as we respect your property.',
         'tone'  => '#4A6C2F'
       ],
       [
         'title' => 'Trust',
-        'copy'  => 'We are C-33 licensed, carry General Liability and Workers’ Compensation insurance, and are fully bonded. When you open your door to our team, you’re protected at every level from the first estimate to the final walk-through.',
+        'copy'  => 'We are C-33 licensed, carry General Liability and Workers’ Compensation insurance, and are fully bonded. When you open your door to our team, you’re protected at every level — from the first estimate to the final walk-through.',
         'tone'  => '#7DAD3F'
       ],
       [
         'title' => 'Excellence',
-        'copy'  => 'With 40+ years of combined experience, we don’t cut corners. Every layer of prep, every coat, every finish reflects a commitment to work that lasts not work that’s fast. We prioritize quality over volume. Always.',
+        'copy'  => 'With 40+ years of combined experience, we don’t cut corners. Every layer of prep, every coat, every finish reflects a commitment to work that lasts — not work that’s fast. We prioritize quality over volume. Always.',
         'tone'  => '#192F44'
       ],
     ];
 
     $communities = [
-      'Rancho Santa Margarita',
-      'Coto de Caza',
-      'Ladera Ranch',
-      'Mission Viejo',
-      'Irvine',
-      'Laguna Niguel',
-      'Yorba Linda',
-      'Aliso Viejo',
-      'Tustin Ranch',
-      'Corona',
-      'Murrieta',
-      'Temecula',
-      'Menifee',
-      'Rancho Cucamonga',
-      'Eastvale',
-      'Chino Hills',
-      'Pasadena',
-      'Glendale',
-      'Arcadia',
-      'Torrance',
+      ['name' => 'Rancho Santa Margarita', 'tone' => '#192F44'],
+      ['name' => 'Coto de Caza', 'tone' => '#236476'],
+      ['name' => 'Ladera Ranch', 'tone' => '#7DAD3F'],
+      ['name' => 'Mission Viejo', 'tone' => '#173142'],
+      ['name' => 'Irvine', 'tone' => '#192F44'],
+      ['name' => 'Laguna Niguel', 'tone' => '#236476'],
+      ['name' => 'Yorba Linda', 'tone' => '#7DAD3F'],
+      ['name' => 'Aliso Viejo', 'tone' => '#173142'],
+      ['name' => 'Tustin Ranch', 'tone' => '#192F44'],
+      ['name' => 'Corona', 'tone' => '#236476'],
+      ['name' => 'Murrieta', 'tone' => '#7DAD3F'],
+      ['name' => 'Temecula', 'tone' => '#173142'],
+      ['name' => 'Menifee', 'tone' => '#192F44'],
+      ['name' => 'Rancho Cucamonga', 'tone' => '#236476'],
+      ['name' => 'Eastvale', 'tone' => '#7DAD3F'],
+      ['name' => 'Chino Hills', 'tone' => '#173142'],
+      ['name' => 'Pasadena', 'tone' => '#192F44'],
+      ['name' => 'Glendale', 'tone' => '#236476'],
+      ['name' => 'Arcadia', 'tone' => '#7DAD3F'],
+      ['name' => 'Torrance', 'tone' => '#173142'],
     ];
   ?>
 
-<!-- HERO -->
-<section class="relative overflow-hidden border-b border-[#192F44]/10 bg-[linear-gradient(180deg,#ffffff_0%,#f6f5f0_100%)] py-16 lg:py-24">
-  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(207,224,218,0.55),transparent_28%)]"></div>
-  <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(35,100,118,0.08),transparent_30%)]"></div>
+  <!-- HERO -->
+  <section class="relative overflow-hidden border-b border-[#192F44]/10 bg-[linear-gradient(180deg,#ffffff_0%,#f6f5f0_100%)] py-16 lg:py-24">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(207,224,218,0.55),transparent_28%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(35,100,118,0.08),transparent_30%)]"></div>
 
-  <div class="relative mx-auto max-w-7xl px-4">
-    <div class="grid items-center gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:gap-16">
-
-      <!-- TEXT -->
-      <div class="ajs-reveal-left">
-        <p class="text-xs font-black uppercase tracking-[0.24em] text-[#236476]">
-          About Us
-        </p>
-
-        <h1 class="mt-5 max-w-[11ch] text-4xl font-extrabold leading-[0.98] tracking-[-0.05em] text-[#192F44] md:text-6xl">
-          Be Real. Build Real.
-        </h1>
-
-        <div class="mt-6 h-[3px] w-24 bg-[linear-gradient(90deg,#192F44_0%,#236476_55%,#7DAD3F_100%)]"></div>
-
-        <p class="mt-8 max-w-2xl text-base leading-8 text-[#192F44]/80 md:text-lg">
-          We founded Real Painting Corp on a simple conviction: that homeowners deserve a contractor who shows up prepared, protects their home, respects their time, and delivers a result worth recommending  without the stress of wondering if it’ll actually happen.
-        </p>
-
-        <!-- AQUÍ reutilizamos copy REAL -->
-        <div class="mt-10 grid gap-3 sm:grid-cols-2">
-          <div class="border border-[#192F44]/10 bg-white px-5 py-4 shadow-[0_10px_24px_rgba(25,47,68,0.06)]">
-            <p class="text-sm font-bold text-[#192F44]">
-              Shows up prepared. Protects your home. Respects your time.
-            </p>
-          </div>
-
-          <div class="border border-[#192F44]/10 bg-[#CFE0DA]/55 px-5 py-4 shadow-[0_10px_24px_rgba(25,47,68,0.06)]">
-            <p class="text-sm font-bold text-[#192F44]">
-              Delivers a result worth recommending.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- IMAGE -->
-      <div class="ajs-reveal-right">
-        <div class="relative overflow-hidden border border-[#192F44]/10 bg-white p-3 shadow-[0_24px_60px_rgba(25,47,68,0.12)]">
-          <div class="relative overflow-hidden">
-            <img
-              src="<?php echo esc_url($about_hero_image); ?>"
-              alt="Real Painting Corp team"
-              class="rpc-about-hero-photo h-[420px] w-full object-cover md:h-[520px]"
-            >
-            <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(25,47,68,0.03)_0%,rgba(25,47,68,0.10)_100%)]"></div>
-          </div>
-        </div>
-      </div>
-
+    <div
+      class="rpc-about-vertical-stamp hidden lg:block"
+      style="background-image:url('<?php echo esc_url($stamp_vertical); ?>');"
+      aria-hidden="true">
     </div>
-  </div>
-</section>
 
-<!-- OUR STORY -->
-<section class="relative overflow-hidden border-y border-[#192F44]/10 bg-white py-20 lg:py-24">
-  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(207,224,218,0.32),transparent_24%)]"></div>
-  <div class="absolute left-0 top-0 h-full w-[18%] bg-[#f3f6f4]"></div>
+    <div class="relative mx-auto max-w-7xl px-4">
+      <div class="grid items-center gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:gap-16">
+
+        <!-- TEXT -->
+        <div class="ajs-reveal-left">
+          <p class="text-xs font-black uppercase tracking-[0.24em] text-[#236476]">
+            About Us
+          </p>
+
+          <h1 class="mt-5 max-w-[11ch] text-4xl font-extrabold leading-[0.98] tracking-[-0.05em] text-[#192F44] md:text-6xl">
+            Be Real. Build Real.
+          </h1>
+
+          <div class="mt-6 h-[3px] w-24 bg-[linear-gradient(90deg,#192F44_0%,#236476_55%,#7DAD3F_100%)]"></div>
+
+          <p class="mt-8 max-w-2xl text-base leading-8 text-[#192F44]/80 md:text-lg">
+            We founded Real Painting Corp on a simple conviction: that homeowners deserve a contractor who shows up prepared, protects their home, respects their time, and delivers a result worth recommending — without the stress of wondering if it’ll actually happen.
+          </p>
+
+          <div class="mt-10 grid gap-3 sm:grid-cols-2">
+            <div class="border border-[#192F44]/10 bg-white px-5 py-4 shadow-[0_10px_24px_rgba(25,47,68,0.06)]">
+              <p class="text-sm font-bold text-[#192F44]">
+                Shows up prepared. Protects your home. Respects your time.
+              </p>
+            </div>
+
+            <div class="border border-[#192F44]/10 bg-[#CFE0DA]/55 px-5 py-4 shadow-[0_10px_24px_rgba(25,47,68,0.06)]">
+              <p class="text-sm font-bold text-[#192F44]">
+                Delivers a result worth recommending.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- IMAGE -->
+        <div class="ajs-reveal-right">
+          <div class="relative overflow-hidden border border-[#192F44]/10 bg-white p-3 shadow-[0_24px_60px_rgba(25,47,68,0.12)]">
+            <div class="relative overflow-hidden">
+              <img
+                src="<?php echo esc_url($about_hero_image); ?>"
+                alt="Real Painting Corp team"
+                class="rpc-about-hero-photo h-[420px] w-full object-cover md:h-[520px]"
+              >
+              <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(25,47,68,0.03)_0%,rgba(25,47,68,0.10)_100%)]"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+ <!-- OUR STORY -->
+<section class="relative overflow-hidden border-y border-[#192F44]/10 bg-[linear-gradient(180deg,#ffffff_0%,#f6f5f0_100%)] py-20 lg:py-24">
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(35,100,118,0.10),transparent_24%)]"></div>
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(125,173,63,0.12),transparent_26%)]"></div>
+  <div class="absolute left-0 top-0 h-full w-[18%] bg-[linear-gradient(180deg,rgba(207,224,218,0.62)_0%,rgba(255,255,255,0)_100%)]  z-0"></div>
+
+  <div
+    class="absolute left-6 top-1/2 hidden h-[72%] w-[82px] -translate-y-1/2 opacity-[0.0] mix-blend-multiply lg:block"
+    style="
+      background-image:url('http://real-painting-corp.local/wp-content/uploads/2026/04/Estampados-04-1-scaled.png');
+      background-repeat:repeat-y;
+      background-position:center;
+      background-size:contain;
+    "
+    aria-hidden="true">
+  </div>
 
   <div class="relative mx-auto max-w-7xl px-4">
     <div class="grid gap-10 xl:grid-cols-[0.78fr_1.22fr] xl:gap-14">
@@ -144,8 +163,8 @@ get_header(); ?>
 
           <div class="mt-7 h-[3px] w-24 bg-[linear-gradient(90deg,#192F44_0%,#236476_55%,#7DAD3F_100%)]"></div>
 
-          <!-- FRASE REAL DEL COPY -->
-          <div class="mt-10 border border-[#192F44]/10 bg-[#f6f5f0] p-6 shadow-[0_16px_34px_rgba(25,47,68,0.06)]">
+          <div class="mt-10 overflow-hidden border border-[#192F44]/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.96),rgba(207,224,218,0.40))] p-6 shadow-[0_16px_34px_rgba(25,47,68,0.06)]">
+            <div class="mb-4 h-[3px] w-16 bg-[#236476]"></div>
             <p class="text-lg font-black leading-8 tracking-[-0.03em] text-[#192F44]">
               Not the biggest company in Southern California. The most trusted one.
             </p>
@@ -155,25 +174,25 @@ get_header(); ?>
 
       <!-- RIGHT -->
       <div class="ajs-reveal-right">
-        <div class="relative overflow-hidden border border-[#192F44]/10 bg-[#fcfbf8] p-6 shadow-[0_20px_44px_rgba(25,47,68,0.08)] md:p-8 lg:p-10">
+        <div class="relative overflow-hidden border border-[#192F44]/10 bg-[linear-gradient(180deg,#fcfbf8_0%,#ffffff_100%)] p-6 shadow-[0_20px_44px_rgba(25,47,68,0.08)] md:p-8 lg:p-10">
 
-          <div class="absolute right-0 top-0 h-24 w-24 translate-x-[20%] -translate-y-[20%] rotate-12 bg-[#CFE0DA]/55"></div>
+          <div class="absolute right-0 top-0 h-28 w-28 translate-x-[20%] -translate-y-[20%] rotate-12 bg-[#CFE0DA]/60"></div>
+          <div class="absolute bottom-0 left-0 h-24 w-24 -translate-x-[20%] translate-y-[20%] rotate-12 bg-[#7DAD3F]/12"></div>
 
           <div class="space-y-6 text-base leading-8 text-[#192F44]/80">
 
             <p>
-              Real Painting Corp was founded in 2023 by two partners who spent decades working in the painting and remodeling industry across Southern California. After years of working under other contractors  where the margins were thin, quality control was inconsistent, and the client relationship was always an afterthought  they made a decision.
+              Real Painting Corp was founded in 2023 by two partners who spent decades working in the painting and remodeling industry across Southern California. After years of working under other contractors — where the margins were thin, quality control was inconsistent, and the client relationship was always an afterthought — they made a decision.
             </p>
 
-            <!-- FRASE CLAVE -->
-            <div class="border-l-4 border-[#236476] bg-white px-5 py-5 shadow-[0_10px_24px_rgba(25,47,68,0.05)]">
+            <div class="overflow-hidden border-l-4 border-[#236476] bg-[linear-gradient(135deg,rgba(255,255,255,1),rgba(35,100,118,0.06))] px-5 py-5 shadow-[0_10px_24px_rgba(25,47,68,0.05)]">
               <p class="text-2xl font-black tracking-[-0.04em] text-[#192F44] md:text-3xl">
                 Build something different.
               </p>
             </div>
 
             <p>
-              Not a company that talks about quality. A company that proves it  every single day, in every single home. Where clean execution isn’t a selling point, it’s the baseline. Where showing up on time isn’t a bonus, it’s the expectation. Where a homeowner opens their front door and feels certain they made the right call.
+              Not a company that talks about quality. A company that proves it — every single day, in every single home. Where clean execution isn’t a selling point, it’s the baseline. Where showing up on time isn’t a bonus, it’s the expectation. Where a homeowner opens their front door and feels certain they made the right call.
             </p>
 
             <p>
@@ -181,7 +200,7 @@ get_header(); ?>
             </p>
 
             <p>
-              Today we serve homeowners across Orange County, Los Angeles, Riverside, and San Bernardino  with full licensing, insurance, and a reputation built entirely on referrals and results.
+              Today we serve homeowners across Orange County, Los Angeles, Riverside, and San Bernardino — with full licensing, insurance, and a reputation built entirely on referrals and results.
             </p>
 
           </div>
@@ -191,7 +210,6 @@ get_header(); ?>
     </div>
   </div>
 </section>
-
   <!-- VALUES -->
   <section class="relative overflow-hidden border-y border-[#192F44]/10 bg-white py-20 lg:py-24">
     <div class="absolute right-0 top-0 h-full w-[28%] bg-[#CFE0DA]/30"></div>
@@ -232,7 +250,11 @@ get_header(); ?>
 
   <!-- MISSION -->
   <section class="relative overflow-hidden bg-[#192F44] py-20 text-white lg:py-24">
-    <div class="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(135deg,rgba(255,255,255,0.35)_25%,transparent_25%,transparent_50%,rgba(255,255,255,0.35)_50%,rgba(255,255,255,0.35)_75%,transparent_75%,transparent)] [background-size:20px_20px]"></div>
+    <div
+      class="rpc-about-mission-stamp absolute inset-0"
+      style="background-image:url('<?php echo esc_url($stamp_mission); ?>');"
+      aria-hidden="true">
+    </div>
 
     <div class="relative mx-auto max-w-5xl px-4 text-center">
       <p class="ajs-reveal-up text-xs font-black uppercase tracking-[0.22em] text-[#CFE0DA]">
@@ -244,7 +266,7 @@ get_header(); ?>
       </h2>
 
       <p class="ajs-reveal-up mx-auto mt-8 max-w-4xl text-base leading-8 text-white/84 md:text-lg">
-        We transform homes across Southern California through premium painting and interior remodeling  delivered with clean execution, schedule discipline, and aesthetic certainty. We operate with full professional structure so that every homeowner feels total certainty from the first call to the final walk-through.
+        We transform homes across Southern California through premium painting and interior remodeling — delivered with clean execution, schedule discipline, and aesthetic certainty. We operate with full professional structure so that every homeowner feels total certainty from the first call to the final walk-through.
       </p>
     </div>
   </section>
@@ -270,7 +292,7 @@ get_header(); ?>
             </p>
 
             <p class="font-bold text-[#192F44]">
-              When you hire Real Painting, you’re working with a legitimate, accountable business  not a crew with a van.
+              When you hire Real Painting, you’re working with a legitimate, accountable business — not a crew with a van.
             </p>
           </div>
         </article>
@@ -319,20 +341,27 @@ get_header(); ?>
 
       <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         <?php foreach ($communities as $community) : ?>
-          <div class="ajs-reveal-stagger border border-[#192F44]/10 bg-[#fdfcf8] px-5 py-4 text-sm font-extrabold uppercase tracking-[0.12em] text-[#192F44] shadow-sm">
-            <?php echo esc_html($community); ?>
+          <div class="ajs-reveal-stagger rpc-about-community-card border border-[#192F44]/10 bg-[#fdfcf8] p-5 shadow-[0_12px_28px_rgba(25,47,68,0.06)]" style="--rpc-community-tone: <?php echo esc_attr($community['tone']); ?>;">
+            <div class="mb-4 h-[3px] w-16 bg-[var(--rpc-community-tone)] transition-all duration-500"></div>
+            <p class="text-[11px] font-black uppercase tracking-[0.18em] text-[var(--rpc-community-tone)]">
+              Community Focus
+            </p>
+            <h3 class="mt-2 text-lg font-black tracking-[-0.03em] text-[#192F44]">
+              <?php echo esc_html($community['name']); ?>
+            </h3>
           </div>
         <?php endforeach; ?>
       </div>
     </div>
   </section>
 
-  <!-- FINAL CTA -->
-  <section class="relative isolate overflow-hidden bg-[#f6f5f0] py-20 text-[#192F44] lg:py-24">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(35,100,118,0.08),transparent_28%)]"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(125,173,63,0.12),transparent_30%)]"></div>
+ <!-- FINAL CTA -->
+<section class="relative isolate overflow-hidden bg-[#f6f5f0] py-20 text-[#192F44] lg:py-24">
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(35,100,118,0.08),transparent_28%)]"></div>
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(125,173,63,0.12),transparent_30%)]"></div>
 
-    <div class="relative mx-auto max-w-5xl px-4 text-center">
+  <div class="relative mx-auto grid max-w-7xl gap-10 px-4 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+    <div class="lg:max-w-xl">
       <p class="ajs-reveal-up text-xs font-black uppercase tracking-[0.22em] text-[#236476]">
         Final CTA
       </p>
@@ -341,21 +370,88 @@ get_header(); ?>
         Ready to Work With a Team That Delivers Certainty?
       </h2>
 
-      <div class="ajs-reveal-up mt-8 flex flex-wrap items-center justify-center gap-3">
-        <a href="/contact-us"
-           class="rpc-about-btn rpc-about-btn-green inline-flex items-center justify-center px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-white">
-          Request a Free Estimate
-        </a>
+      <p class="ajs-reveal-up mt-6 max-w-3xl text-base leading-8 text-[#192F44]/80">
+        We founded Real Painting Corp on a simple conviction: that homeowners deserve a contractor who shows up prepared, protects their home, respects their time, and delivers a result worth recommending — without the stress of wondering if it’ll actually happen.
+      </p>
 
-        <a href="tel:+19092326602"
-           class="rpc-about-btn rpc-about-btn-dark inline-flex items-center justify-center px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-white">
-          (909) 232-6602
-        </a>
-      </div>
+      <p class="ajs-reveal-up mt-6 max-w-2xl text-sm leading-7 text-[#192F44]/68">
+        Request your free estimate and let’s talk about the scope, timeline, and result your home deserves.
+      </p>
 
-      <div class="rpc-about-swipe rpc-about-swipe-light mx-auto mt-10 max-w-2xl"></div>
+      <div class="rpc-about-swipe rpc-about-swipe-light mt-10 max-w-2xl"></div>
     </div>
-  </section>
+
+    <div class="ajs-reveal-right">
+      <form class="rpc-estimate-form rpc-estimate-form--light" method="post" action="#">
+        <div class="rpc-estimate-form__header">
+          <p class="rpc-estimate-form__eyebrow">Request a Free Estimate</p>
+          <h3 class="rpc-estimate-form__title">Tell us about your project.</h3>
+          <p class="rpc-estimate-form__trust">
+            Licensed • Insured • Bonded — 40+ Years Combined Experience
+          </p>
+        </div>
+
+        <div class="rpc-estimate-form__grid">
+          <div class="rpc-estimate-form__field">
+            <label for="rpc-about-name">Full Name *</label>
+            <input id="rpc-about-name" type="text" name="full_name" placeholder="Your full name" required>
+          </div>
+
+          <div class="rpc-estimate-form__field">
+            <label for="rpc-about-phone">Phone Number *</label>
+            <input id="rpc-about-phone" type="tel" name="phone" placeholder="(909) 232-6602" required>
+          </div>
+
+          <div class="rpc-estimate-form__field">
+            <label for="rpc-about-email">Email Address *</label>
+            <input id="rpc-about-email" type="email" name="email" placeholder="you@example.com" required>
+          </div>
+
+          <div class="rpc-estimate-form__field">
+            <label for="rpc-about-service">Service Needed *</label>
+            <select id="rpc-about-service" name="service" required>
+              <option value="">Select a service</option>
+              <option value="Interior Painting">Interior Painting</option>
+              <option value="Exterior Painting">Exterior Painting</option>
+              <option value="Kitchen Remodeling">Kitchen Remodeling</option>
+              <option value="Bathroom Remodeling">Bathroom Remodeling</option>
+              <option value="Cabinet Refinishing">Cabinet Refinishing</option>
+              <option value="Surface Repair &amp; Prep">Surface Repair &amp; Prep</option>
+              <option value="Pressure Washing">Pressure Washing</option>
+              <option value="Commercial Painting">Commercial Painting</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="rpc-estimate-form__field rpc-estimate-form__field--full">
+            <label for="rpc-about-location">Property Address or City *</label>
+            <input id="rpc-about-location" type="text" name="location" placeholder="City or property address" required>
+          </div>
+
+          <div class="rpc-estimate-form__field rpc-estimate-form__field--full">
+            <label for="rpc-about-message">Tell Us About Your Project</label>
+            <textarea id="rpc-about-message" name="message" rows="4" placeholder="Scope, timing, type of work, or anything else we should know."></textarea>
+          </div>
+        </div>
+
+        <p class="rpc-estimate-form__micro">
+          We’ll review your request and reach out within 24–48 hours. No pressure. Just clarity.
+        </p>
+
+        <label class="rpc-estimate-form__check">
+          <input type="checkbox" required>
+          <span>
+            I agree to the <a href="/privacy-policy">Privacy Policy</a> and <a href="/terms">Terms &amp; Conditions</a>, and consent to be contacted regarding my request.
+          </span>
+        </label>
+
+        <button type="submit" class="rpc-about-btn rpc-about-btn-green rpc-estimate-form__submit">
+          Request My Estimate
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
 </main>
 
 <style>
@@ -371,9 +467,222 @@ get_header(); ?>
     font-family: "Space Grotesk", "Segoe UI", Arial, sans-serif;
   }
 
+  .rpc-about-vertical-stamp {
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    width: 110px;
+    height: 90%;
+    transform: translateY(-50%);
+    background-repeat: repeat-y;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.26;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+  }
+
   .rpc-about-hero-image {
     animation: rpcAboutHeroZoom 14s ease-out forwards;
     transform: scale(1.06);
+  }
+
+  .rpc-about-hero-photo {
+    animation: rpcAboutHeroZoom 14s ease-out forwards;
+    transform: scale(1.04);
+  }
+
+  .rpc-about-mission-stamp {
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 340px auto;
+    opacity: 0.5;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+  }
+
+  .rpc-about-community-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,0.96), rgba(249,249,249,0.96)),
+      linear-gradient(135deg, color-mix(in srgb, var(--rpc-community-tone) 10%, white), white);
+  }
+
+  .rpc-about-community-card::after {
+    content: "";
+    position: absolute;
+    right: -28px;
+    top: -28px;
+    width: 96px;
+    height: 96px;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--rpc-community-tone) 14%, transparent);
+    pointer-events: none;
+  }
+
+.rpc-estimate-form {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.09);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.20);
+  padding: 1.25rem;
+}
+
+.rpc-estimate-form::after {
+  content: "";
+  position: absolute;
+  right: -60px;
+  top: -60px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(255,255,255,0.12), transparent 72%);
+  pointer-events: none;
+}
+
+.rpc-estimate-form--light {
+  border-color: rgba(25,47,68,0.10);
+  background: rgba(255,255,255,0.84);
+  box-shadow: 0 22px 46px rgba(25,47,68,0.10);
+}
+
+.rpc-estimate-form__header {
+  margin-bottom: 1rem;
+}
+
+.rpc-estimate-form__eyebrow {
+  margin: 0;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(25,47,68,0.68);
+}
+
+.rpc-estimate-form__title {
+  margin: 0.55rem 0 0;
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #192F44;
+}
+
+.rpc-estimate-form__trust {
+  margin-top: 0.6rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(25,47,68,0.56);
+}
+
+.rpc-estimate-form__grid {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: 1fr;
+}
+
+.rpc-estimate-form__field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.rpc-estimate-form__field label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(25,47,68,0.78);
+}
+
+.rpc-estimate-form__field input,
+.rpc-estimate-form__field select,
+.rpc-estimate-form__field textarea {
+  width: 100%;
+  min-height: 50px;
+  border: 1px solid rgba(25,47,68,0.10);
+  background: rgba(246,245,240,0.82);
+  padding: 0.9rem 1rem;
+  font-size: 0.95rem;
+  color: #192F44;
+  outline: none;
+  transition: border-color .2s ease, background-color .2s ease, box-shadow .2s ease;
+}
+
+.rpc-estimate-form__field textarea {
+  min-height: 122px;
+  resize: vertical;
+}
+
+.rpc-estimate-form__field input::placeholder,
+.rpc-estimate-form__field textarea::placeholder {
+  color: rgba(25,47,68,0.52);
+}
+
+.rpc-estimate-form__field input:focus,
+.rpc-estimate-form__field select:focus,
+.rpc-estimate-form__field textarea:focus {
+  border-color: rgba(125,173,63,0.65);
+  box-shadow: 0 0 0 3px rgba(125,173,63,0.16);
+  background: #fff;
+}
+
+.rpc-estimate-form__field--full {
+  grid-column: 1 / -1;
+}
+
+.rpc-estimate-form__micro {
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: rgba(25,47,68,0.64);
+  margin-top: 0.9rem;
+}
+
+.rpc-estimate-form__check {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 1rem;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: rgba(25,47,68,0.72);
+}
+
+.rpc-estimate-form__check input {
+  margin-top: 0.15rem;
+  accent-color: #7DAD3F;
+}
+
+.rpc-estimate-form__check a {
+  color: #236476;
+  text-decoration: underline;
+}
+
+.rpc-estimate-form__submit {
+  width: 100%;
+  margin-top: 1rem;
+  min-height: 54px;
+}
+
+@media (min-width: 768px) {
+  .rpc-estimate-form__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+
+  .rpc-about-community-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 36px rgba(25,47,68,0.10);
+    border-color: color-mix(in srgb, var(--rpc-community-tone) 30%, rgba(25,47,68,0.10));
+  }
+
+  .rpc-about-community-card:hover .h-\[3px\] {
+    width: 5rem;
   }
 
   .rpc-about-btn {
@@ -447,10 +756,6 @@ get_header(); ?>
   .ajs-reveal-up {
     transform: translateY(34px);
   }
-  .rpc-about-hero-photo {
-  animation: rpcAboutHeroZoom 14s ease-out forwards;
-  transform: scale(1.04);
-}
 
   .ajs-reveal-left {
     transform: translateX(-36px);
@@ -486,6 +791,21 @@ get_header(); ?>
     }
   }
 
+  @media (max-width: 1279px) {
+    .rpc-about-vertical-stamp {
+      left: 1rem;
+      width: 86px;
+      opacity: 0.12;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .rpc-about-mission-stamp {
+      background-size: 280px auto;
+      opacity: 0.16;
+    }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .ajs-reveal-up,
     .ajs-reveal-left,
@@ -493,7 +813,9 @@ get_header(); ?>
     .ajs-reveal-stagger,
     .rpc-about-btn,
     .rpc-about-swipe,
-    .rpc-about-hero-image {
+    .rpc-about-hero-image,
+    .rpc-about-hero-photo,
+    .rpc-about-community-card {
       opacity: 1 !important;
       transform: none !important;
       transition: none !important;

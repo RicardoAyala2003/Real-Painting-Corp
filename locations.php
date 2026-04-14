@@ -98,7 +98,7 @@ get_header(); ?>
       </div>
     </div>
 
-    <div class="absolute bottom-0 left-0 h-32 w-full bg-gradient-to-t from-[#f6f5f0] to-transparent"></div>
+    
   </section>
 
   <!-- INTRO -->
@@ -240,7 +240,15 @@ get_header(); ?>
 
   <!-- WHY THIS MATTERS -->
   <section class="relative overflow-hidden bg-[#192F44] py-20 text-white lg:py-24">
-    <div class="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(135deg,rgba(255,255,255,0.35)_25%,transparent_25%,transparent_50%,rgba(255,255,255,0.35)_50%,rgba(255,255,255,0.35)_75%,transparent_75%,transparent)] [background-size:20px_20px]"></div>
+<div
+  class="absolute inset-0 opacity-[0.5] mix-blend-multiply"
+  style="
+    background-image:url('http://real-painting-corp.local/wp-content/uploads/2026/04/Estampados-01-scaled.png');
+    background-repeat:repeat;
+    background-position:center;
+    background-size:360px auto;
+  "
+></div>
 
     <div class="relative mx-auto max-w-7xl px-4">
       <div class="ajs-reveal-left max-w-3xl">
