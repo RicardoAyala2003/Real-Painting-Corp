@@ -11,7 +11,7 @@ get_header(); ?>
 <main class="rpc-location-page bg-[#f6f5f0] text-[#192F44] overflow-hidden">
 
   <?php
-    $hero_image = 'http://real-painting-corp.local/wp-content/uploads/2026/03/photo-1523198780259-41f275ab6e3d.avif';
+    $hero_image = '/wp-content/uploads/2026/03/photo-1523198780259-41f275ab6e3d.avif';
 
     $counties = [
       'Orange County',

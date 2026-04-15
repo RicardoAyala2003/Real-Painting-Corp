@@ -11,7 +11,7 @@ get_header(); ?>
 <main class="rpc-service-page bg-[#f6f5f0] text-[#192F44] overflow-hidden">
 
   <?php
-    $hero_image = 'http://real-painting-corp.local/wp-content/uploads/2026/04/ExteriorPaintingService.jpg-scaled.jpeg';
+    $hero_image = '/wp-content/uploads/2026/04/ExteriorPaintingService.jpg-scaled.jpeg';
 
     $included_items = [
       'Full pressure washing and surface preparation',
@@ -173,7 +173,7 @@ get_header(); ?>
     <div
       class="absolute inset-0 opacity-[0.5] mix-blend-multiply"
       style="
-        background-image:url('http://real-painting-corp.local/wp-content/uploads/2026/04/Estampados-01-scaled.png');
+        background-image:url('/wp-content/uploads/2026/04/Estampados-01-scaled.png');
         background-repeat:repeat;
         background-position:center;
         background-size:300px auto;

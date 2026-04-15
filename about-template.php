@@ -11,9 +11,9 @@ get_header(); ?>
 <main class="rpc-about-page bg-[#f6f5f0] text-[#192F44] overflow-hidden">
 
   <?php
-    $about_hero_image = 'http://real-painting-corp.local/wp-content/uploads/2026/04/home-makeover-2026-01-05-04-46-23-utc-scaled.jpg';
-    $stamp_vertical   = 'http://real-painting-corp.local/wp-content/uploads/2026/04/Estampados-04-1-scaled.png';
-    $stamp_mission    = 'http://real-painting-corp.local/wp-content/uploads/2026/04/Estampados-01-scaled.png';
+    $about_hero_image = '/wp-content/uploads/2026/04/home-makeover-2026-01-05-04-46-23-utc-scaled.jpg';
+    $stamp_vertical   = '/wp-content/uploads/2026/04/Estampados-04-1-scaled.png';
+    $stamp_mission    = '/wp-content/uploads/2026/04/Estampados-01-scaled.png';
 
     $values = [
       [
@@ -139,7 +139,7 @@ get_header(); ?>
   <div
     class="absolute left-6 top-1/2 hidden h-[72%] w-[82px] -translate-y-1/2 opacity-[0.0] mix-blend-multiply lg:block"
     style="
-      background-image:url('http://real-painting-corp.local/wp-content/uploads/2026/04/Estampados-04-1-scaled.png');
+      background-image:url('/wp-content/uploads/2026/04/Estampados-04-1-scaled.png');
       background-repeat:repeat-y;
       background-position:center;
       background-size:contain;

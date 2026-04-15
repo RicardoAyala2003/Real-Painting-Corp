@@ -7,7 +7,7 @@
           <a href="<?php echo esc_url(get_home_url()); ?>" class="rpc-footer__brand" aria-label="Real Painting Corp Home">
             <span class="rpc-footer__brand-logo-wrap">
               <img
-                src="http://real-painting-corp.local/wp-content/uploads/2026/04/RP_logotipo-vertical.png"
+                src="/wp-content/uploads/2026/04/RP_logotipo-vertical.png"
                 alt="Real Painting Corp"
                 class="rpc-footer__brand-logo"
               >

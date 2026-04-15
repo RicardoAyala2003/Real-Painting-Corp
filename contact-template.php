@@ -59,7 +59,7 @@ get_header(); ?>
   <div
     class="absolute inset-0 opacity-[0.17] mix-blend-multiply"
     style="
-      background-image:url('http://real-painting-corp.local/wp-content/uploads/2026/04/Estampados-01-scaled.png');
+      background-image:url('/wp-content/uploads/2026/04/Estampados-01-scaled.png');
       background-repeat:repeat;
       background-position:center;
       background-size:320px auto;
@@ -184,7 +184,7 @@ get_header(); ?>
 
             <div class="relative p-7 md:p-9">
               <img
-                src="http://real-painting-corp.local/wp-content/uploads/2026/04/RP_logotipo-diagonal.png"
+                src="/wp-content/uploads/2026/04/RP_logotipo-diagonal.png"
                 alt="Real Painting Corp"
                 class="mb-6 h-14 w-auto object-contain md:h-16"
               >

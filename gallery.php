@@ -13,40 +13,40 @@ get_header(); ?>
   <?php
     $gallery_pairs = [
       [
-        'before' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-1-scaled.jpg',
-        'after'  => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-1-resuelto-scaled.jpg',
+        'before' => '/wp-content/uploads/2026/04/proy-1-scaled.jpg',
+        'after'  => '/wp-content/uploads/2026/04/proy-1-resuelto-scaled.jpg',
       ],
       [
-        'before' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-2-scaled.jpg',
-        'after'  => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-2-resuelto-scaled.jpg',
+        'before' => '/wp-content/uploads/2026/04/proy-2-scaled.jpg',
+        'after'  => '/wp-content/uploads/2026/04/proy-2-resuelto-scaled.jpg',
       ],
       [
-        'before' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-3-scaled.jpg',
-        'after'  => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-3-resuelto-scaled.jpg',
+        'before' => '/wp-content/uploads/2026/04/proy-3-scaled.jpg',
+        'after'  => '/wp-content/uploads/2026/04/proy-3-resuelto-scaled.jpg',
       ],
       [
-        'before' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-4-scaled.jpg',
-        'after'  => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-4-resuelto-scaled.jpg',
+        'before' => '/wp-content/uploads/2026/04/proy-4-scaled.jpg',
+        'after'  => '/wp-content/uploads/2026/04/proy-4-resuelto-scaled.jpg',
       ],
       [
-        'before' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-5-scaled.jpg',
-        'after'  => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-5-resuelto-scaled.jpg',
+        'before' => '/wp-content/uploads/2026/04/proy-5-scaled.jpg',
+        'after'  => '/wp-content/uploads/2026/04/proy-5-resuelto-scaled.jpg',
       ],
       [
-        'before' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/20250531_110801-scaled.jpg',
-        'after'  => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-6-scaled.jpg',
+        'before' => '/wp-content/uploads/2026/04/20250531_110801-scaled.jpg',
+        'after'  => '/wp-content/uploads/2026/04/proy-6-scaled.jpg',
       ],
       [
-        'before' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-7-scaled.jpg',
-        'after'  => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-7-resuelto-scaled.jpg',
+        'before' => '/wp-content/uploads/2026/04/proy-7-scaled.jpg',
+        'after'  => '/wp-content/uploads/2026/04/proy-7-resuelto-scaled.jpg',
       ],
       [
-        'before' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-8-scaled.jpg',
-        'after'  => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-8-resuelto-scaled.jpg',
+        'before' => '/wp-content/uploads/2026/04/proy-8-scaled.jpg',
+        'after'  => '/wp-content/uploads/2026/04/proy-8-resuelto-scaled.jpg',
       ],
       [
-        'before' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-9-scaled.jpg',
-        'after'  => 'http://real-painting-corp.local/wp-content/uploads/2026/04/20250527_164612-scaled.jpg',
+        'before' => '/wp-content/uploads/2026/04/proy-9-scaled.jpg',
+        'after'  => '/wp-content/uploads/2026/04/20250527_164612-scaled.jpg',
       ],
     ];
   ?>

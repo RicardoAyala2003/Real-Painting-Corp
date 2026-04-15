@@ -12,10 +12,10 @@ get_header(); ?>
 
   <?php
     $hero_images = [
-      'http://real-painting-corp.local/wp-content/uploads/2026/04/Painting-scaled.jpg',
-      'http://real-painting-corp.local/wp-content/uploads/2026/04/RealPaintingHeroKitchenRemodeling.jpg-scaled.jpeg',
-      'http://real-painting-corp.local/wp-content/uploads/2026/04/CabinetsInstallationRealPainting.jpg-scaled.jpeg',
-      'http://real-painting-corp.local/wp-content/uploads/2026/04/ExteriorPaintingHero.jpg-scaled.jpeg',
+      '/wp-content/uploads/2026/04/Painting-scaled.jpg',
+      '/wp-content/uploads/2026/04/RealPaintingHeroKitchenRemodeling.jpg-scaled.jpeg',
+      '/wp-content/uploads/2026/04/CabinetsInstallationRealPainting.jpg-scaled.jpeg',
+      '/wp-content/uploads/2026/04/ExteriorPaintingHero.jpg-scaled.jpeg',
     ];
 
     $service_options = [
@@ -95,7 +95,7 @@ get_header(); ?>
         'link'  => '/services/interior-painting',
         'tone'  => '#192F44',
         'cta'   => 'Explore Interior Painting →',
-        'image' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/InteriorPaintingService.jpg-scaled.jpeg',
+        'image' => '/wp-content/uploads/2026/04/InteriorPaintingService.jpg-scaled.jpeg',
       ],
       [
         'title' => 'Exterior Painting',
@@ -103,7 +103,7 @@ get_header(); ?>
         'link'  => '/services/exterior-painting',
         'tone'  => '#236476',
         'cta'   => 'Explore Exterior Painting →',
-        'image' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/ExteriorPaintingService.jpg-scaled.jpeg',
+        'image' => '/wp-content/uploads/2026/04/ExteriorPaintingService.jpg-scaled.jpeg',
       ],
       [
         'title' => 'Kitchen Remodeling',
@@ -111,7 +111,7 @@ get_header(); ?>
         'link'  => '/services/kitchen-remodeling',
         'tone'  => '#4A6C2F',
         'cta'   => 'Explore Kitchen Remodeling →',
-        'image' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/KitchenRemodelingService.jpg-scaled.jpeg',
+        'image' => '/wp-content/uploads/2026/04/KitchenRemodelingService.jpg-scaled.jpeg',
       ],
       [
         'title' => 'Bathroom Remodeling',
@@ -119,7 +119,7 @@ get_header(); ?>
         'link'  => '/services/bathroom-remodeling',
         'tone'  => '#7DAD3F',
         'cta'   => 'Explore Bathroom Remodeling →',
-        'image' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/BathroomRemodelingService.jpg-scaled.jpeg',
+        'image' => '/wp-content/uploads/2026/04/BathroomRemodelingService.jpg-scaled.jpeg',
       ],
       [
         'title' => 'Cabinet Refinishing & Staining',
@@ -127,7 +127,7 @@ get_header(); ?>
         'link'  => '/services/cabinet-refinishing-staining',
         'tone'  => '#192F44',
         'cta'   => 'Explore Cabinet Refinishing →',
-        'image' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/CabinetRefinishingStainingService.jpg-scaled.jpeg',
+        'image' => '/wp-content/uploads/2026/04/CabinetRefinishingStainingService.jpg-scaled.jpeg',
       ],
       [
         'title' => 'Surface Repair & Preparation',
@@ -135,7 +135,7 @@ get_header(); ?>
         'link'  => '/services/surface-repair-preparation',
         'tone'  => '#236476',
         'cta'   => 'Explore Surface Repair →',
-        'image' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/SurfaceReparePreparationService.jpg-scaled.jpeg',
+        'image' => '/wp-content/uploads/2026/04/SurfaceReparePreparationService.jpg-scaled.jpeg',
       ],
       [
         'title' => 'Pressure Washing',
@@ -143,7 +143,7 @@ get_header(); ?>
         'link'  => '/services/pressure-washing',
         'tone'  => '#7DAD3F',
         'cta'   => 'Explore Pressure Washing →',
-        'image' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/PressureWashingService.jpg-scaled.jpeg',
+        'image' => '/wp-content/uploads/2026/04/PressureWashingService.jpg-scaled.jpeg',
       ],
       [
         'title' => 'Commercial Painting',
@@ -151,7 +151,7 @@ get_header(); ?>
         'link'  => '/services/commercial-painting',
         'tone'  => '#4A6C2F',
         'cta'   => 'Explore Commercial Painting →',
-        'image' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/CommercialPaintingService.jpg-scaled.jpeg',
+        'image' => '/wp-content/uploads/2026/04/CommercialPaintingService.jpg-scaled.jpeg',
       ],
     ];
   ?>
@@ -361,7 +361,7 @@ get_header(); ?>
 <section class="rpc-why-section relative overflow-hidden bg-[#192F44] py-20 text-white lg:py-24">
 <div
   class="absolute inset-0 rpc-why-stamp"
-  style="background-image: url('http://real-painting-corp.local/wp-content/uploads/2026/04/Estampados-01-scaled.png');">
+  style="background-image: url('/wp-content/uploads/2026/04/Estampados-01-scaled.png');">
 </div>
 
   <div class="relative z-10 mx-auto max-w-7xl px-4">
@@ -546,33 +546,33 @@ get_header(); ?>
       <?php
         $project_pairs = [
           [
-            'before' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-1-scaled.jpg',
-            'after'  => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-1-resuelto-scaled.jpg',
+            'before' => '/wp-content/uploads/2026/04/proy-1-scaled.jpg',
+            'after'  => '/wp-content/uploads/2026/04/proy-1-resuelto-scaled.jpg',
             'title'  => 'Project 01'
           ],
           [
-            'before' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-2-scaled.jpg',
-            'after'  => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-2-resuelto-scaled.jpg',
+            'before' => '/wp-content/uploads/2026/04/proy-2-scaled.jpg',
+            'after'  => '/wp-content/uploads/2026/04/proy-2-resuelto-scaled.jpg',
             'title'  => 'Project 02'
           ],
           [
-            'before' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-3-scaled.jpg',
-            'after'  => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-3-resuelto-scaled.jpg',
+            'before' => '/wp-content/uploads/2026/04/proy-3-scaled.jpg',
+            'after'  => '/wp-content/uploads/2026/04/proy-3-resuelto-scaled.jpg',
             'title'  => 'Project 03'
           ],
           [
-            'before' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-4-scaled.jpg',
-            'after'  => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-4-resuelto-scaled.jpg',
+            'before' => '/wp-content/uploads/2026/04/proy-4-scaled.jpg',
+            'after'  => '/wp-content/uploads/2026/04/proy-4-resuelto-scaled.jpg',
             'title'  => 'Project 04'
           ],
           [
-            'before' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-5-scaled.jpg',
-            'after'  => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-5-resuelto-scaled.jpg',
+            'before' => '/wp-content/uploads/2026/04/proy-5-scaled.jpg',
+            'after'  => '/wp-content/uploads/2026/04/proy-5-resuelto-scaled.jpg',
             'title'  => 'Project 05'
           ],
           [
-            'before' => 'http://real-painting-corp.local/wp-content/uploads/2026/04/20250531_110801-scaled.jpg',
-            'after'  => 'http://real-painting-corp.local/wp-content/uploads/2026/04/proy-6-scaled.jpg',
+            'before' => '/wp-content/uploads/2026/04/20250531_110801-scaled.jpg',
+            'after'  => '/wp-content/uploads/2026/04/proy-6-scaled.jpg',
             'title'  => 'Project 06'
           ],
         ];

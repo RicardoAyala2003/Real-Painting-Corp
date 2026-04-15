@@ -11,7 +11,7 @@ get_header(); ?>
 <main class="rpc-locations-hub bg-[#f6f5f0] text-[#192F44] overflow-hidden">
 
   <?php
-    $hero_image = 'http://real-painting-corp.local/wp-content/uploads/2026/04/houses-in-suburb-at-summer-in-the-north-america-l-2026-03-26-11-33-50-utc.jpg-scaled.jpeg';
+    $hero_image = '/wp-content/uploads/2026/04/houses-in-suburb-at-summer-in-the-north-america-l-2026-03-26-11-33-50-utc.jpg-scaled.jpeg';
 
     $locations = [
       [
@@ -287,7 +287,7 @@ get_header(); ?>
 <div
   class="absolute inset-0 opacity-[0.5] mix-blend-multiply"
   style="
-    background-image:url('http://real-painting-corp.local/wp-content/uploads/2026/04/Estampados-01-scaled.png');
+    background-image:url('/wp-content/uploads/2026/04/Estampados-01-scaled.png');
     background-repeat:repeat;
     background-position:center;
     background-size:360px auto;

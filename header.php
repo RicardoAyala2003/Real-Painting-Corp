@@ -89,7 +89,7 @@
         <a href="<?php echo esc_url(get_home_url()); ?>" class="rpc-brand__link" aria-label="Real Painting Corp Home">
           <span class="rpc-brand__logo-wrap rpc-brand__logo-wrap--mono">
             <img
-              src="http://real-painting-corp.local/wp-content/uploads/2026/04/RP_isotipo_negativo.png"
+              src="/wp-content/uploads/2026/04/RP_isotipo_negativo.png"
               alt="Real Painting Corp"
               class="rpc-brand__logo rpc-brand__logo--mono"
             >
