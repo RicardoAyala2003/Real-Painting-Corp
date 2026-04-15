@@ -136,107 +136,151 @@ get_header(); ?>
     </div>
   </section>
 
-  <!-- LOCATIONS GRID -->
-  <section id="locations-grid" class="border-y border-[#192F44]/10 bg-white py-20 lg:py-24">
-    <div class="mx-auto max-w-7xl px-4">
-      <div class="ajs-reveal-up mx-auto max-w-4xl text-center">
-        <p class="text-xs font-black uppercase tracking-[0.22em] text-[#236476]">
-          Service Areas
-        </p>
+ <!-- LOCATIONS GRID -->
+<section id="locations-grid" class="border-y border-[#192F44]/10 bg-white py-20 lg:py-24">
+  <div class="mx-auto max-w-7xl px-4">
+    <div class="ajs-reveal-up mx-auto max-w-4xl text-center">
+      <p class="text-xs font-black uppercase tracking-[0.22em] text-[#236476]">
+        Service Areas
+      </p>
 
-        <h2 class="mt-5 text-3xl font-black leading-tight tracking-[-0.05em] text-[#192F44] md:text-5xl">
-          Choose Your County
-        </h2>
+      <h2 class="mt-5 text-3xl font-black leading-tight tracking-[-0.05em] text-[#192F44] md:text-5xl">
+        Choose Your County
+      </h2>
 
-        <p class="mx-auto mt-6 max-w-3xl text-base leading-8 text-[#192F44]/72">
-          Built as a clean county-level hub, each card leads to its dedicated location page while keeping the visual language aligned with the Real Painting Corp brand.
-        </p>
-      </div>
+      <p class="mx-auto mt-6 max-w-3xl text-base leading-8 text-[#192F44]/72">
+        Built as a clean county-level hub, each card now connects directly to its location on Google Maps.
+      </p>
+    </div>
 
-      <div class="mt-14 grid gap-8 md:grid-cols-2">
-        <?php foreach ($locations as $index => $location) : ?>
-          <article class="ajs-reveal-stagger group overflow-hidden border border-[#192F44]/10 bg-[#fcfbf7] shadow-[0_20px_50px_rgba(25,47,68,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_26px_60px_rgba(25,47,68,0.12)]">
-            <div class="relative h-[290px] overflow-hidden border-b border-[#192F44]/10 bg-[#dfe7e3]">
-              <iframe
-                src="<?php echo esc_url($location['map_embed']); ?>"
-                loading="lazy"
-                allowfullscreen
-                referrerpolicy="no-referrer-when-downgrade"
-                class="h-full w-full transition duration-700 group-hover:scale-[1.01]"
-                style="filter: saturate(.88) contrast(1.02);">
-              </iframe>
+    <?php
+      $locations = [
+        [
+          'title' => 'Orange County',
+          'map_link' => 'https://www.google.com/maps/search/?api=1&query=Orange+County,+CA',
+          'tone'  => '#192F44',
+          'kicker'=> 'Southern California Service Area',
+          'map_embed' => 'https://www.google.com/maps?q=Orange+County,+CA&output=embed',
+          'cities' => 'Rancho Santa Margarita · Coto de Caza · Ladera Ranch · Mission Viejo · Irvine · Laguna Niguel · Yorba Linda · Aliso Viejo · Tustin Ranch',
+          'copy' => 'Homeowners across Orange County trust Real Painting Corp for premium painting and remodeling delivered with clean execution, schedule discipline, and the certainty their homes deserve.',
+        ],
+        [
+          'title' => 'Los Angeles County',
+          'map_link' => 'https://www.google.com/maps/search/?api=1&query=Los+Angeles+County,+CA',
+          'tone'  => '#236476',
+          'kicker'=> 'Southern California Service Area',
+          'map_embed' => 'https://www.google.com/maps?q=Los+Angeles+County,+CA&output=embed',
+          'cities' => 'Pasadena · Glendale · Arcadia · Torrance',
+          'copy' => 'In Los Angeles County, we serve homeowners who value their property, expect professionalism, and want a contractor who protects the home, respects the timeline, and delivers a result worth recommending.',
+        ],
+        [
+          'title' => 'Riverside County',
+          'map_link' => 'https://www.google.com/maps/search/?api=1&query=Riverside+County,+CA',
+          'tone'  => '#7DAD3F',
+          'kicker'=> 'Southern California Service Area',
+          'map_embed' => 'https://www.google.com/maps?q=Riverside+County,+CA&output=embed',
+          'cities' => 'Corona · Murrieta · Temecula · Menifee · Eastvale',
+          'copy' => 'From repainting to remodeling, Riverside County homeowners choose Real Painting Corp for a structured process, clear communication, and a home experience that feels organized from day one.',
+        ],
+        [
+          'title' => 'San Bernardino County',
+          'map_link' => 'https://www.google.com/maps/search/?api=1&query=San+Bernardino+County,+CA',
+          'tone'  => '#4A6C2F',
+          'kicker'=> 'Southern California Service Area',
+          'map_embed' => 'https://www.google.com/maps?q=San+Bernardino+County,+CA&output=embed',
+          'cities' => 'Rancho Cucamonga · Chino Hills',
+          'copy' => 'We serve San Bernardino County with the same standard that defines the brand: licensed, insured, bonded work delivered with clean execution, schedule discipline, and aesthetic certainty.',
+        ],
+      ];
+    ?>
 
-              <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(25,47,68,0.06)_0%,rgba(25,47,68,0.00)_36%,rgba(25,47,68,0.12)_100%)]"></div>
+    <div class="mt-14 grid gap-8 md:grid-cols-2">
+      <?php foreach ($locations as $location) : ?>
+        <article class="ajs-reveal-stagger group overflow-hidden border border-[#192F44]/10 bg-[#fcfbf7] shadow-[0_20px_50px_rgba(25,47,68,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_26px_60px_rgba(25,47,68,0.12)]">
+          
+          <div class="relative h-[290px] overflow-hidden border-b border-[#192F44]/10 bg-[#dfe7e3]">
+            <iframe
+              src="<?php echo esc_url($location['map_embed']); ?>"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              class="h-full w-full transition duration-700 group-hover:scale-[1.01]"
+              style="filter: saturate(.88) contrast(1.02);">
+            </iframe>
 
-              <div class="absolute left-5 top-5">
-                <span
-                  class="inline-flex items-center rounded-full border border-white/18 px-4 py-2 text-[11px] font-black uppercase tracking-[0.18em] text-white shadow-[0_12px_24px_rgba(0,0,0,0.16)] backdrop-blur-sm"
-                  style="background: <?php echo esc_attr($location['tone']); ?>;">
-                  <?php echo esc_html($location['kicker']); ?>
-                </span>
-              </div>
+            <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(25,47,68,0.06)_0%,rgba(25,47,68,0.00)_36%,rgba(25,47,68,0.12)_100%)]"></div>
 
-              <div class="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-4">
-                <div>
-                  <p class="text-[11px] font-black uppercase tracking-[0.18em] text-white/72">
-                    Real Painting Corp
-                  </p>
-                  <h3 class="mt-2 text-2xl font-black tracking-[-0.04em] text-white md:text-[2rem]">
-                    <?php echo esc_html($location['title']); ?>
-                  </h3>
-                </div>
-
-                <span
-                  class="hidden h-12 w-12 items-center justify-center border border-white/18 bg-white/10 text-white shadow-[0_12px_20px_rgba(0,0,0,0.14)] backdrop-blur-md md:inline-flex">
-                  <svg viewBox="0 0 24 24" class="h-5 w-5 fill-none" stroke="currentColor" stroke-width="2">
-                    <path d="M7 17 17 7"></path>
-                    <path d="M9 7h8v8"></path>
-                  </svg>
-                </span>
-              </div>
+            <div class="absolute left-5 top-5">
+              <span
+                class="inline-flex items-center rounded-full border border-white/18 px-4 py-2 text-[11px] font-black uppercase tracking-[0.18em] text-white shadow-[0_12px_24px_rgba(0,0,0,0.16)] backdrop-blur-sm"
+                style="background: <?php echo esc_attr($location['tone']); ?>;">
+                <?php echo esc_html($location['kicker']); ?>
+              </span>
             </div>
 
-            <div class="p-7 md:p-8">
-              <div class="flex items-center gap-3">
-                <span class="h-2.5 w-16" style="background: <?php echo esc_attr($location['tone']); ?>;"></span>
-                <span class="text-[11px] font-black uppercase tracking-[0.18em] text-[#236476]">
-                  County Page
-                </span>
+            <div class="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-4">
+              <div>
+                <p class="text-[11px] font-black uppercase tracking-[0.18em] text-white/72">
+                  Real Painting Corp
+                </p>
+                <h3 class="mt-2 text-2xl font-black tracking-[-0.04em] text-white md:text-[2rem]">
+                  <?php echo esc_html($location['title']); ?>
+                </h3>
               </div>
 
-              <p class="mt-6 text-[15px] leading-8 text-[#192F44]/78">
-                <?php echo esc_html($location['copy']); ?>
+              <span
+                class="hidden h-12 w-12 items-center justify-center border border-white/18 bg-white/10 text-white shadow-[0_12px_20px_rgba(0,0,0,0.14)] backdrop-blur-md md:inline-flex">
+                <svg viewBox="0 0 24 24" class="h-5 w-5 fill-none" stroke="currentColor" stroke-width="2">
+                  <path d="M7 17 17 7"></path>
+                  <path d="M9 7h8v8"></path>
+                </svg>
+              </span>
+            </div>
+          </div>
+
+          <div class="p-7 md:p-8">
+            <div class="flex items-center gap-3">
+              <span class="h-2.5 w-16" style="background: <?php echo esc_attr($location['tone']); ?>;"></span>
+              <span class="text-[11px] font-black uppercase tracking-[0.18em] text-[#236476]">
+                County Page
+              </span>
+            </div>
+
+            <p class="mt-6 text-[15px] leading-8 text-[#192F44]/78">
+              <?php echo esc_html($location['copy']); ?>
+            </p>
+
+            <div class="mt-6 border border-[#192F44]/8 bg-white/80 p-5">
+              <p class="text-[11px] font-black uppercase tracking-[0.18em] text-[#4A6C2F]">
+                Communities We Target
               </p>
 
-              <div class="mt-6 border border-[#192F44]/8 bg-white/80 p-5">
-                <p class="text-[11px] font-black uppercase tracking-[0.18em] text-[#4A6C2F]">
-                  Communities We Target
-                </p>
-
-                <p class="mt-3 text-sm leading-7 text-[#192F44]/70">
-                  <?php echo esc_html($location['cities']); ?>
-                </p>
-              </div>
-
-              <div class="mt-7 flex flex-wrap items-center gap-3">
-                <a href="<?php echo esc_url($location['slug']); ?>"
-                   class="rpc-paint-btn inline-flex items-center justify-center px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-white shadow-[0_16px_34px_rgba(25,47,68,0.14)]"
-                   style="background: <?php echo esc_attr($location['tone']); ?>; border-color: <?php echo esc_attr($location['tone']); ?>;">
-                  Explore <?php echo esc_html($location['title']); ?>
-                </a>
-
-                <a href="/contact-us"
-                   class="inline-flex items-center gap-2 border-b-2 border-[#236476] pb-1 text-sm font-black uppercase tracking-[0.12em] text-[#236476] transition hover:gap-3">
-                  Request Estimate
-                  <span>→</span>
-                </a>
-              </div>
+              <p class="mt-3 text-sm leading-7 text-[#192F44]/70">
+                <?php echo esc_html($location['cities']); ?>
+              </p>
             </div>
-          </article>
-        <?php endforeach; ?>
-      </div>
+
+            <div class="mt-7 flex flex-wrap items-center gap-3">
+              <a href="<?php echo esc_url($location['map_link']); ?>"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="rpc-paint-btn inline-flex items-center justify-center px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-white shadow-[0_16px_34px_rgba(25,47,68,0.14)]"
+                 style="background: <?php echo esc_attr($location['tone']); ?>; border-color: <?php echo esc_attr($location['tone']); ?>;">
+                Explore <?php echo esc_html($location['title']); ?>
+              </a>
+
+              <a href="/contact-us"
+                 class="inline-flex items-center gap-2 border-b-2 border-[#236476] pb-1 text-sm font-black uppercase tracking-[0.12em] text-[#236476] transition hover:gap-3">
+                Request Estimate
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      <?php endforeach; ?>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- WHY THIS MATTERS -->
   <section class="relative overflow-hidden bg-[#192F44] py-20 text-white lg:py-24">

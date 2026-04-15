@@ -13,8 +13,9 @@ get_header(); ?>
   <?php
     $hero_images = [
       'http://real-painting-corp.local/wp-content/uploads/2026/04/Painting-scaled.jpg',
-      'http://real-painting-corp.local/wp-content/uploads/2026/04/RealPaintingHero3.jpg-scaled.jpeg',
-      'http://real-painting-corp.local/wp-content/uploads/2026/04/RealPaintingHero2.jpg-scaled.jpeg',
+      'http://real-painting-corp.local/wp-content/uploads/2026/04/RealPaintingHeroKitchenRemodeling.jpg-scaled.jpeg',
+      'http://real-painting-corp.local/wp-content/uploads/2026/04/CabinetsInstallationRealPainting.jpg-scaled.jpeg',
+      'http://real-painting-corp.local/wp-content/uploads/2026/04/ExteriorPaintingHero.jpg-scaled.jpeg',
     ];
 
     $service_options = [
@@ -183,7 +184,7 @@ get_header(); ?>
         </p>
 
         <p class="ajs-reveal-up mt-4 text-sm font-black uppercase tracking-[0.24em] text-white/82 md:text-base">
-          Be Real. Build Real.
+          Clear Process. Clean Results.
         </p>
 
         <h1 class="ajs-reveal-up mt-6 text-4xl font-extrabold leading-[1.05] tracking-[-0.04em] text-white md:text-6xl">

@@ -18,10 +18,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
 
 
-const PHONE_DISPLAY = "(909) 232-6602";
-const PHONE_LINK = "tel:+19092326602";
-const EMAIL_DISPLAY = "[client email]";
-const EMAIL_LINK = "mailto:[client email]";
+const PHONE_DISPLAY = "(909) 513-7397";
+const PHONE_LINK = "tel:+19095137397";
+const EMAIL_DISPLAY = "info@realpaintingus.com";
+const EMAIL_LINK = "mailto:info@realpaintingus.com";
 const ESTIMATE_LINK = "/contact-us";
 const ABOUT_LINK = "/about-us";
 const GALLERY_LINK = "/gallery";
@@ -354,7 +354,7 @@ function RealPaintingChatbot() {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
                 className: "text-[11px] font-black uppercase tracking-[0.18em] text-[#CFE0DA]",
-                children: "Be Real. Build Real."
+                children: "Clean Process. Clean Results."
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
                 className: "mt-1 text-[0.92rem] font-black tracking-[-0.02em]",
                 style: {

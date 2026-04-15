@@ -1,9 +1,9 @@
 import React, { useEffect, useMemo, useRef, useState } from "react"
 
-const PHONE_DISPLAY = "(909) 232-6602"
-const PHONE_LINK = "tel:+19092326602"
-const EMAIL_DISPLAY = "[client email]"
-const EMAIL_LINK = "mailto:[client email]"
+const PHONE_DISPLAY = "(909) 513-7397"
+const PHONE_LINK = "tel:+19095137397"
+const EMAIL_DISPLAY = "info@realpaintingus.com"
+const EMAIL_LINK = "mailto:info@realpaintingus.com"
 const ESTIMATE_LINK = "/contact-us"
 const ABOUT_LINK = "/about-us"
 const GALLERY_LINK = "/gallery"
@@ -400,7 +400,7 @@ function RealPaintingChatbot() {
 
 								<div>
 									<p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#CFE0DA]">
-										Be Real. Build Real.
+										Clean Process. Clean Results.
 									</p>
 									<h3
 										className="mt-1 text-[0.92rem] font-black tracking-[-0.02em]"
