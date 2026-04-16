@@ -19,7 +19,7 @@ get_header(); ?>
       'Cabinet installation, refinishing, or replacement',
       'Countertop installation',
       'Tile backsplash and flooring',
-      'Painting and finishing — walls, trim, ceilings',
+      'Painting and finishing  walls, trim, ceilings',
       'Fixture coordination and installation',
       'Daily cleanup and complete home protection throughout',
     ];
@@ -35,7 +35,7 @@ get_header(); ?>
       ],
       [
         'q' => 'What’s the typical investment?',
-        'a' => 'Our kitchen remodels typically start around $30,000 for a complete transformation. Your estimate will be detailed, transparent, and include everything — no surprises after you sign.',
+        'a' => 'Our kitchen remodels typically start around $30,000 for a complete transformation. Your estimate will be detailed, transparent, and include everything  no surprises after you sign.',
       ],
     ];
 
@@ -80,7 +80,7 @@ get_header(); ?>
               <div class="mt-6 h-[3px] w-24 bg-[linear-gradient(90deg,#CFE0DA_0%,#ffffff_55%,#7DAD3F_100%)]"></div>
 
               <p class="mt-7 max-w-xl text-base leading-8 text-white/86 md:text-lg">
-                Complete kitchen transformations designed around how your family lives — from layout and design to cabinets, countertops, tile, and every finishing detail.
+                Complete kitchen transformations designed around how your family lives  from layout and design to cabinets, countertops, tile, and every finishing detail.
               </p>
 
               <div class="mt-8">
@@ -125,11 +125,11 @@ get_header(); ?>
 
             <div class="space-y-6 text-base leading-8 text-[#192F44]/80">
               <p>
-                Your kitchen is where your family gathers, where meals are shared, and where the value of your home is most visible. A kitchen remodel is the most emotionally significant improvement you can make — and the one where trust matters most.
+                Your kitchen is where your family gathers, where meals are shared, and where the value of your home is most visible. A kitchen remodel is the most emotionally significant improvement you can make  and the one where trust matters most.
               </p>
 
               <p>
-                That’s why most of our kitchen remodeling clients didn’t start with the kitchen. They started with a paint job. They experienced how we operate — the cleanliness, the communication, the schedule discipline — and trusted us with the bigger project.
+                That’s why most of our kitchen remodeling clients didn’t start with the kitchen. They started with a paint job. They experienced how we operate  the cleanliness, the communication, the schedule discipline  and trusted us with the bigger project.
               </p>
 
               <p>
@@ -265,7 +265,7 @@ get_header(); ?>
         </h2>
 
         <p class="ajs-reveal-up mt-6 max-w-3xl text-base leading-8 text-[#192F44]/80">
-          Let’s talk about the layout, finish level, and remodeling scope you want — and build a plan that changes how your home feels and functions every day.
+          Let’s talk about the layout, finish level, and remodeling scope you want  and build a plan that changes how your home feels and functions every day.
         </p>
 
         <p class="ajs-reveal-up mt-6 max-w-2xl text-sm leading-7 text-[#192F44]/68">
@@ -281,7 +281,7 @@ get_header(); ?>
             <p class="rpc-estimate-form__eyebrow">Request a Free Estimate</p>
             <h3 class="rpc-estimate-form__title">Tell us about your project.</h3>
             <p class="rpc-estimate-form__trust">
-              Licensed • Insured • Bonded — 40+ Years Combined Experience
+              Licensed • Insured • Bonded  40+ Years Combined Experience
             </p>
           </div>
 

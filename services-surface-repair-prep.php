@@ -16,7 +16,7 @@ get_header(); ?>
     $services = [
       [
         'title' => 'Drywall Repair',
-        'copy'  => 'Patches, cracks, holes, and water damage — restored to a smooth, invisible finish ready for paint.',
+        'copy'  => 'Patches, cracks, holes, and water damage  restored to a smooth, invisible finish ready for paint.',
       ],
       [
         'title' => 'Stucco Repair',
@@ -24,7 +24,7 @@ get_header(); ?>
       ],
       [
         'title' => 'Texture Installation & Removal',
-        'copy'  => 'Orange peel, knockdown, smooth finish — applied or removed to match your desired aesthetic.',
+        'copy'  => 'Orange peel, knockdown, smooth finish  applied or removed to match your desired aesthetic.',
       ],
       [
         'title' => 'Acoustic Ceiling Removal',
@@ -85,7 +85,7 @@ get_header(); ?>
               <div class="mt-6 h-[3px] w-24 bg-[linear-gradient(90deg,#CFE0DA_0%,#ffffff_55%,#7DAD3F_100%)]"></div>
 
               <p class="mt-7 max-w-xl text-base leading-8 text-white/86 md:text-lg">
-                Drywall repair, stucco patching, texture work, acoustic ceiling removal, baseboards, doors, and windows — the structural work behind every finish that lasts.
+                Drywall repair, stucco patching, texture work, acoustic ceiling removal, baseboards, doors, and windows  the structural work behind every finish that lasts.
               </p>
 
               <div class="mt-8">
@@ -238,7 +238,7 @@ get_header(); ?>
         </h2>
 
         <p class="ajs-reveal-up mt-6 max-w-3xl text-base leading-8 text-[#192F44]/80">
-          Let’s talk about the damage, texture, or prep work your home needs — and build a plan that gives the final finish the right foundation.
+          Let’s talk about the damage, texture, or prep work your home needs  and build a plan that gives the final finish the right foundation.
         </p>
 
         <p class="ajs-reveal-up mt-6 max-w-2xl text-sm leading-7 text-[#192F44]/68">
@@ -254,7 +254,7 @@ get_header(); ?>
             <p class="rpc-estimate-form__eyebrow">Request a Free Estimate</p>
             <h3 class="rpc-estimate-form__title">Tell us about your project.</h3>
             <p class="rpc-estimate-form__trust">
-              Licensed • Insured • Bonded — 40+ Years Combined Experience
+              Licensed • Insured • Bonded  40+ Years Combined Experience
             </p>
           </div>
 

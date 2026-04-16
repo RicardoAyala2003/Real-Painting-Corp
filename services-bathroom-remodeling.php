@@ -16,7 +16,7 @@ get_header(); ?>
     $handle_items = [
       'Full demolition and site preparation',
       'Tub-to-shower conversions',
-      'Tile installation — floors, walls, shower surrounds',
+      'Tile installation  floors, walls, shower surrounds',
       'Vanity and fixture installation',
       'Painting and finishing',
       'Daily cleanup and home protection',
@@ -74,7 +74,7 @@ get_header(); ?>
               <div class="mt-6 h-[3px] w-24 bg-[linear-gradient(90deg,#CFE0DA_0%,#ffffff_55%,#7DAD3F_100%)]"></div>
 
               <p class="mt-7 max-w-xl text-base leading-8 text-white/86 md:text-lg">
-                Modern upgrades, shower conversions, tile, vanities, and finishing details — designed for comfort, style, and lasting value.
+                Modern upgrades, shower conversions, tile, vanities, and finishing details  designed for comfort, style, and lasting value.
               </p>
 
               <div class="mt-8">
@@ -123,7 +123,7 @@ get_header(); ?>
               </p>
 
               <p>
-                We handle every detail — demolition, plumbing coordination, tile, vanity installation, paint, and finishing — with the same clean execution and schedule discipline we bring to every project. Most bathroom remodels take about 10 working days with a dedicated crew of 3–4.
+                We handle every detail  demolition, plumbing coordination, tile, vanity installation, paint, and finishing  with the same clean execution and schedule discipline we bring to every project. Most bathroom remodels take about 10 working days with a dedicated crew of 3–4.
               </p>
             </div>
           </div>
@@ -200,7 +200,7 @@ get_header(); ?>
 
         <div class="ajs-reveal-right space-y-6 text-base leading-8 text-white/82">
           <p>
-            Bathrooms are one of the most-used rooms in the home, which means every detail matters — layout, comfort, finish quality, and how clean the process feels while the work is happening.
+            Bathrooms are one of the most-used rooms in the home, which means every detail matters  layout, comfort, finish quality, and how clean the process feels while the work is happening.
           </p>
 
           <p>
@@ -259,7 +259,7 @@ get_header(); ?>
         </h2>
 
         <p class="ajs-reveal-up mt-6 max-w-3xl text-base leading-8 text-[#192F44]/80">
-          Let’s talk about the layout, finish level, and remodeling scope you want — and build a plan that improves comfort, function, and value.
+          Let’s talk about the layout, finish level, and remodeling scope you want  and build a plan that improves comfort, function, and value.
         </p>
 
         <p class="ajs-reveal-up mt-6 max-w-2xl text-sm leading-7 text-[#192F44]/68">
@@ -275,7 +275,7 @@ get_header(); ?>
             <p class="rpc-estimate-form__eyebrow">Request a Free Estimate</p>
             <h3 class="rpc-estimate-form__title">Tell us about your project.</h3>
             <p class="rpc-estimate-form__trust">
-              Licensed • Insured • Bonded — 40+ Years Combined Experience
+              Licensed • Insured • Bonded  40+ Years Combined Experience
             </p>
           </div>
 

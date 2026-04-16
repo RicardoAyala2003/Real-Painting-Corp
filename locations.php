@@ -82,7 +82,7 @@ get_header(); ?>
       </h1>
 
       <p class="ajs-reveal-up mt-6 max-w-3xl text-base leading-8 text-white/84 md:text-lg">
-        Real Painting Corp serves homeowners across Orange County, Los Angeles County, Riverside County, and San Bernardino County — with clean execution, schedule discipline, and the certainty your home deserves.
+        Real Painting Corp serves homeowners across Orange County, Los Angeles County, Riverside County, and San Bernardino County  with clean execution, schedule discipline, and the certainty your home deserves.
       </p>
 
       <div class="ajs-reveal-up mt-10 flex flex-col gap-4 sm:flex-row">

@@ -91,7 +91,7 @@ get_header(); ?>
     $services = [
       [
         'title' => 'Interior Painting',
-        'copy'  => 'Walls, ceilings, trim, and accent work — with full surface preparation and daily cleanup.',
+        'copy'  => 'Walls, ceilings, trim, and accent work  with full surface preparation and daily cleanup.',
         'link'  => '/services/interior-painting',
         'tone'  => '#192F44',
         'cta'   => 'Explore Interior Painting →',
@@ -107,7 +107,7 @@ get_header(); ?>
       ],
       [
         'title' => 'Kitchen Remodeling',
-        'copy'  => 'Full kitchen transformations — layout, cabinets, countertops, tile, and finishing.',
+        'copy'  => 'Full kitchen transformations  layout, cabinets, countertops, tile, and finishing.',
         'link'  => '/services/kitchen-remodeling',
         'tone'  => '#4A6C2F',
         'cta'   => 'Explore Kitchen Remodeling →',
@@ -193,7 +193,7 @@ get_header(); ?>
         </h1>
 
         <p class="ajs-reveal-up mt-6 max-w-2xl text-base leading-7 text-white/85 md:text-lg lg:max-w-xl">
-          Premium painting and remodeling across Southern California — delivered with clean execution,
+          Premium painting and remodeling across Southern California  delivered with clean execution,
           schedule discipline, and the certainty your home deserves.
         </p>
 
@@ -224,6 +224,7 @@ get_header(); ?>
           <span class="rpc-marquee__dot bg-[#192F44]"></span>
           C-33 Licensed · Insured · Bonded
         </span>
+        
 
         <span class="rpc-marquee__item">
           <span class="rpc-marquee__dot bg-[#236476]"></span>
@@ -244,7 +245,7 @@ get_header(); ?>
       <div class="rpc-marquee__group" aria-hidden="true">
         <span class="rpc-marquee__item">
           <span class="rpc-marquee__dot bg-[#192F44]"></span>
-          C-33 Licensed · Insured · Bonded
+          B-2 Licensed · Insured · Bonded
         </span>
 
         <span class="rpc-marquee__item">
@@ -284,11 +285,11 @@ get_header(); ?>
         <div class="ajs-reveal-right">
           <div class="space-y-5 text-base leading-8 text-[#192F44]/80">
             <p>
-              Real Painting Corp is a full-service painting and remodeling company based in Southern California. We handle everything from interior and exterior painting to complete kitchen and bathroom transformations — with the structure, licensing, and accountability that most contractors simply don’t offer.
+              Real Painting Corp is a full-service painting and remodeling company based in Southern California. We handle everything from interior and exterior painting to complete kitchen and bathroom transformations  with the structure, licensing, and accountability that most contractors simply don’t offer.
             </p>
 
             <p>
-              We exist to eliminate the stress and uncertainty homeowners feel when hiring someone to work inside their home. That means protecting your space before we touch a wall. It means showing up when we say and finishing when we promise. And it means delivering a result you can see and feel — one that makes you say, “These are different.”
+              We exist to eliminate the stress and uncertainty homeowners feel when hiring someone to work inside their home. That means protecting your space before we touch a wall. It means showing up when we say and finishing when we promise. And it means delivering a result you can see and feel  one that makes you say, “These are different.”
             </p>
 
             <p>
@@ -384,7 +385,7 @@ get_header(); ?>
         <article class="ajs-reveal-up border border-white/12 bg-white/6 p-6 backdrop-blur-sm">
           <h3 class="text-xl font-black">Clean Site Protocol</h3>
           <p class="mt-4 text-[15px] leading-8 text-white/80">
-            We protect every surface before we start — floors, furniture, fixtures. When we leave each day, your home is cleaner than when we arrived. This isn’t a promise we make at the estimate. It’s what you’ll see on day one.
+            We protect every surface before we start  floors, furniture, fixtures. When we leave each day, your home is cleaner than when we arrived. This isn’t a promise we make at the estimate. It’s what you’ll see on day one.
           </p>
         </article>
 
@@ -398,7 +399,7 @@ get_header(); ?>
         <article class="ajs-reveal-up border border-white/12 bg-white/6 p-6 backdrop-blur-sm">
           <h3 class="text-xl font-black">Aesthetic Certainty</h3>
           <p class="mt-4 text-[15px] leading-8 text-white/80">
-            You’ll know exactly what the result will look like before we begin. Our experience in color, finish, and design means no guesswork — just a result that makes you proud of your home.
+            You’ll know exactly what the result will look like before we begin. Our experience in color, finish, and design means no guesswork  just a result that makes you proud of your home.
           </p>
         </article>
 
@@ -429,7 +430,7 @@ get_header(); ?>
       <div class="mt-14 grid gap-6 xl:grid-cols-4">
         <?php
         $steps = [
-          ['num' => '01', 'title' => 'Free Consultation', 'copy' => 'We visit your property, listen to your goals, and assess the scope before recommending anything. No pressure, no obligation — just an honest conversation about what your home needs.', 'bg' => '#CFE0DA'],
+          ['num' => '01', 'title' => 'Free Consultation', 'copy' => 'We visit your property, listen to your goals, and assess the scope before recommending anything. No pressure, no obligation  just an honest conversation about what your home needs.', 'bg' => '#CFE0DA'],
           ['num' => '02', 'title' => 'Detailed Estimate', 'copy' => 'You receive a clear, written proposal with defined scope, timeline, and pricing. No vague numbers. No hidden costs. You know exactly what you’re getting before we touch a wall.', 'bg' => '#ffffff'],
           ['num' => '03', 'title' => 'Expert Execution', 'copy' => 'Our crew arrives on schedule, protects your home, and delivers premium workmanship with daily cleanup and progress updates. You’ll always know what happened today and what’s happening tomorrow.', 'bg' => '#ffffff'],
           ['num' => '04', 'title' => 'Final Walk-Through', 'copy' => 'We don’t consider a project complete until you do. Every job ends with a walk-through, your full approval, and the confidence that you made the right call.', 'bg' => '#CFE0DA'],
@@ -456,73 +457,96 @@ get_header(); ?>
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="border-y border-[#192F44]/10 bg-white py-20 lg:py-24">
-    <div class="mx-auto max-w-7xl px-4">
-      <div class="ajs-reveal-left">
+<!-- TESTIMONIALS -->
+<section class="relative overflow-hidden border-t border-[#192F44]/10 bg-white py-20 lg:py-24">
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(35,100,118,0.05),transparent_30%)]"></div>
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(125,173,63,0.08),transparent_28%)]"></div>
+
+  <div class="relative mx-auto max-w-7xl px-4">
+    <div class="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+      <div class="ajs-reveal-left max-w-2xl">
         <p class="text-xs font-black uppercase tracking-[0.22em] text-[#236476]">
           Testimonials
         </p>
 
-        <h2 class="mt-5 max-w-[10ch] text-3xl font-black leading-[0.94] tracking-[-0.05em] text-[#192F44] md:text-5xl">
-          What Our Clients Say
+        <h2 class="mt-4 text-3xl font-black leading-tight tracking-[-0.05em] text-[#192F44] md:text-5xl">
+          What Homeowners Are Saying
         </h2>
+
+        <p class="mt-5 max-w-xl text-base leading-8 text-[#192F44]/74">
+          Real feedback from homeowners who trusted Real Painting Corp with their home.
+        </p>
       </div>
 
-      <div class="mt-14 grid gap-6 xl:grid-cols-[1.1fr_0.9fr]">
-        <article class="ajs-reveal-up rpc-testimonial-featured">
-          <div class="rpc-testimonial-featured__inner">
-            <div class="rpc-testimonial-featured__top">
-              <span class="rpc-testimonial-bar bg-[#192F44]"></span>
-              <span class="rpc-testimonial-kicker text-[#236476]">Cleanliness</span>
-            </div>
+      <div class="ajs-reveal-right">
+        <a 
+          href="https://www.google.com/search?sca_esv=55e9f3c856495c1e&rlz=1C5AJCO_enUS1195US1195&sxsrf=ANbL-n7SWeDoYqXCCqbsvlBJOd9U5zKwxg:1776310827641&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOY2rO3DUfzgS3kdyK5OTfr68pXOjsJtQzHBPt0E9MABdgr0JcuEhZjfL-is4Cvx29OAHfP_xw8HAeSKmK31GzNBvjahGqcTrebKo3pxVeFXg6KrlRA%3D%3D&q=REAL+Painting+Corp+Opiniones&sa=X&ved=2ahUKEwiisZG_ufGTAxWrj4kEHbMPLp0Q0bkNegQIIBAH&cshid=1776310953691549&biw=1528&bih=698&dpr=1.25"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="rpc-paint-btn rpc-paint-btn-dark inline-flex items-center justify-center px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-white"
+        >
+          Read More Reviews →
+        </a>
+      </div>
+    </div>
 
-            <div class="rpc-testimonial-quote-mark text-[#192F44]/12">“</div>
+    <div class="mt-12 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+      <article class="ajs-reveal-left rpc-testimonial-featured">
+        <div class="rpc-testimonial-featured__inner">
+          <div class="rpc-testimonial-featured__top">
+            <span class="rpc-testimonial-bar bg-[#7DAD3F]"></span>
+            <p class="rpc-testimonial-kicker text-[#236476]">Google Review</p>
+          </div>
 
-            <p class="rpc-testimonial-featured__copy">
-              They protected every inch of our home. When they finished, the house was spotless — not just painted, but cleaner than before they started.
-            </p>
+          <span class="rpc-testimonial-quote-mark text-[#192F44]/10">“</span>
 
-            <div class="rpc-testimonial-featured__meta">
-              <p class="rpc-testimonial-name">Homeowner, Mission Viejo, CA</p>
-            </div>
+          <p class="rpc-testimonial-featured__copy">
+            “I would like to recommend Real Painting Corporation. If you are looking for a great paint job for your home, look no further. They came out, assessed the project, and gave me a great price. From the very start, they arrived when they said they would, prepped the property carefully, repaired damaged fascia boards, window sills, and fallen stucco, and cleaned up after each day’s work. After a few days, my mother’s old house was looking brand new again. Real Painting Corporation is worth hiring if you want a job well done.”
+          </p>
+
+          <div class="rpc-testimonial-featured__meta">
+            <p class="rpc-testimonial-name text-[#192F44]">Wayne Downing</p>
+            <p class="mt-2 text-sm font-medium text-[#192F44]/62">Exterior Painting Project</p>
+          </div>
+        </div>
+      </article>
+
+      <div class="grid gap-6">
+        <article class="ajs-reveal-up rpc-testimonial-side rpc-testimonial-side--dark">
+          <div class="rpc-testimonial-side__top">
+            <span class="rpc-testimonial-bar bg-[#CFE0DA]"></span>
+            <p class="rpc-testimonial-kicker text-white/72">Google Review</p>
+          </div>
+
+          <p class="rpc-testimonial-side__copy">
+            “ They really listen and pay attention to details. Their whole team was professional and efficient. We highly recommend them. Our two bathrooms and laundry room look great.”
+          </p>
+
+          <div class="rpc-testimonial-side__meta border-white/14">
+            <p class="rpc-testimonial-name text-white">Andrew Estrada</p>
+            <p class="mt-2 text-sm font-medium text-white/70">Bathroom Remodeling</p>
           </div>
         </article>
 
-        <div class="grid gap-6">
-          <article class="ajs-reveal-stagger rpc-testimonial-side rpc-testimonial-side--dark">
-            <div class="rpc-testimonial-side__top">
-              <span class="rpc-testimonial-bar bg-[#CFE0DA]"></span>
-              <span class="rpc-testimonial-kicker text-[#CFE0DA]">Schedule Discipline</span>
-            </div>
+        <article class="ajs-reveal-up rpc-testimonial-side rpc-testimonial-side--green">
+          <div class="rpc-testimonial-side__top">
+            <span class="rpc-testimonial-bar bg-white/80"></span>
+            <p class="rpc-testimonial-kicker text-white/80">Google Review</p>
+          </div>
 
-            <p class="rpc-testimonial-side__copy text-white/84">
-              They showed up when they said they would and finished on the exact day they promised. I’ve never had that experience with a contractor before.
-            </p>
+          <p class="rpc-testimonial-side__copy">
+            “They arrive early, work full days, keep the site very clean before, during, and after each day, and were even flexible with our schedule. They were pet friendly, easy to communicate with, and worked through changes with wonderful ideas. The quality and professionalism is a 10.”
+          </p>
 
-            <div class="rpc-testimonial-side__meta">
-              <p class="rpc-testimonial-name text-white">Homeowner, Irvine, CA</p>
-            </div>
-          </article>
-
-          <article class="ajs-reveal-stagger rpc-testimonial-side rpc-testimonial-side--green">
-            <div class="rpc-testimonial-side__top">
-              <span class="rpc-testimonial-bar bg-[#192F44]"></span>
-              <span class="rpc-testimonial-kicker text-white/84">Trust-to-Remodel Path</span>
-            </div>
-
-            <p class="rpc-testimonial-side__copy text-white/88">
-              We hired them for a repaint and trusted them enough to do our kitchen remodel. Best decision we’ve made for our home.
-            </p>
-
-            <div class="rpc-testimonial-side__meta">
-              <p class="rpc-testimonial-name text-white">Homeowner, Corona, CA</p>
-            </div>
-          </article>
-        </div>
+          <div class="rpc-testimonial-side__meta border-white/18">
+            <p class="rpc-testimonial-name text-white">Annamarie Molino</p>
+            <p class="mt-2 text-sm font-medium text-white/78">Interior & Exterior Construction Work</p>
+          </div>
+        </article>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- GALLERY TEASER -->
   <section class="bg-[#f6f5f0] py-20">
@@ -684,7 +708,7 @@ get_header(); ?>
         </h2>
 
         <p class="ajs-reveal-up mt-6 max-w-3xl text-base leading-8 text-[#192F44]/80">
-          Whether you need a fresh interior, a complete exterior transformation, or a kitchen and bathroom that changes how you live — we deliver the certainty your home deserves.
+          Whether you need a fresh interior, a complete exterior transformation, or a kitchen and bathroom that changes how you live  we deliver the certainty your home deserves.
         </p>
 
         <div class="ajs-reveal-up mt-8 flex flex-wrap items-center gap-3">

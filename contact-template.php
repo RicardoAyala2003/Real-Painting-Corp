@@ -26,7 +26,7 @@ get_header(); ?>
     $faqs = [
       [
         'q' => 'What areas do you serve?',
-        'a' => 'We serve homeowners across Orange County, Los Angeles County, Riverside County, and San Bernardino County — including Rancho Santa Margarita, Irvine, Mission Viejo, Coto de Caza, Ladera Ranch, Corona, Murrieta, Temecula, Menifee, Rancho Cucamonga, Pasadena, Glendale, Arcadia, and surrounding communities.',
+        'a' => 'We serve homeowners across Orange County, Los Angeles County, Riverside County, and San Bernardino County  including Rancho Santa Margarita, Irvine, Mission Viejo, Coto de Caza, Ladera Ranch, Corona, Murrieta, Temecula, Menifee, Rancho Cucamonga, Pasadena, Glendale, Arcadia, and surrounding communities.',
       ],
       [
         'q' => 'Are you licensed and insured?',
@@ -38,7 +38,7 @@ get_header(); ?>
       ],
       [
         'q' => 'How quickly can you start?',
-        'a' => 'We respond within 24–48 hours. Project start dates depend on scope and schedule — you’ll receive a clear timeline as part of your proposal.',
+        'a' => 'We respond within 24–48 hours. Project start dates depend on scope and schedule  you’ll receive a clear timeline as part of your proposal.',
       ],
       [
         'q' => 'Do you do remodeling or just painting?',

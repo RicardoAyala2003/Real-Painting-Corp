@@ -18,27 +18,27 @@ get_header(); ?>
     $values = [
       [
         'title' => 'Certainty',
-        'copy'  => 'Every project has a defined scope, a clear timeline, and a predictable result. You never have to guess what’s happening, what it costs, or when it’ll be done. We eliminate the uncertainty — that’s the product.',
+        'copy'  => 'Every project has a defined scope, a clear timeline, and a predictable result. You never have to guess what’s happening, what it costs, or when it’ll be done. We eliminate the uncertainty  that’s the product.',
         'tone'  => '#192F44'
       ],
       [
         'title' => 'Cleanliness',
-        'copy'  => 'We treat your home like it’s ours. Floors are protected. Furniture is covered. Surfaces are shielded. And when we leave, the site is cleaner than when we arrived. Cleanliness is our first signal of professionalism — before we paint a single wall.',
+        'copy'  => 'We treat your home like it’s ours. Floors are protected. Furniture is covered. Surfaces are shielded. And when we leave, the site is cleaner than when we arrived. Cleanliness is our first signal of professionalism  before we paint a single wall.',
         'tone'  => '#236476'
       ],
       [
         'title' => 'Commitment',
-        'copy'  => 'What we promise, we deliver — on time and in full. Schedule discipline isn’t something we aspire to. It’s how we operate. We respect your time as much as we respect your property.',
+        'copy'  => 'What we promise, we deliver  on time and in full. Schedule discipline isn’t something we aspire to. It’s how we operate. We respect your time as much as we respect your property.',
         'tone'  => '#4A6C2F'
       ],
       [
         'title' => 'Trust',
-        'copy'  => 'We are C-33 licensed, carry General Liability and Workers’ Compensation insurance, and are fully bonded. When you open your door to our team, you’re protected at every level — from the first estimate to the final walk-through.',
+        'copy'  => 'We are C-33 licensed, carry General Liability and Workers’ Compensation insurance, and are fully bonded. When you open your door to our team, you’re protected at every level  from the first estimate to the final walk-through.',
         'tone'  => '#7DAD3F'
       ],
       [
         'title' => 'Excellence',
-        'copy'  => 'With 40+ years of combined experience, we don’t cut corners. Every layer of prep, every coat, every finish reflects a commitment to work that lasts — not work that’s fast. We prioritize quality over volume. Always.',
+        'copy'  => 'With 40+ years of combined experience, we don’t cut corners. Every layer of prep, every coat, every finish reflects a commitment to work that lasts  not work that’s fast. We prioritize quality over volume. Always.',
         'tone'  => '#192F44'
       ],
     ];
@@ -94,7 +94,7 @@ get_header(); ?>
           <div class="mt-6 h-[3px] w-24 bg-[linear-gradient(90deg,#192F44_0%,#236476_55%,#7DAD3F_100%)]"></div>
 
           <p class="mt-8 max-w-2xl text-base leading-8 text-[#192F44]/80 md:text-lg">
-            We founded Real Painting Corp on a simple conviction: that homeowners deserve a contractor who shows up prepared, protects their home, respects their time, and delivers a result worth recommending — without the stress of wondering if it’ll actually happen.
+            We founded Real Painting Corp on a simple conviction: that homeowners deserve a contractor who shows up prepared, protects their home, respects their time, and delivers a result worth recommending  without the stress of wondering if it’ll actually happen.
           </p>
 
           <div class="mt-10 grid gap-3 sm:grid-cols-2">
@@ -182,7 +182,7 @@ get_header(); ?>
           <div class="space-y-6 text-base leading-8 text-[#192F44]/80">
 
             <p>
-              Real Painting Corp was founded in 2023 by two partners who spent decades working in the painting and remodeling industry across Southern California. After years of working under other contractors — where the margins were thin, quality control was inconsistent, and the client relationship was always an afterthought — they made a decision.
+              Real Painting Corp was founded in 2023 by two partners who spent decades working in the painting and remodeling industry across Southern California. After years of working under other contractors  where the margins were thin, quality control was inconsistent, and the client relationship was always an afterthought  they made a decision.
             </p>
 
             <div class="overflow-hidden border-l-4 border-[#236476] bg-[linear-gradient(135deg,rgba(255,255,255,1),rgba(35,100,118,0.06))] px-5 py-5 shadow-[0_10px_24px_rgba(25,47,68,0.05)]">
@@ -192,7 +192,7 @@ get_header(); ?>
             </div>
 
             <p>
-              Not a company that talks about quality. A company that proves it — every single day, in every single home. Where clean execution isn’t a selling point, it’s the baseline. Where showing up on time isn’t a bonus, it’s the expectation. Where a homeowner opens their front door and feels certain they made the right call.
+              Not a company that talks about quality. A company that proves it  every single day, in every single home. Where clean execution isn’t a selling point, it’s the baseline. Where showing up on time isn’t a bonus, it’s the expectation. Where a homeowner opens their front door and feels certain they made the right call.
             </p>
 
             <p>
@@ -200,7 +200,7 @@ get_header(); ?>
             </p>
 
             <p>
-              Today we serve homeowners across Orange County, Los Angeles, Riverside, and San Bernardino — with full licensing, insurance, and a reputation built entirely on referrals and results.
+              Today we serve homeowners across Orange County, Los Angeles, Riverside, and San Bernardino  with full licensing, insurance, and a reputation built entirely on referrals and results.
             </p>
 
           </div>
@@ -266,61 +266,71 @@ get_header(); ?>
       </h2>
 
       <p class="ajs-reveal-up mx-auto mt-8 max-w-4xl text-base leading-8 text-white/84 md:text-lg">
-        We transform homes across Southern California through premium painting and interior remodeling — delivered with clean execution, schedule discipline, and aesthetic certainty. We operate with full professional structure so that every homeowner feels total certainty from the first call to the final walk-through.
+        We transform homes across Southern California through premium painting and interior remodeling  delivered with clean execution, schedule discipline, and aesthetic certainty. We operate with full professional structure so that every homeowner feels total certainty from the first call to the final walk-through.
       </p>
     </div>
   </section>
 
-  <!-- LICENSED -->
-  <section class="bg-[#f6f5f0] py-20 lg:py-24">
-    <div class="mx-auto max-w-7xl px-4">
-      <div class="grid gap-8 xl:grid-cols-[1.1fr_0.9fr] xl:items-stretch">
-        <article class="ajs-reveal-left relative overflow-hidden border border-[#192F44]/10 bg-white p-8 shadow-[0_20px_44px_rgba(25,47,68,0.08)] md:p-10">
-          <div class="absolute right-0 top-0 h-24 w-24 translate-x-[20%] -translate-y-[20%] rotate-12 bg-[#CFE0DA]/60"></div>
+ <!-- LICENSED -->
+<section class="bg-[#f6f5f0] py-20 lg:py-24">
+  <div class="mx-auto max-w-7xl px-4">
+    <div class="grid gap-8 xl:grid-cols-[1.1fr_0.9fr] xl:items-stretch">
+      
+      <article class="ajs-reveal-left relative overflow-hidden border border-[#192F44]/10 bg-white p-8 shadow-[0_20px_44px_rgba(25,47,68,0.08)] md:p-10">
+        <div class="absolute right-0 top-0 h-24 w-24 translate-x-[20%] -translate-y-[20%] rotate-12 bg-[#CFE0DA]/60"></div>
 
-          <p class="text-xs font-black uppercase tracking-[0.22em] text-[#236476]">
-            Licensed, Insured & Bonded
+        <p class="text-xs font-black uppercase tracking-[0.22em] text-[#236476]">
+          Licensed, Insured & Bonded
+        </p>
+
+        <h2 class="mt-5 text-3xl font-black leading-tight tracking-[-0.05em] text-[#192F44] md:text-5xl">
+          Professional structure. Full accountability.
+        </h2>
+
+        <div class="mt-8 space-y-5 text-base leading-8 text-[#192F44]/80">
+          <p>
+            Real Painting Corp holds a C-33 Painting and Decorating license (CSLB #1111920), a B-2 General Building license, General Liability insurance, Workers’ Compensation coverage, and a surety bond. We are compliant with all OSHA and California state regulations.
           </p>
 
-          <h2 class="mt-5 text-3xl font-black leading-tight tracking-[-0.05em] text-[#192F44] md:text-5xl">
-            Professional structure. Full accountability.
-          </h2>
+          <p class="font-bold text-[#192F44]">
+            When you hire Real Painting, you’re working with a legitimate, accountable business — not a crew with a van.
+          </p>
+        </div>
+      </article>
 
-          <div class="mt-8 space-y-5 text-base leading-8 text-[#192F44]/80">
-            <p>
-              Real Painting Corp holds a C-33 Painting and Decorating license (CSLB #1111920), General Liability insurance, Workers’ Compensation coverage, and a surety bond. We are compliant with all OSHA and California state regulations.
-            </p>
-
-            <p class="font-bold text-[#192F44]">
-              When you hire Real Painting, you’re working with a legitimate, accountable business — not a crew with a van.
-            </p>
-          </div>
+      <div class="grid gap-5 sm:grid-cols-2 xl:grid-cols-1">
+        
+        <article class="ajs-reveal-stagger border border-[#192F44]/10 bg-[#CFE0DA] p-6 shadow-[0_16px_34px_rgba(25,47,68,0.06)]">
+          <p class="text-xs font-black uppercase tracking-[0.18em] text-[#192F44]/70">Credential</p>
+          <h3 class="mt-3 text-2xl font-black tracking-[-0.03em] text-[#192F44]">C-33 Licensed</h3>
         </article>
 
-        <div class="grid gap-5 sm:grid-cols-2 xl:grid-cols-1">
-          <article class="ajs-reveal-stagger border border-[#192F44]/10 bg-[#CFE0DA] p-6 shadow-[0_16px_34px_rgba(25,47,68,0.06)]">
-            <p class="text-xs font-black uppercase tracking-[0.18em] text-[#192F44]/70">Credential</p>
-            <h3 class="mt-3 text-2xl font-black tracking-[-0.03em] text-[#192F44]">C-33 Licensed</h3>
-          </article>
+        <!-- NUEVA CARD -->
+        <article class="ajs-reveal-stagger border border-[#192F44]/10 bg-[#CFE0DA] p-6 shadow-[0_16px_34px_rgba(25,47,68,0.06)]">
+          <p class="text-xs font-black uppercase tracking-[0.18em] text-[#192F44]/70">Credential</p>
+          <h3 class="mt-3 text-2xl font-black tracking-[-0.03em] text-[#192F44]">B-2 Licensed</h3>
+        </article>
 
-          <article class="ajs-reveal-stagger border border-[#192F44]/10 bg-white p-6 shadow-[0_16px_34px_rgba(25,47,68,0.06)]">
-            <p class="text-xs font-black uppercase tracking-[0.18em] text-[#236476]">Protection</p>
-            <h3 class="mt-3 text-2xl font-black tracking-[-0.03em] text-[#192F44]">General Liability</h3>
-          </article>
 
-          <article class="ajs-reveal-stagger border border-[#192F44]/10 bg-white p-6 shadow-[0_16px_34px_rgba(25,47,68,0.06)]">
-            <p class="text-xs font-black uppercase tracking-[0.18em] text-[#4A6C2F]">Coverage</p>
-            <h3 class="mt-3 text-2xl font-black tracking-[-0.03em] text-[#192F44]">Workers’ Compensation</h3>
-          </article>
+        <article class="ajs-reveal-stagger border border-[#192F44]/10 bg-white p-6 shadow-[0_16px_34px_rgba(25,47,68,0.06)]">
+          <p class="text-xs font-black uppercase tracking-[0.18em] text-[#236476]">Protection</p>
+          <h3 class="mt-3 text-2xl font-black tracking-[-0.03em] text-[#192F44]">General Liability</h3>
+        </article>
 
-          <article class="ajs-reveal-stagger border border-[#192F44]/10 bg-[#7DAD3F] p-6 shadow-[0_16px_34px_rgba(25,47,68,0.10)]">
-            <p class="text-xs font-black uppercase tracking-[0.18em] text-white/82">Accountability</p>
-            <h3 class="mt-3 text-2xl font-black tracking-[-0.03em] text-white">Surety Bond</h3>
-          </article>
-        </div>
+        <article class="ajs-reveal-stagger border border-[#192F44]/10 bg-white p-6 shadow-[0_16px_34px_rgba(25,47,68,0.06)]">
+          <p class="text-xs font-black uppercase tracking-[0.18em] text-[#4A6C2F]">Coverage</p>
+          <h3 class="mt-3 text-2xl font-black tracking-[-0.03em] text-[#192F44]">Workers’ Compensation</h3>
+        </article>
+
+        <article class="ajs-reveal-stagger border border-[#192F44]/10 bg-[#7DAD3F] p-6 shadow-[0_16px_34px_rgba(25,47,68,0.10)]">
+          <p class="text-xs font-black uppercase tracking-[0.18em] text-white/82">Accountability</p>
+          <h3 class="mt-3 text-2xl font-black tracking-[-0.03em] text-white">Surety Bond</h3>
+        </article>
+
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- COMMUNITIES -->
   <section class="border-y border-[#192F44]/10 bg-white py-20 lg:py-24">
@@ -371,7 +381,7 @@ get_header(); ?>
       </h2>
 
       <p class="ajs-reveal-up mt-6 max-w-3xl text-base leading-8 text-[#192F44]/80">
-        We founded Real Painting Corp on a simple conviction: that homeowners deserve a contractor who shows up prepared, protects their home, respects their time, and delivers a result worth recommending — without the stress of wondering if it’ll actually happen.
+        We founded Real Painting Corp on a simple conviction: that homeowners deserve a contractor who shows up prepared, protects their home, respects their time, and delivers a result worth recommending  without the stress of wondering if it’ll actually happen.
       </p>
 
       <p class="ajs-reveal-up mt-6 max-w-2xl text-sm leading-7 text-[#192F44]/68">
@@ -387,7 +397,7 @@ get_header(); ?>
           <p class="rpc-estimate-form__eyebrow">Request a Free Estimate</p>
           <h3 class="rpc-estimate-form__title">Tell us about your project.</h3>
           <p class="rpc-estimate-form__trust">
-            Licensed • Insured • Bonded — 40+ Years Combined Experience
+            Licensed • Insured • Bonded  40+ Years Combined Experience
           </p>
         </div>
 

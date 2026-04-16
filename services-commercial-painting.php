@@ -62,7 +62,7 @@ get_header(); ?>
               <div class="mt-6 h-[3px] w-24 bg-[linear-gradient(90deg,#CFE0DA_0%,#ffffff_55%,#7DAD3F_100%)]"></div>
 
               <p class="mt-7 max-w-xl text-base leading-8 text-white/86 md:text-lg">
-                Professional-grade painting for offices, retail, medical, and commercial spaces — executed on schedule, on budget, and with minimal disruption to your business.
+                Professional-grade painting for offices, retail, medical, and commercial spaces  executed on schedule, on budget, and with minimal disruption to your business.
               </p>
 
               <div class="mt-8">
@@ -227,7 +227,7 @@ get_header(); ?>
             <p class="rpc-estimate-form__eyebrow">Request a Free Estimate</p>
             <h3 class="rpc-estimate-form__title">Tell us about your project.</h3>
             <p class="rpc-estimate-form__trust">
-              Licensed • Insured • Bonded — 40+ Years Combined Experience
+              Licensed • Insured • Bonded  40+ Years Combined Experience
             </p>
           </div>
 

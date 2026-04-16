@@ -62,7 +62,7 @@ get_header(); ?>
               <div class="mt-6 h-[3px] w-24 bg-[linear-gradient(90deg,#CFE0DA_0%,#ffffff_55%,#7DAD3F_100%)]"></div>
 
               <p class="mt-7 max-w-xl text-base leading-8 text-white/86 md:text-lg">
-                Deep cleaning for driveways, patios, walkways, fences, and exterior surfaces — restoring your property’s appearance and preparing surfaces for new coatings.
+                Deep cleaning for driveways, patios, walkways, fences, and exterior surfaces  restoring your property’s appearance and preparing surfaces for new coatings.
               </p>
 
               <div class="mt-8">
@@ -107,7 +107,7 @@ get_header(); ?>
 
             <div class="space-y-6 text-base leading-8 text-[#192F44]/80">
               <p>
-                Southern California properties accumulate dirt, grime, algae, and mineral deposits that dull surfaces and accelerate wear. Pressure washing doesn’t just improve how your property looks — it extends the life of your concrete, stucco, and exterior finishes.
+                Southern California properties accumulate dirt, grime, algae, and mineral deposits that dull surfaces and accelerate wear. Pressure washing doesn’t just improve how your property looks  it extends the life of your concrete, stucco, and exterior finishes.
               </p>
 
               <p>
@@ -227,7 +227,7 @@ get_header(); ?>
             <p class="rpc-estimate-form__eyebrow">Request a Free Estimate</p>
             <h3 class="rpc-estimate-form__title">Tell us about your project.</h3>
             <p class="rpc-estimate-form__trust">
-              Licensed • Insured • Bonded — 40+ Years Combined Experience
+              Licensed • Insured • Bonded  40+ Years Combined Experience
             </p>
           </div>
 

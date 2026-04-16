@@ -14,11 +14,11 @@ get_header(); ?>
     $hero_image = '/wp-content/uploads/2026/04/InteriorPaintingService.jpg-scaled.jpeg';
 
     $included_items = [
-      'Full surface preparation — patching, sanding, caulking, priming',
-      'Premium paint products — Sherwin-Williams, Benjamin Moore, or equivalent',
+      'Full surface preparation  patching, sanding, caulking, priming',
+      'Premium paint products  Sherwin-Williams, Benjamin Moore, or equivalent',
       'Complimentary color consultation',
       'Complete furniture and floor protection',
-      'Daily site cleanup — every single day, not just at the end',
+      'Daily site cleanup  every single day, not just at the end',
       'Final walk-through inspection with your approval before final payment',
       'Up to 1-year workmanship warranty',
     ];
@@ -26,7 +26,7 @@ get_header(); ?>
     $faqs = [
       [
         'q' => 'How long does an interior paint job take?',
-        'a' => 'A standard 2,000 sq ft interior takes approximately 2 weeks with a crew of 4–5 professionals working Monday through Friday. We’ll give you a specific timeline in your proposal — and we’ll hold to it.',
+        'a' => 'A standard 2,000 sq ft interior takes approximately 2 weeks with a crew of 4–5 professionals working Monday through Friday. We’ll give you a specific timeline in your proposal  and we’ll hold to it.',
       ],
       [
         'q' => 'Do I need to move my furniture?',
@@ -38,7 +38,7 @@ get_header(); ?>
       ],
       [
         'q' => 'Do you repair walls before painting?',
-        'a' => 'Yes. Full surface preparation — drywall repair, patching, sanding, and priming — is included in every project. The prep is what makes the paint last.',
+        'a' => 'Yes. Full surface preparation  drywall repair, patching, sanding, and priming  is included in every project. The prep is what makes the paint last.',
       ],
     ];
 
@@ -85,7 +85,7 @@ get_header(); ?>
             <div class="mt-6 h-[3px] w-24 bg-[linear-gradient(90deg,#CFE0DA_0%,#ffffff_55%,#7DAD3F_100%)]"></div>
 
             <p class="mt-7 max-w-xl text-base leading-8 text-white/86 md:text-lg">
-              Precision finishes, full surface preparation, and a clean site from start to finish — for homeowners who notice the difference between a paint job and a transformation.
+              Precision finishes, full surface preparation, and a clean site from start to finish  for homeowners who notice the difference between a paint job and a transformation.
             </p>
 
             <div class="mt-8">
@@ -134,11 +134,11 @@ get_header(); ?>
               </p>
 
               <p>
-                That’s why we approach every interior project with a level of care that goes far beyond the paint itself. We protect your floors, your furniture, and your fixtures before we open a single can. We prep every surface — patching, sanding, priming — because the quality of what’s underneath determines how long the finish lasts.
+                That’s why we approach every interior project with a level of care that goes far beyond the paint itself. We protect your floors, your furniture, and your fixtures before we open a single can. We prep every surface  patching, sanding, priming  because the quality of what’s underneath determines how long the finish lasts.
               </p>
 
               <p>
-                And when we leave each day, the only evidence of our work is the progress — not the mess.
+                And when we leave each day, the only evidence of our work is the progress  not the mess.
               </p>
             </div>
           </div>
@@ -229,7 +229,7 @@ get_header(); ?>
           </p>
 
           <p>
-            That doesn’t happen here. Cleanliness is our first signal of professionalism — before a single wall gets painted.
+            That doesn’t happen here. Cleanliness is our first signal of professionalism  before a single wall gets painted.
           </p>
         </div>
       </div>
@@ -300,7 +300,7 @@ get_header(); ?>
             <p class="rpc-estimate-form__eyebrow">Request a Free Estimate</p>
             <h3 class="rpc-estimate-form__title">Tell us about your project.</h3>
             <p class="rpc-estimate-form__trust">
-              Licensed • Insured • Bonded — 40+ Years Combined Experience
+              Licensed • Insured • Bonded  40+ Years Combined Experience
             </p>
           </div>
 

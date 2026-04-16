@@ -14,7 +14,7 @@ get_header(); ?>
     $hero_image = '/wp-content/uploads/2026/04/CabinetRefinishingStainingService.jpg-scaled.jpeg';
 
     $included_items = [
-      'Full surface preparation — deglossing, sanding, priming',
+      'Full surface preparation  deglossing, sanding, priming',
       'Professional spray or brush application',
       'Painting or staining to your specification',
       'Hardware removal and reinstallation',
@@ -62,7 +62,7 @@ get_header(); ?>
               <div class="mt-6 h-[3px] w-24 bg-[linear-gradient(90deg,#CFE0DA_0%,#ffffff_55%,#7DAD3F_100%)]"></div>
 
               <p class="mt-7 max-w-xl text-base leading-8 text-white/86 md:text-lg">
-                A dramatic transformation without the cost or disruption of full replacement — professional refinishing that makes your kitchen feel new again.
+                A dramatic transformation without the cost or disruption of full replacement  professional refinishing that makes your kitchen feel new again.
               </p>
 
               <div class="mt-8">
@@ -107,7 +107,7 @@ get_header(); ?>
 
             <div class="space-y-6 text-base leading-8 text-[#192F44]/80">
               <p>
-                Full cabinet replacement can cost tens of thousands and take weeks. Refinishing delivers the visual transformation at a fraction of the cost — with significantly less disruption to your daily life.
+                Full cabinet replacement can cost tens of thousands and take weeks. Refinishing delivers the visual transformation at a fraction of the cost  with significantly less disruption to your daily life.
               </p>
 
               <p>
@@ -211,7 +211,7 @@ get_header(); ?>
         </h2>
 
         <p class="ajs-reveal-up mt-6 max-w-3xl text-base leading-8 text-[#192F44]/80">
-          Let’s talk about the finish, color direction, and level of transformation you want — and build a plan that gives your kitchen a new look with less disruption.
+          Let’s talk about the finish, color direction, and level of transformation you want  and build a plan that gives your kitchen a new look with less disruption.
         </p>
 
         <p class="ajs-reveal-up mt-6 max-w-2xl text-sm leading-7 text-[#192F44]/68">
@@ -227,7 +227,7 @@ get_header(); ?>
             <p class="rpc-estimate-form__eyebrow">Request a Free Estimate</p>
             <h3 class="rpc-estimate-form__title">Tell us about your project.</h3>
             <p class="rpc-estimate-form__trust">
-              Licensed • Insured • Bonded — 40+ Years Combined Experience
+              Licensed • Insured • Bonded  40+ Years Combined Experience
             </p>
           </div>
 
