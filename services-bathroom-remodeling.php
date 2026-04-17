@@ -270,7 +270,7 @@ get_header(); ?>
       </div>
 
       <div class="ajs-reveal-right">
-        <form class="rpc-estimate-form rpc-estimate-form--light" method="post" action="#">
+        <form id="rpc-service-estimate-form" class="rpc-estimate-form rpc-estimate-form--light" method="post" action="#">
           <div class="rpc-estimate-form__header">
             <p class="rpc-estimate-form__eyebrow">Request a Free Estimate</p>
             <h3 class="rpc-estimate-form__title">Tell us about your project.</h3>
@@ -322,14 +322,23 @@ get_header(); ?>
             We’ll review your request and reach out within 24–48 hours. No pressure. Just clarity.
           </p>
 
+          <div class="rpc-estimate-form__feedback">
+            <div id="rpc-service-form-success" class="rpc-form-message rpc-form-message--success" aria-live="polite"></div>
+            <div id="rpc-service-form-error" class="rpc-form-message rpc-form-message--error" aria-live="polite"></div>
+          </div>
+
+          <div class="rpc-estimate-form__captcha">
+            <div class="g-recaptcha" data-sitekey="6LeAh7wsAAAAAPiODrnGhIF6zQSjhx3bIb3zWcoJ"></div>
+          </div>
+
           <label class="rpc-estimate-form__check">
-            <input type="checkbox" required>
+            <input id="rpc-service-policy" type="checkbox" required>
             <span>
               I agree to the <a href="/privacy-policy">Privacy Policy</a> and <a href="/terms">Terms &amp; Conditions</a>, and consent to be contacted regarding my request.
             </span>
           </label>
 
-          <button type="submit" class="rpc-service-btn rpc-service-btn-green rpc-estimate-form__submit">
+          <button id="rpc-service-submit" type="submit" class="rpc-service-btn rpc-service-btn-green rpc-estimate-form__submit">
             Request My Estimate
           </button>
         </form>
@@ -543,6 +552,39 @@ get_header(); ?>
     margin-top: 0.9rem;
   }
 
+  .rpc-estimate-form__feedback {
+    margin-top: 1rem;
+  }
+
+  .rpc-form-message {
+    display: none;
+    padding: 0.9rem 1rem;
+    border: 1px solid transparent;
+    font-size: 0.82rem;
+    line-height: 1.6;
+  }
+
+  .rpc-form-message.is-visible {
+    display: block;
+  }
+
+  .rpc-form-message--success {
+    background: rgba(125,173,63,0.10);
+    border-color: rgba(125,173,63,0.22);
+    color: #4A6C2F;
+  }
+
+  .rpc-form-message--error {
+    background: rgba(180,55,55,0.08);
+    border-color: rgba(180,55,55,0.16);
+    color: #8b2f2f;
+    margin-top: 0.75rem;
+  }
+
+  .rpc-estimate-form__captcha {
+    margin-top: 1rem;
+  }
+
   .rpc-estimate-form__check {
     display: flex;
     gap: 0.7rem;
@@ -566,6 +608,11 @@ get_header(); ?>
     width: 100%;
     margin-top: 1rem;
     min-height: 54px;
+  }
+
+  .rpc-estimate-form__submit[disabled] {
+    cursor: not-allowed;
+    opacity: 0.75;
   }
 
   .ajs-reveal-up,
@@ -633,6 +680,9 @@ get_header(); ?>
   }
 </style>
 
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const items = document.querySelectorAll(
@@ -651,6 +701,86 @@ get_header(); ?>
     }, { threshold: 0.12 });
 
     items.forEach((item) => observer.observe(item));
+
+    if (window.emailjs) {
+      emailjs.init({
+        publicKey: "aMoYiYOIydChXIOaZ"
+      });
+    }
+
+    const form = document.getElementById("rpc-service-estimate-form");
+    const submitBtn = document.getElementById("rpc-service-submit");
+    const successBox = document.getElementById("rpc-service-form-success");
+    const errorBox = document.getElementById("rpc-service-form-error");
+    const policyCheckbox = document.getElementById("rpc-service-policy");
+
+    if (!form || !submitBtn || !successBox || !errorBox) return;
+
+    const resetMessages = () => {
+      successBox.textContent = "";
+      errorBox.textContent = "";
+      successBox.classList.remove("is-visible");
+      errorBox.classList.remove("is-visible");
+    };
+
+    const showSuccess = (message) => {
+      successBox.textContent = message;
+      successBox.classList.add("is-visible");
+    };
+
+    const showError = (message) => {
+      errorBox.textContent = message;
+      errorBox.classList.add("is-visible");
+    };
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      resetMessages();
+
+      if (!policyCheckbox.checked) {
+        showError("Please accept the Privacy Policy and Terms & Conditions before submitting.");
+        return;
+      }
+
+      if (typeof grecaptcha === "undefined") {
+        showError("reCAPTCHA failed to load. Please refresh the page and try again.");
+        return;
+      }
+
+      const captchaResponse = grecaptcha.getResponse();
+      if (!captchaResponse) {
+        showError("Please complete the reCAPTCHA verification.");
+        return;
+      }
+
+      submitBtn.disabled = true;
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = "Sending...";
+
+      const formData = {
+        name: document.getElementById("rpc-service-name").value.trim(),
+        phone: document.getElementById("rpc-service-phone").value.trim(),
+        email: document.getElementById("rpc-service-email").value.trim(),
+        service: document.getElementById("rpc-service-needed").value,
+        property: document.getElementById("rpc-service-location").value.trim(),
+        message: document.getElementById("rpc-service-message").value.trim(),
+        "g-recaptcha-response": captchaResponse
+      };
+
+      emailjs.send("service_ym70oob", "template_hz5g86r", formData)
+        .then(function () {
+          form.reset();
+          grecaptcha.reset();
+          showSuccess("Thank you. Your request has been sent successfully. We’ll be in touch soon.");
+        })
+        .catch(function () {
+          showError("Something went wrong while sending your request. Please try again.");
+        })
+        .finally(function () {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+        });
+    });
   });
 </script>
 
