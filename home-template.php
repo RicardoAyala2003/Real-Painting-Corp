@@ -30,33 +30,58 @@ get_header(); ?>
       'Other',
     ];
 
-    $render_estimate_form = function($form_class = '', $button_class = 'rpc-paint-btn rpc-paint-btn-green') use ($service_options) {
+    $render_estimate_form = function($form_id, $form_class = '', $button_class = 'rpc-paint-btn rpc-paint-btn-green') use ($service_options) {
+      $name_id    = $form_id . '_name';
+      $phone_id   = $form_id . '_phone';
+      $email_id   = $form_id . '_email';
+      $service_id = $form_id . '_service';
+      $city_id    = $form_id . '_city';
+      $message_id = $form_id . '_message';
+      $policy_id  = $form_id . '_policy';
+      $submit_id  = $form_id . '_submit';
+      $success_id = $form_id . '_success';
+      $error_id   = $form_id . '_error';
+      $captcha_id = $form_id . '_captcha';
+
       ob_start(); ?>
-      <form class="rpc-estimate-form <?php echo esc_attr($form_class); ?>" method="post" action="#">
+      <form
+        id="<?php echo esc_attr($form_id); ?>"
+        class="rpc-estimate-form js-rpc-email-form <?php echo esc_attr($form_class); ?>"
+        method="post"
+        action="#"
+        data-success-id="<?php echo esc_attr($success_id); ?>"
+        data-error-id="<?php echo esc_attr($error_id); ?>"
+        data-policy-id="<?php echo esc_attr($policy_id); ?>"
+        data-submit-id="<?php echo esc_attr($submit_id); ?>"
+        data-captcha-id="<?php echo esc_attr($captcha_id); ?>"
+      >
         <div class="rpc-estimate-form__header">
           <p class="rpc-estimate-form__eyebrow">Request a Free Estimate</p>
           <h3 class="rpc-estimate-form__title">Tell us about your project.</h3>
+          <p class="rpc-estimate-form__trust">
+            Licensed • Insured • Bonded • 40+ Years Combined Experience
+          </p>
         </div>
 
         <div class="rpc-estimate-form__grid">
           <div class="rpc-estimate-form__field">
-            <label for="<?php echo esc_attr(uniqid('name_')); ?>">Full Name *</label>
-            <input id="<?php echo esc_attr(uniqid('name_')); ?>" type="text" name="full_name" placeholder="Your full name" required>
+            <label for="<?php echo esc_attr($name_id); ?>">Full Name *</label>
+            <input id="<?php echo esc_attr($name_id); ?>" type="text" name="full_name" placeholder="Your full name" required>
           </div>
 
           <div class="rpc-estimate-form__field">
-            <label for="<?php echo esc_attr(uniqid('phone_')); ?>">Phone Number *</label>
-            <input id="<?php echo esc_attr(uniqid('phone_')); ?>" type="tel" name="phone" placeholder="(909) 232-6602" required>
+            <label for="<?php echo esc_attr($phone_id); ?>">Phone Number *</label>
+            <input id="<?php echo esc_attr($phone_id); ?>" type="tel" name="phone" placeholder="(909) 232-6602" required>
           </div>
 
           <div class="rpc-estimate-form__field">
-            <label for="<?php echo esc_attr(uniqid('email_')); ?>">Email Address *</label>
-            <input id="<?php echo esc_attr(uniqid('email_')); ?>" type="email" name="email" placeholder="you@example.com" required>
+            <label for="<?php echo esc_attr($email_id); ?>">Email Address *</label>
+            <input id="<?php echo esc_attr($email_id); ?>" type="email" name="email" placeholder="you@example.com" required>
           </div>
 
           <div class="rpc-estimate-form__field">
-            <label for="<?php echo esc_attr(uniqid('service_')); ?>">Service Needed *</label>
-            <select id="<?php echo esc_attr(uniqid('service_')); ?>" name="service" required>
+            <label for="<?php echo esc_attr($service_id); ?>">Service Needed *</label>
+            <select id="<?php echo esc_attr($service_id); ?>" name="service" required>
               <option value="">Select a service</option>
               <?php foreach ($service_options as $option) : ?>
                 <option value="<?php echo esc_attr($option); ?>"><?php echo esc_html($option); ?></option>
@@ -65,22 +90,41 @@ get_header(); ?>
           </div>
 
           <div class="rpc-estimate-form__field rpc-estimate-form__field--full">
-            <label for="<?php echo esc_attr(uniqid('city_')); ?>">Property Address or City *</label>
-            <input id="<?php echo esc_attr(uniqid('city_')); ?>" type="text" name="location" placeholder="City or property address" required>
+            <label for="<?php echo esc_attr($city_id); ?>">Property Address or City *</label>
+            <input id="<?php echo esc_attr($city_id); ?>" type="text" name="location" placeholder="City or property address" required>
           </div>
 
           <div class="rpc-estimate-form__field rpc-estimate-form__field--full">
-            <label for="<?php echo esc_attr(uniqid('message_')); ?>">Tell Us About Your Project</label>
-            <textarea id="<?php echo esc_attr(uniqid('message_')); ?>" name="message" rows="4" placeholder="Scope, timing, type of work, or anything else we should know."></textarea>
+            <label for="<?php echo esc_attr($message_id); ?>">Tell Us About Your Project</label>
+            <textarea id="<?php echo esc_attr($message_id); ?>" name="message" rows="4" placeholder="Scope, timing, type of work, or anything else we should know."></textarea>
+          </div>
+        </div>
+
+        <p class="rpc-estimate-form__micro">
+          We’ll review your request and reach out within 24–48 hours. No pressure. Just clarity.
+        </p>
+
+        <div class="rpc-estimate-form__feedback">
+          <div id="<?php echo esc_attr($success_id); ?>" class="rpc-form-message rpc-form-message--success" aria-live="polite"></div>
+          <div id="<?php echo esc_attr($error_id); ?>" class="rpc-form-message rpc-form-message--error" aria-live="polite"></div>
+        </div>
+
+        <div class="rpc-estimate-form__captcha">
+          <div
+            id="<?php echo esc_attr($captcha_id); ?>"
+            class="js-rpc-recaptcha"
+            data-sitekey="6LeAh7wsAAAAAPiODrnGhIF6zQSjhx3bIb3zWcoJ">
           </div>
         </div>
 
         <label class="rpc-estimate-form__check">
-          <input type="checkbox" required>
-          <span>I agree to the Privacy Policy and Terms &amp; Conditions.</span>
+          <input id="<?php echo esc_attr($policy_id); ?>" type="checkbox" required>
+          <span>
+            I agree to the <a href="/privacy-policy">Privacy Policy</a> and <a href="/terms">Terms &amp; Conditions</a>, and consent to be contacted regarding my request.
+          </span>
         </label>
 
-        <button type="submit" class="<?php echo esc_attr($button_class); ?> rpc-estimate-form__submit">
+        <button id="<?php echo esc_attr($submit_id); ?>" type="submit" class="<?php echo esc_attr($button_class); ?> rpc-estimate-form__submit">
           Submit Request
         </button>
       </form>
@@ -211,7 +255,7 @@ get_header(); ?>
       </div>
 
       <div class="ajs-reveal-right">
-        <?php echo $render_estimate_form('rpc-estimate-form--hero', 'rpc-paint-btn rpc-paint-btn-green'); ?>
+        <?php echo $render_estimate_form('rpc-home-hero-form', 'rpc-estimate-form--hero', 'rpc-paint-btn rpc-paint-btn-green'); ?>
       </div>
     </div>
   </section>
@@ -224,7 +268,6 @@ get_header(); ?>
           <span class="rpc-marquee__dot bg-[#192F44]"></span>
           C-33 Licensed · Insured · Bonded
         </span>
-        
 
         <span class="rpc-marquee__item">
           <span class="rpc-marquee__dot bg-[#236476]"></span>
@@ -358,61 +401,61 @@ get_header(); ?>
     </div>
   </section>
 
- <!-- WHY REAL PAINTING -->
-<section class="rpc-why-section relative overflow-hidden bg-[#192F44] py-20 text-white lg:py-24">
-<div
-  class="absolute inset-0 rpc-why-stamp"
-  style="background-image: url('/wp-content/uploads/2026/04/Estampados-01-scaled.png');">
-</div>
+  <!-- WHY REAL PAINTING -->
+  <section class="rpc-why-section relative overflow-hidden bg-[#192F44] py-20 text-white lg:py-24">
+    <div
+      class="absolute inset-0 rpc-why-stamp"
+      style="background-image: url('/wp-content/uploads/2026/04/Estampados-01-scaled.png');">
+    </div>
 
-  <div class="relative z-10 mx-auto max-w-7xl px-4">
-    <div class="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
-      <div class="ajs-reveal-left">
-        <p class="text-xs font-black uppercase tracking-[0.22em] text-[#CFE0DA]">
-          Why Real Painting
-        </p>
-
-        <h2 class="mt-5 text-3xl font-black leading-tight tracking-[-0.05em] md:text-5xl">
-          In an Industry Full of Broken Promises, We Deliver Certainty.
-        </h2>
-
-        <p class="mt-6 max-w-md text-base leading-8 text-white/76">
-          The most common complaints homeowners have about contractors are irresponsibility, lack of cleanliness, and broken timelines. We built our entire company around solving those three problems.
-        </p>
-      </div>
-
-      <div class="grid gap-5 md:grid-cols-2">
-        <article class="ajs-reveal-up border border-white/12 bg-white/6 p-6 backdrop-blur-sm">
-          <h3 class="text-xl font-black">Clean Site Protocol</h3>
-          <p class="mt-4 text-[15px] leading-8 text-white/80">
-            We protect every surface before we start  floors, furniture, fixtures. When we leave each day, your home is cleaner than when we arrived. This isn’t a promise we make at the estimate. It’s what you’ll see on day one.
+    <div class="relative z-10 mx-auto max-w-7xl px-4">
+      <div class="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
+        <div class="ajs-reveal-left">
+          <p class="text-xs font-black uppercase tracking-[0.22em] text-[#CFE0DA]">
+            Why Real Painting
           </p>
-        </article>
 
-        <article class="ajs-reveal-up border border-white/12 bg-white/6 p-6 backdrop-blur-sm">
-          <h3 class="text-xl font-black">Schedule Discipline</h3>
-          <p class="mt-4 text-[15px] leading-8 text-white/80">
-            We arrive when we say. We finish when we promise. Your time matters to us as much as the final result. Every project has a defined timeline, and we hold to it.
-          </p>
-        </article>
+          <h2 class="mt-5 text-3xl font-black leading-tight tracking-[-0.05em] md:text-5xl">
+            In an Industry Full of Broken Promises, We Deliver Certainty.
+          </h2>
 
-        <article class="ajs-reveal-up border border-white/12 bg-white/6 p-6 backdrop-blur-sm">
-          <h3 class="text-xl font-black">Aesthetic Certainty</h3>
-          <p class="mt-4 text-[15px] leading-8 text-white/80">
-            You’ll know exactly what the result will look like before we begin. Our experience in color, finish, and design means no guesswork  just a result that makes you proud of your home.
+          <p class="mt-6 max-w-md text-base leading-8 text-white/76">
+            The most common complaints homeowners have about contractors are irresponsibility, lack of cleanliness, and broken timelines. We built our entire company around solving those three problems.
           </p>
-        </article>
+        </div>
 
-        <article class="ajs-reveal-up border border-[#7DAD3F]/30 bg-[linear-gradient(135deg,rgba(125,173,63,0.18),rgba(74,108,47,0.36))] p-6">
-          <h3 class="text-xl font-black">Licensed, Insured & Bonded</h3>
-          <p class="mt-4 text-[15px] leading-8 text-white/86">
-            C-33 licensed, General Liability, Workers’ Compensation, and bonded. This eliminates over 60% of informal competitors who operate without protection. Your home and your investment are fully covered.
-          </p>
-        </article>
+        <div class="grid gap-5 md:grid-cols-2">
+          <article class="ajs-reveal-up border border-white/12 bg-white/6 p-6 backdrop-blur-sm">
+            <h3 class="text-xl font-black">Clean Site Protocol</h3>
+            <p class="mt-4 text-[15px] leading-8 text-white/80">
+              We protect every surface before we start  floors, furniture, fixtures. When we leave each day, your home is cleaner than when we arrived. This isn’t a promise we make at the estimate. It’s what you’ll see on day one.
+            </p>
+          </article>
+
+          <article class="ajs-reveal-up border border-white/12 bg-white/6 p-6 backdrop-blur-sm">
+            <h3 class="text-xl font-black">Schedule Discipline</h3>
+            <p class="mt-4 text-[15px] leading-8 text-white/80">
+              We arrive when we say. We finish when we promise. Your time matters to us as much as the final result. Every project has a defined timeline, and we hold to it.
+            </p>
+          </article>
+
+          <article class="ajs-reveal-up border border-white/12 bg-white/6 p-6 backdrop-blur-sm">
+            <h3 class="text-xl font-black">Aesthetic Certainty</h3>
+            <p class="mt-4 text-[15px] leading-8 text-white/80">
+              You’ll know exactly what the result will look like before we begin. Our experience in color, finish, and design means no guesswork  just a result that makes you proud of your home.
+            </p>
+          </article>
+
+          <article class="ajs-reveal-up border border-[#7DAD3F]/30 bg-[linear-gradient(135deg,rgba(125,173,63,0.18),rgba(74,108,47,0.36))] p-6">
+            <h3 class="text-xl font-black">Licensed, Insured & Bonded</h3>
+            <p class="mt-4 text-[15px] leading-8 text-white/86">
+              C-33 licensed, General Liability, Workers’ Compensation, and bonded. This eliminates over 60% of informal competitors who operate without protection. Your home and your investment are fully covered.
+            </p>
+          </article>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- HOW WE WORK -->
   <section class="bg-[#f6f5f0] py-20 lg:py-24">
@@ -457,96 +500,96 @@ get_header(); ?>
     </div>
   </section>
 
-<!-- TESTIMONIALS -->
-<section class="relative overflow-hidden border-t border-[#192F44]/10 bg-white py-20 lg:py-24">
-  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(35,100,118,0.05),transparent_30%)]"></div>
-  <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(125,173,63,0.08),transparent_28%)]"></div>
+  <!-- TESTIMONIALS -->
+  <section class="relative overflow-hidden border-t border-[#192F44]/10 bg-white py-20 lg:py-24">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(35,100,118,0.05),transparent_30%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(125,173,63,0.08),transparent_28%)]"></div>
 
-  <div class="relative mx-auto max-w-7xl px-4">
-    <div class="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
-      <div class="ajs-reveal-left max-w-2xl">
-        <p class="text-xs font-black uppercase tracking-[0.22em] text-[#236476]">
-          Testimonials
-        </p>
-
-        <h2 class="mt-4 text-3xl font-black leading-tight tracking-[-0.05em] text-[#192F44] md:text-5xl">
-          What Homeowners Are Saying
-        </h2>
-
-        <p class="mt-5 max-w-xl text-base leading-8 text-[#192F44]/74">
-          Real feedback from homeowners who trusted Real Painting Corp with their home.
-        </p>
-      </div>
-
-      <div class="ajs-reveal-right">
-        <a 
-          href="https://www.google.com/search?sca_esv=55e9f3c856495c1e&rlz=1C5AJCO_enUS1195US1195&sxsrf=ANbL-n7SWeDoYqXCCqbsvlBJOd9U5zKwxg:1776310827641&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOY2rO3DUfzgS3kdyK5OTfr68pXOjsJtQzHBPt0E9MABdgr0JcuEhZjfL-is4Cvx29OAHfP_xw8HAeSKmK31GzNBvjahGqcTrebKo3pxVeFXg6KrlRA%3D%3D&q=REAL+Painting+Corp+Opiniones&sa=X&ved=2ahUKEwiisZG_ufGTAxWrj4kEHbMPLp0Q0bkNegQIIBAH&cshid=1776310953691549&biw=1528&bih=698&dpr=1.25"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="rpc-paint-btn rpc-paint-btn-dark inline-flex items-center justify-center px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-white"
-        >
-          Read More Reviews →
-        </a>
-      </div>
-    </div>
-
-    <div class="mt-12 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-      <article class="ajs-reveal-left rpc-testimonial-featured">
-        <div class="rpc-testimonial-featured__inner">
-          <div class="rpc-testimonial-featured__top">
-            <span class="rpc-testimonial-bar bg-[#7DAD3F]"></span>
-            <p class="rpc-testimonial-kicker text-[#236476]">Google Review</p>
-          </div>
-
-          <span class="rpc-testimonial-quote-mark text-[#192F44]/10">“</span>
-
-          <p class="rpc-testimonial-featured__copy">
-            “I would like to recommend Real Painting Corporation. If you are looking for a great paint job for your home, look no further. They came out, assessed the project, and gave me a great price. From the very start, they arrived when they said they would, prepped the property carefully, repaired damaged fascia boards, window sills, and fallen stucco, and cleaned up after each day’s work. After a few days, my mother’s old house was looking brand new again. Real Painting Corporation is worth hiring if you want a job well done.”
+    <div class="relative mx-auto max-w-7xl px-4">
+      <div class="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+        <div class="ajs-reveal-left max-w-2xl">
+          <p class="text-xs font-black uppercase tracking-[0.22em] text-[#236476]">
+            Testimonials
           </p>
 
-          <div class="rpc-testimonial-featured__meta">
-            <p class="rpc-testimonial-name text-[#192F44]">Wayne Downing</p>
-            <p class="mt-2 text-sm font-medium text-[#192F44]/62">Exterior Painting Project</p>
-          </div>
+          <h2 class="mt-4 text-3xl font-black leading-tight tracking-[-0.05em] text-[#192F44] md:text-5xl">
+            What Homeowners Are Saying
+          </h2>
+
+          <p class="mt-5 max-w-xl text-base leading-8 text-[#192F44]/74">
+            Real feedback from homeowners who trusted Real Painting Corp with their home.
+          </p>
         </div>
-      </article>
 
-      <div class="grid gap-6">
-        <article class="ajs-reveal-up rpc-testimonial-side rpc-testimonial-side--dark">
-          <div class="rpc-testimonial-side__top">
-            <span class="rpc-testimonial-bar bg-[#CFE0DA]"></span>
-            <p class="rpc-testimonial-kicker text-white/72">Google Review</p>
-          </div>
+        <div class="ajs-reveal-right">
+          <a
+            href="https://www.google.com/search?sca_esv=55e9f3c856495c1e&rlz=1C5AJCO_enUS1195US1195&sxsrf=ANbL-n7SWeDoYqXCCqbsvlBJOd9U5zKwxg:1776310827641&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOY2rO3DUfzgS3kdyK5OTfr68pXOjsJtQzHBPt0E9MABdgr0JcuEhZjfL-is4Cvx29OAHfP_xw8HAeSKmK31GzNBvjahGqcTrebKo3pxVeFXg6KrlRA%3D%3D&q=REAL+Painting+Corp+Opiniones&sa=X&ved=2ahUKEwiisZG_ufGTAxWrj4kEHbMPLp0Q0bkNegQIIBAH&cshid=1776310953691549&biw=1528&bih=698&dpr=1.25"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rpc-paint-btn rpc-paint-btn-dark inline-flex items-center justify-center px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-white"
+          >
+            Read More Reviews →
+          </a>
+        </div>
+      </div>
 
-          <p class="rpc-testimonial-side__copy">
-            “ They really listen and pay attention to details. Their whole team was professional and efficient. We highly recommend them. Our two bathrooms and laundry room look great.”
-          </p>
+      <div class="mt-12 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+        <article class="ajs-reveal-left rpc-testimonial-featured">
+          <div class="rpc-testimonial-featured__inner">
+            <div class="rpc-testimonial-featured__top">
+              <span class="rpc-testimonial-bar bg-[#7DAD3F]"></span>
+              <p class="rpc-testimonial-kicker text-[#236476]">Google Review</p>
+            </div>
 
-          <div class="rpc-testimonial-side__meta border-white/14">
-            <p class="rpc-testimonial-name text-white">Andrew Estrada</p>
-            <p class="mt-2 text-sm font-medium text-white/70">Bathroom Remodeling</p>
+            <span class="rpc-testimonial-quote-mark text-[#192F44]/10">“</span>
+
+            <p class="rpc-testimonial-featured__copy">
+              “I would like to recommend Real Painting Corporation. If you are looking for a great paint job for your home, look no further. They came out, assessed the project, and gave me a great price. From the very start, they arrived when they said they would, prepped the property carefully, repaired damaged fascia boards, window sills, and fallen stucco, and cleaned up after each day’s work. After a few days, my mother’s old house was looking brand new again. Real Painting Corporation is worth hiring if you want a job well done.”
+            </p>
+
+            <div class="rpc-testimonial-featured__meta">
+              <p class="rpc-testimonial-name text-[#192F44]">Wayne Downing</p>
+              <p class="mt-2 text-sm font-medium text-[#192F44]/62">Exterior Painting Project</p>
+            </div>
           </div>
         </article>
 
-        <article class="ajs-reveal-up rpc-testimonial-side rpc-testimonial-side--green">
-          <div class="rpc-testimonial-side__top">
-            <span class="rpc-testimonial-bar bg-white/80"></span>
-            <p class="rpc-testimonial-kicker text-white/80">Google Review</p>
-          </div>
+        <div class="grid gap-6">
+          <article class="ajs-reveal-up rpc-testimonial-side rpc-testimonial-side--dark">
+            <div class="rpc-testimonial-side__top">
+              <span class="rpc-testimonial-bar bg-[#CFE0DA]"></span>
+              <p class="rpc-testimonial-kicker text-white/72">Google Review</p>
+            </div>
 
-          <p class="rpc-testimonial-side__copy">
-            “They arrive early, work full days, keep the site very clean before, during, and after each day, and were even flexible with our schedule. They were pet friendly, easy to communicate with, and worked through changes with wonderful ideas. The quality and professionalism is a 10.”
-          </p>
+            <p class="rpc-testimonial-side__copy">
+              “ They really listen and pay attention to details. Their whole team was professional and efficient. We highly recommend them. Our two bathrooms and laundry room look great.”
+            </p>
 
-          <div class="rpc-testimonial-side__meta border-white/18">
-            <p class="rpc-testimonial-name text-white">Annamarie Molino</p>
-            <p class="mt-2 text-sm font-medium text-white/78">Interior & Exterior Construction Work</p>
-          </div>
-        </article>
+            <div class="rpc-testimonial-side__meta border-white/14">
+              <p class="rpc-testimonial-name text-white">Andrew Estrada</p>
+              <p class="mt-2 text-sm font-medium text-white/70">Bathroom Remodeling</p>
+            </div>
+          </article>
+
+          <article class="ajs-reveal-up rpc-testimonial-side rpc-testimonial-side--green">
+            <div class="rpc-testimonial-side__top">
+              <span class="rpc-testimonial-bar bg-white/80"></span>
+              <p class="rpc-testimonial-kicker text-white/80">Google Review</p>
+            </div>
+
+            <p class="rpc-testimonial-side__copy">
+              “They arrive early, work full days, keep the site very clean before, during, and after each day, and were even flexible with our schedule. They were pet friendly, easy to communicate with, and worked through changes with wonderful ideas. The quality and professionalism is a 10.”
+            </p>
+
+            <div class="rpc-testimonial-side__meta border-white/18">
+              <p class="rpc-testimonial-name text-white">Annamarie Molino</p>
+              <p class="mt-2 text-sm font-medium text-white/78">Interior & Exterior Construction Work</p>
+            </div>
+          </article>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- GALLERY TEASER -->
   <section class="bg-[#f6f5f0] py-20">
@@ -722,7 +765,7 @@ get_header(); ?>
       </div>
 
       <div class="ajs-reveal-right">
-        <?php echo $render_estimate_form('rpc-estimate-form--light', 'rpc-paint-btn rpc-paint-btn-green'); ?>
+        <?php echo $render_estimate_form('rpc-home-final-form', 'rpc-estimate-form--light', 'rpc-paint-btn rpc-paint-btn-green'); ?>
       </div>
     </div>
   </section>
@@ -754,14 +797,13 @@ get_header(); ?>
     transition: opacity 1.2s ease, visibility 1.2s ease;
   }
 
-.rpc-why-stamp {
-  background-repeat: repeat;
-  background-position: center;
-  background-size: 420px auto;
-  opacity: 0.50;
-  mix-blend-mode: multiply;
-}
-
+  .rpc-why-stamp {
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 420px auto;
+    opacity: 0.50;
+    mix-blend-mode: multiply;
+  }
 
   .rpc-hero-slide.is-active {
     opacity: 1;
@@ -831,6 +873,19 @@ get_header(); ?>
 
   .rpc-estimate-form--light .rpc-estimate-form__title {
     color: #192F44;
+  }
+
+  .rpc-estimate-form__trust {
+    margin-top: 0.6rem;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.62);
+  }
+
+  .rpc-estimate-form--light .rpc-estimate-form__trust {
+    color: rgba(25,47,68,0.56);
   }
 
   .rpc-estimate-form__grid {
@@ -911,6 +966,58 @@ get_header(); ?>
     grid-column: 1 / -1;
   }
 
+  .rpc-estimate-form__micro {
+    font-size: 0.75rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.64);
+    margin-top: 0.9rem;
+  }
+
+  .rpc-estimate-form--light .rpc-estimate-form__micro {
+    color: rgba(25,47,68,0.64);
+  }
+
+  .rpc-estimate-form__feedback {
+    margin-top: 1rem;
+  }
+
+  .rpc-form-message {
+    display: none;
+    padding: 0.9rem 1rem;
+    border: 1px solid transparent;
+    font-size: 0.82rem;
+    line-height: 1.6;
+  }
+
+  .rpc-form-message.is-visible {
+    display: block;
+  }
+
+  .rpc-form-message--success {
+    background: rgba(125,173,63,0.10);
+    border-color: rgba(125,173,63,0.22);
+    color: #dff1c8;
+  }
+
+  .rpc-estimate-form--light .rpc-form-message--success {
+    color: #4A6C2F;
+  }
+
+  .rpc-form-message--error {
+    background: rgba(180,55,55,0.10);
+    border-color: rgba(180,55,55,0.20);
+    color: #ffd7d7;
+    margin-top: 0.75rem;
+  }
+
+  .rpc-estimate-form--light .rpc-form-message--error {
+    color: #8b2f2f;
+  }
+
+  .rpc-estimate-form__captcha {
+    margin-top: 1rem;
+  }
+
   .rpc-estimate-form__check {
     display: flex;
     gap: 0.7rem;
@@ -929,10 +1036,24 @@ get_header(); ?>
     color: rgba(25,47,68,0.72);
   }
 
+  .rpc-estimate-form__check a {
+    color: #CFE0DA;
+    text-decoration: underline;
+  }
+
+  .rpc-estimate-form--light .rpc-estimate-form__check a {
+    color: #236476;
+  }
+
   .rpc-estimate-form__submit {
     width: 100%;
     margin-top: 1rem;
     min-height: 54px;
+  }
+
+  .rpc-estimate-form__submit[disabled] {
+    cursor: not-allowed;
+    opacity: 0.75;
   }
 
   .rpc-paint-swipe {
@@ -1174,8 +1295,6 @@ get_header(); ?>
     letter-spacing: -0.01em;
   }
 
-
-
   .ajs-reveal-up,
   .ajs-reveal-left,
   .ajs-reveal-right,
@@ -1307,6 +1426,25 @@ get_header(); ?>
   }
 </style>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  window.rpcHomeRecaptchaReady = function () {
+    const captchaNodes = document.querySelectorAll(".js-rpc-recaptcha");
+
+    captchaNodes.forEach((node) => {
+      if (node.dataset.widgetId) return;
+      if (typeof grecaptcha === "undefined") return;
+
+      const widgetId = grecaptcha.render(node, {
+        sitekey: node.dataset.sitekey
+      });
+
+      node.dataset.widgetId = String(widgetId);
+    });
+  };
+</script>
+<script src="https://www.google.com/recaptcha/api.js?onload=rpcHomeRecaptchaReady&render=explicit" async defer></script>
+
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const items = document.querySelectorAll(
@@ -1337,7 +1475,95 @@ get_header(); ?>
       }, 5000);
     }
 
+    if (window.emailjs) {
+      emailjs.init({
+        publicKey: "aMoYiYOIydChXIOaZ"
+      });
+    }
 
+    const forms = document.querySelectorAll(".js-rpc-email-form");
+
+    forms.forEach((form) => {
+      const successBox = document.getElementById(form.dataset.successId);
+      const errorBox = document.getElementById(form.dataset.errorId);
+      const policyCheckbox = document.getElementById(form.dataset.policyId);
+      const submitBtn = document.getElementById(form.dataset.submitId);
+      const captchaNode = document.getElementById(form.dataset.captchaId);
+
+      if (!successBox || !errorBox || !policyCheckbox || !submitBtn || !captchaNode) return;
+
+      const resetMessages = () => {
+        successBox.textContent = "";
+        errorBox.textContent = "";
+        successBox.classList.remove("is-visible");
+        errorBox.classList.remove("is-visible");
+      };
+
+      const showSuccess = (message) => {
+        successBox.textContent = message;
+        successBox.classList.add("is-visible");
+      };
+
+      const showError = (message) => {
+        errorBox.textContent = message;
+        errorBox.classList.add("is-visible");
+      };
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        resetMessages();
+
+        if (!policyCheckbox.checked) {
+          showError("Please accept the Privacy Policy and Terms & Conditions before submitting.");
+          return;
+        }
+
+        if (typeof grecaptcha === "undefined") {
+          showError("reCAPTCHA failed to load. Please refresh the page and try again.");
+          return;
+        }
+
+        const widgetId = captchaNode.dataset.widgetId;
+        if (typeof widgetId === "undefined") {
+          showError("reCAPTCHA is still loading. Please wait a moment and try again.");
+          return;
+        }
+
+        const captchaResponse = grecaptcha.getResponse(Number(widgetId));
+        if (!captchaResponse) {
+          showError("Please complete the reCAPTCHA verification.");
+          return;
+        }
+
+        submitBtn.disabled = true;
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = "Sending...";
+
+        const formData = {
+          name: form.querySelector('input[name="full_name"]').value.trim(),
+          phone: form.querySelector('input[name="phone"]').value.trim(),
+          email: form.querySelector('input[name="email"]').value.trim(),
+          service: form.querySelector('select[name="service"]').value,
+          property: form.querySelector('input[name="location"]').value.trim(),
+          message: form.querySelector('textarea[name="message"]').value.trim(),
+          "g-recaptcha-response": captchaResponse
+        };
+
+        emailjs.send("service_ym70oob", "template_hz5g86r", formData)
+          .then(function () {
+            form.reset();
+            grecaptcha.reset(Number(widgetId));
+            showSuccess("Thank you. Your request has been sent successfully. We’ll be in touch soon.");
+          })
+          .catch(function () {
+            showError("Something went wrong while sending your request. Please try again.");
+          })
+          .finally(function () {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+          });
+      });
+    });
   });
 </script>
 

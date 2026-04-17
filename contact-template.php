@@ -292,6 +292,11 @@ get_header(); ?>
                   ></textarea>
                 </div>
 
+                <!-- reCAPTCHA -->
+                <div class="pt-4">
+                  <div class="g-recaptcha" data-sitekey="6LeAh7wsAAAAAPiODrnGhIF6zQSjhx3bIb3zWcoJ"></div>
+                </div>
+
                 <label class="flex items-start gap-3 border border-[#192F44]/10 bg-white px-4 py-4">
                   <input
                     type="checkbox"
@@ -565,6 +570,9 @@ get_header(); ?>
   }
 </style>
 
+<!-- reCAPTCHA Script -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 <script>
@@ -588,7 +596,7 @@ get_header(); ?>
 
     if (window.emailjs) {
       emailjs.init({
-        publicKey: "CDikedp0ZSxxiBeLb"
+        publicKey: "aMoYiYOIydChXIOaZ"
       });
     }
 
@@ -611,6 +619,14 @@ get_header(); ?>
           return;
         }
 
+        // reCAPTCHA validation
+        const recaptchaResponse = grecaptcha.getResponse();
+        if (!recaptchaResponse) {
+          errorBox.textContent = "Please complete the reCAPTCHA verification.";
+          errorBox.classList.remove("hidden");
+          return;
+        }
+
         const originalButtonText = submitBtn.textContent;
         submitBtn.disabled = true;
         submitBtn.textContent = "Sending...";
@@ -621,15 +637,17 @@ get_header(); ?>
           email: document.getElementById("email_address").value,
           service: document.getElementById("service_needed").value,
           property: document.getElementById("property_address").value,
-          message: document.getElementById("project_details").value
+          message: document.getElementById("project_details").value,
+          'g-recaptcha-response': recaptchaResponse
         };
 
         emailjs.send(
-          "service_a03f0zf",
-          "template_17g32zt",
+          "service_ym70oob",
+          "template_hz5g86r",
           formData
         ).then(function () {
           form.reset();
+          grecaptcha.reset();   // Reinicia el reCAPTCHA después de enviar
           successBox.classList.remove("hidden");
           submitBtn.disabled = false;
           submitBtn.textContent = originalButtonText;
