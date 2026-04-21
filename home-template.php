@@ -71,7 +71,7 @@ get_header(); ?>
 
           <div class="rpc-estimate-form__field">
             <label for="<?php echo esc_attr($phone_id); ?>">Phone Number *</label>
-            <input id="<?php echo esc_attr($phone_id); ?>" type="tel" name="phone" placeholder="(909) 232-6602" required>
+            <input id="<?php echo esc_attr($phone_id); ?>" type="tel" name="phone" placeholder="(909) 513-7397" required>
           </div>
 
           <div class="rpc-estimate-form__field">
@@ -223,13 +223,7 @@ get_header(); ?>
 
     <div class="relative z-10 mx-auto grid min-h-[760px] max-w-7xl gap-10 px-4 py-20 lg:min-h-[820px] lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-14">
       <div class="text-center lg:text-left">
-        <p class="ajs-reveal-up text-xs font-black uppercase tracking-[0.28em] text-[#CFE0DA]">
-          Real Painting Corp
-        </p>
-
-        <p class="ajs-reveal-up mt-4 text-sm font-black uppercase tracking-[0.24em] text-white/82 md:text-base">
-          Clear Process. Clean Results.
-        </p>
+ç
 
         <h1 class="ajs-reveal-up mt-6 text-4xl font-extrabold leading-[1.05] tracking-[-0.04em] text-white md:text-6xl">
           When We Enter Your Home,<br class="hidden md:block">
@@ -500,96 +494,45 @@ get_header(); ?>
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="relative overflow-hidden border-t border-[#192F44]/10 bg-white py-20 lg:py-24">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(35,100,118,0.05),transparent_30%)]"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(125,173,63,0.08),transparent_28%)]"></div>
+ <!-- TESTIMONIALS -->
+<section class="relative overflow-hidden border-t border-[#192F44]/10 bg-white py-20 lg:py-24">
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(35,100,118,0.05),transparent_30%)]"></div>
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(125,173,63,0.08),transparent_28%)]"></div>
 
-    <div class="relative mx-auto max-w-7xl px-4">
-      <div class="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
-        <div class="ajs-reveal-left max-w-2xl">
-          <p class="text-xs font-black uppercase tracking-[0.22em] text-[#236476]">
-            Testimonials
-          </p>
+  <div class="relative mx-auto max-w-7xl px-4">
+    
+    <!-- HEADER -->
+    <div class="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+      <div class="ajs-reveal-left max-w-2xl">
+        <p class="text-xs font-black uppercase tracking-[0.22em] text-[#236476]">
+          Testimonials
+        </p>
 
-          <h2 class="mt-4 text-3xl font-black leading-tight tracking-[-0.05em] text-[#192F44] md:text-5xl">
-            What Homeowners Are Saying
-          </h2>
+        <h2 class="mt-4 text-3xl font-black leading-tight tracking-[-0.05em] text-[#192F44] md:text-5xl">
+          What Homeowners Are Saying
+        </h2>
 
-          <p class="mt-5 max-w-xl text-base leading-8 text-[#192F44]/74">
-            Real feedback from homeowners who trusted Real Painting Corp with their home.
-          </p>
-        </div>
-
-        <div class="ajs-reveal-right">
-          <a
-            href="https://www.google.com/search?sca_esv=55e9f3c856495c1e&rlz=1C5AJCO_enUS1195US1195&sxsrf=ANbL-n7SWeDoYqXCCqbsvlBJOd9U5zKwxg:1776310827641&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOY2rO3DUfzgS3kdyK5OTfr68pXOjsJtQzHBPt0E9MABdgr0JcuEhZjfL-is4Cvx29OAHfP_xw8HAeSKmK31GzNBvjahGqcTrebKo3pxVeFXg6KrlRA%3D%3D&q=REAL+Painting+Corp+Opiniones&sa=X&ved=2ahUKEwiisZG_ufGTAxWrj4kEHbMPLp0Q0bkNegQIIBAH&cshid=1776310953691549&biw=1528&bih=698&dpr=1.25"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="rpc-paint-btn rpc-paint-btn-dark inline-flex items-center justify-center px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-white"
-          >
-            Read More Reviews →
-          </a>
-        </div>
+        <p class="mt-5 max-w-xl text-base leading-8 text-[#192F44]/74">
+          Real feedback from homeowners who trusted Real Painting Corp with their home.
+        </p>
       </div>
 
-      <div class="mt-12 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-        <article class="ajs-reveal-left rpc-testimonial-featured">
-          <div class="rpc-testimonial-featured__inner">
-            <div class="rpc-testimonial-featured__top">
-              <span class="rpc-testimonial-bar bg-[#7DAD3F]"></span>
-              <p class="rpc-testimonial-kicker text-[#236476]">Google Review</p>
-            </div>
-
-            <span class="rpc-testimonial-quote-mark text-[#192F44]/10">“</span>
-
-            <p class="rpc-testimonial-featured__copy">
-              “I would like to recommend Real Painting Corporation. If you are looking for a great paint job for your home, look no further. They came out, assessed the project, and gave me a great price. From the very start, they arrived when they said they would, prepped the property carefully, repaired damaged fascia boards, window sills, and fallen stucco, and cleaned up after each day’s work. After a few days, my mother’s old house was looking brand new again. Real Painting Corporation is worth hiring if you want a job well done.”
-            </p>
-
-            <div class="rpc-testimonial-featured__meta">
-              <p class="rpc-testimonial-name text-[#192F44]">Wayne Downing</p>
-              <p class="mt-2 text-sm font-medium text-[#192F44]/62">Exterior Painting Project</p>
-            </div>
-          </div>
-        </article>
-
-        <div class="grid gap-6">
-          <article class="ajs-reveal-up rpc-testimonial-side rpc-testimonial-side--dark">
-            <div class="rpc-testimonial-side__top">
-              <span class="rpc-testimonial-bar bg-[#CFE0DA]"></span>
-              <p class="rpc-testimonial-kicker text-white/72">Google Review</p>
-            </div>
-
-            <p class="rpc-testimonial-side__copy">
-              “ They really listen and pay attention to details. Their whole team was professional and efficient. We highly recommend them. Our two bathrooms and laundry room look great.”
-            </p>
-
-            <div class="rpc-testimonial-side__meta border-white/14">
-              <p class="rpc-testimonial-name text-white">Andrew Estrada</p>
-              <p class="mt-2 text-sm font-medium text-white/70">Bathroom Remodeling</p>
-            </div>
-          </article>
-
-          <article class="ajs-reveal-up rpc-testimonial-side rpc-testimonial-side--green">
-            <div class="rpc-testimonial-side__top">
-              <span class="rpc-testimonial-bar bg-white/80"></span>
-              <p class="rpc-testimonial-kicker text-white/80">Google Review</p>
-            </div>
-
-            <p class="rpc-testimonial-side__copy">
-              “They arrive early, work full days, keep the site very clean before, during, and after each day, and were even flexible with our schedule. They were pet friendly, easy to communicate with, and worked through changes with wonderful ideas. The quality and professionalism is a 10.”
-            </p>
-
-            <div class="rpc-testimonial-side__meta border-white/18">
-              <p class="rpc-testimonial-name text-white">Annamarie Molino</p>
-              <p class="mt-2 text-sm font-medium text-white/78">Interior & Exterior Construction Work</p>
-            </div>
-          </article>
-        </div>
+      <!-- OPCIONAL: BOTÓN -->
+      <div class="ajs-reveal-right">
+        <a href="https://www.google.com/search?sca_esv=55e9f3c856495c1e&rlz=1C5AJCO_enUS1195US1195&sxsrf=ANbL-n7SWeDoYqXCCqbsvlBJOd9U5zKwxg:1776310827641&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOY2rO3DUfzgS3kdyK5OTfr68pXOjsJtQzHBPt0E9MABdgr0JcuEhZjfL-is4Cvx29OAHfP_xw8HAeSKmK31GzNBvjahGqcTrebKo3pxVeFXg6KrlRA%3D%3D&q=REAL+Painting+Corp+Opiniones&sa=X&ved=2ahUKEwiisZG_ufGTAxWrj4kEHbMPLp0Q0bkNegQIIBAH&cshid=1776310953691549&biw=1528&bih=698&dpr=1.25"
+           class="rpc-paint-btn rpc-paint-btn-dark inline-flex items-center justify-center px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-white">
+          Read More Reviews →
+        </a>
       </div>
     </div>
-  </section>
+
+    <!-- TRUSTINDEX -->
+    <div class="mt-12 ajs-reveal-up">
+      <?php echo do_shortcode('[trustindex no-registration=google]'); ?>
+    </div>
+
+  </div>
+</section>
 
   <!-- GALLERY TEASER -->
   <section class="bg-[#f6f5f0] py-20">
@@ -696,7 +639,7 @@ get_header(); ?>
     </div>
   </section>
 
-  <!-- SERVICE AREAS -->
+   <!-- SERVICE AREAS -->
   <section class="border-y border-[#192F44]/10 bg-white py-20 lg:py-24">
     <div class="mx-auto max-w-7xl px-4">
       <div class="ajs-reveal-up mx-auto max-w-4xl text-center">
@@ -712,14 +655,32 @@ get_header(); ?>
       <div class="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
         <?php
         $areas = [
-          ['title' => 'Orange County', 'link' => '/locations/orange-county', 'swatch' => '#192F44'],
-          ['title' => 'Los Angeles County', 'link' => '/locations/los-angeles-county', 'swatch' => '#236476'],
-          ['title' => 'Riverside County', 'link' => '/locations/riverside-county', 'swatch' => '#7DAD3F'],
-          ['title' => 'San Bernardino County', 'link' => '/locations/san-bernardino-county', 'swatch' => '#4A6C2F'],
+          [
+            'title'  => 'Orange County',
+            'link'   => 'https://www.google.com/maps/search/?api=1&query=Orange+County,+CA',
+            'swatch' => '#192F44'
+          ],
+          [
+            'title'  => 'Los Angeles County',
+            'link'   => 'https://www.google.com/maps/search/?api=1&query=Los+Angeles+County,+CA',
+            'swatch' => '#236476'
+          ],
+          [
+            'title'  => 'Riverside County',
+            'link'   => 'https://www.google.com/maps/search/?api=1&query=Riverside+County,+CA',
+            'swatch' => '#7DAD3F'
+          ],
+          [
+            'title'  => 'San Bernardino County',
+            'link'   => 'https://www.google.com/maps/search/?api=1&query=San+Bernardino+County,+CA',
+            'swatch' => '#4A6C2F'
+          ],
         ];
 
         foreach ($areas as $area) : ?>
           <a href="<?php echo esc_url($area['link']); ?>"
+             target="_blank"
+             rel="noopener noreferrer"
              class="ajs-reveal-stagger group border border-[#192F44]/10 bg-[#fdfcf8] p-6 transition hover:-translate-y-1 hover:shadow-[0_16px_36px_rgba(25,47,68,0.10)]">
             <div class="mb-5 h-4 w-20 transition-all duration-500 group-hover:w-28" style="background: <?php echo esc_attr($area['swatch']); ?>;"></div>
             <h3 class="text-xl font-black tracking-[-0.03em] text-[#192F44]">
@@ -742,9 +703,7 @@ get_header(); ?>
 
     <div class="relative mx-auto grid max-w-7xl gap-10 px-4 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
       <div class="lg:max-w-xl">
-        <p class="ajs-reveal-up text-xs font-black uppercase tracking-[0.22em] text-[#236476]">
-          Final CTA
-        </p>
+
 
         <h2 class="ajs-reveal-up mt-5 text-3xl font-black leading-tight tracking-[-0.05em] md:text-5xl">
           Ready to See What Real Looks Like?
@@ -755,9 +714,9 @@ get_header(); ?>
         </p>
 
         <div class="ajs-reveal-up mt-8 flex flex-wrap items-center gap-3">
-          <a href="tel:+19092326602"
+          <a href="tel:+19095137397"
              class="rpc-paint-btn rpc-paint-btn-dark inline-flex items-center justify-center px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-white">
-            (909) 232-6602
+            (909)-513-7397
           </a>
         </div>
 

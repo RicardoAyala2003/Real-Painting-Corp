@@ -11,7 +11,11 @@ get_header(); ?>
   <section class="relative isolate overflow-hidden bg-[#192F44] text-white">
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(207,224,218,0.16),transparent_30%)]"></div>
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(125,173,63,0.14),transparent_28%)]"></div>
-    <div class="absolute inset-0 opacity-10 [background-image:linear-gradient(135deg,rgba(255,255,255,0.28)_25%,transparent_25%,transparent_50%,rgba(255,255,255,0.28)_50%,rgba(255,255,255,0.28)_75%,transparent_75%,transparent)] [background-size:22px_22px]"></div>
+
+    <div
+      class="absolute inset-0 rpc-why-stamp"
+      style="background-image: url('/wp-content/uploads/2026/04/Estampados-01-scaled.png');">
+    </div>
 
     <div class="relative mx-auto max-w-6xl px-4 py-24 md:py-28">
       <div class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
@@ -81,8 +85,6 @@ get_header(); ?>
         </div>
       </div>
     </div>
-
-    <div class="absolute bottom-0 left-0 h-24 w-full bg-gradient-to-t from-[#f6f5f0] to-transparent"></div>
   </section>
 
   <!-- CONTENT -->
@@ -128,9 +130,9 @@ get_header(); ?>
                     Contact Us
                   </a>
 
-                  <a href="tel:+19092326602"
+                  <a href="tel:+19095137397"
                      class="rpc-paint-btn rpc-paint-btn-green inline-flex items-center justify-center px-5 py-3 text-[11px] font-black uppercase tracking-[0.16em] text-white">
-                    (909) 232-6602
+                    (909)-513-7397
                   </a>
                 </div>
               </div>
@@ -289,12 +291,12 @@ get_header(); ?>
             <div class="mt-6 grid gap-4 md:grid-cols-2">
               <div class="border border-[#192F44]/10 bg-white p-6 shadow-sm">
                 <p class="text-xs font-black uppercase tracking-[0.18em] text-[#236476]">Phone</p>
-                <p class="mt-3 text-lg font-black text-[#192F44]">(909) 232-6602</p>
+                <p class="mt-3 text-lg font-black text-[#192F44]">(909)-513-7397</p>
               </div>
 
               <div class="border border-[#192F44]/10 bg-white p-6 shadow-sm">
                 <p class="text-xs font-black uppercase tracking-[0.18em] text-[#236476]">Email</p>
-                <p class="mt-3 text-lg font-black text-[#192F44]">[your email here]</p>
+                <p class="mt-3 text-lg font-black text-[#192F44]">info@realpaintingcorp.com</p>
               </div>
             </div>
 
@@ -339,9 +341,9 @@ get_header(); ?>
           Request a Free Estimate
         </a>
 
-        <a href="tel:+19092326602"
+        <a href="tel:+19095137397"
            class="rpc-paint-btn rpc-paint-btn-dark inline-flex items-center justify-center px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-white">
-          (909) 232-6602
+          (909)-513-7397
         </a>
       </div>
 
@@ -419,7 +421,13 @@ get_header(); ?>
   .rpc-paint-swipe-light {
     background: linear-gradient(90deg, #CFE0DA 0%, #ffffff 36%, #CFE0DA 58%, #7DAD3F 100%);
   }
-
+.rpc-why-stamp {
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 420px auto;
+  opacity: 0.50;
+  mix-blend-mode: multiply;
+}
   .rpc-paint-btn {
     position: relative;
     border: 1px solid transparent;
