@@ -223,7 +223,7 @@ get_header(); ?>
 
     <div class="relative z-10 mx-auto grid min-h-[760px] max-w-7xl gap-10 px-4 py-20 lg:min-h-[820px] lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-14">
       <div class="text-center lg:text-left">
-ç
+
 
         <h1 class="ajs-reveal-up mt-6 text-4xl font-extrabold leading-[1.05] tracking-[-0.04em] text-white md:text-6xl">
           When We Enter Your Home,<br class="hidden md:block">
