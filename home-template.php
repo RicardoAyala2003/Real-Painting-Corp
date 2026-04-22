@@ -290,6 +290,11 @@ get_header(); ?>
           40+ Years Combined Experience
         </span>
 
+                <span class="rpc-marquee__item">
+          <span class="rpc-marquee__dot bg-[#236476]"></span>
+          C-33 Licensed· Insured · Bonded
+        </span>
+
         <span class="rpc-marquee__item">
           <span class="rpc-marquee__dot bg-[#7DAD3F]"></span>
           24–48 Hour Response Time

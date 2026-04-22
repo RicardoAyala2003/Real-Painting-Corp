@@ -24,6 +24,7 @@
 
           <div class="rpc-footer__badges">
             <span class="rpc-footer__badge">C-33 Licensed</span>
+                        <span class="rpc-footer__badge">B-2 Licensed</span>
             <span class="rpc-footer__badge">Insured</span>
             <span class="rpc-footer__badge">Bonded</span>
             <span class="rpc-footer__badge">Google Reviews</span>
