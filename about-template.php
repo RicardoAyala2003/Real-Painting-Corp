@@ -371,9 +371,7 @@ get_header(); ?>
 
     <div class="relative mx-auto grid max-w-7xl gap-10 px-4 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
       <div class="lg:max-w-xl">
-        <p class="ajs-reveal-up text-xs font-black uppercase tracking-[0.22em] text-[#236476]">
-          Final CTA
-        </p>
+
 
         <h2 class="ajs-reveal-up mt-5 text-3xl font-black leading-tight tracking-[-0.05em] md:text-5xl">
           Ready to Work With a Team That Delivers Certainty?

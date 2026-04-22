@@ -343,9 +343,7 @@ get_header(); ?>
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(125,173,63,0.12),transparent_30%)]"></div>
 
     <div class="relative mx-auto max-w-5xl px-4 text-center">
-      <p class="ajs-reveal-up text-xs font-black uppercase tracking-[0.22em] text-[#236476]">
-        Final CTA
-      </p>
+   
 
       <h2 class="ajs-reveal-up mt-5 text-3xl font-black leading-tight tracking-[-0.05em] md:text-5xl">
         Ready to See What Real Looks Like?
